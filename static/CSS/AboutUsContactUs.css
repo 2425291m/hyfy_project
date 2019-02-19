@@ -16,7 +16,10 @@ html{
     background-color: #bdc3c7;
     opacity: .8;
     min-width: 500px;
+    overflow: hidden;
+    position: relative;
 }
+
 
 .HyfyLogo{
     float: left;
@@ -167,18 +170,10 @@ img {}
     margin-top: 12px;
 }
 
-.HomeButton, .VenueButton, .GenreButton, .MyAccountButton  {
-    padding-bottom: 1%;
-    padding-left: 3px;
-    padding-right: 3px;
-    text-decoration: none;
-    color: black;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    background-color: #9a9a9a;
-    border: 1px solid #9a9a9a;
-}
-
 .ContactUsButton {
     margin-left: 1%;
+}
+
+.pageTitle {
+    
 }
