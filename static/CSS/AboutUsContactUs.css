@@ -1,6 +1,6 @@
 * {
     margin: 0;
-    box-sizing: border-box;
+    
     font-family: 'Montserrat', sans-serif;
     
 }
@@ -21,11 +21,7 @@ html{
 }
 
 
-.HyfyLogo{
-    float: left;
-    margin-left: 20px;
-    padding-top: 20px
-}
+
 
 h1 {
     float: left;
@@ -79,6 +75,7 @@ float: left;
 .signup{
     float: right;
     padding-left: 5px;
+    padding-right: 5px;
 }
 
 .signinButton, .signupButton {
@@ -95,50 +92,50 @@ float: left;
 
 
 .textBox {
-     
     float: left;
-    position: relative;
+    position: absolute;
     margin-top: 2%;
     margin-left: 5%;
     width: 50%;
+    height: 70%;
     background-color: #ffffff;
     border: 3px solid #9a9a9a ;
-    height: 450px;
     opacity: .9;
     border-radius: 40px;
 }
 
 .about{
    
-    font-size: 25px;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-bottom: 15px;
+
+
 }
 
 .aboutUsText {
-    font-size: 14px;
-    height: 400px;
-    border-radius: 35px;
-    padding: 15px;
+    font-size: 16px;
+    margin: 3%;
+    padding: 3%;
+    padding-bottom: 50%;
+    height: inherit;
     border: 1px solid #9a9a9a;
+    border-radius: 35px;
 }
 
 .userForm {
     margin-left: 20px;
+    margin-top: 10px;
     float: left;
     font-size: 12px;
 }
 
 .textArea {
+    height: inherit;
     margin-top: 5%;
     margin-left: 5%;
     color: black;
-    height: 350px;
     width: 90%;
     padding: 3%;
     border-radius: 35px;
-     resize: none;
+
 }
 
 .email {
@@ -149,12 +146,24 @@ float: left;
     width: 15%;
 }
 
-.glasgowUni, .clydeside {
-    margin-left: 6.5%;
-    margin-top: 2%;
+
+.glasgowUni, .clydeside { 
+
     width: 30%;
-    border-radius: 100px;
+    border-radius: 60px;
     border: 5px solid #ffffff ;
+}
+
+.glasgowUni {
+    position: absolute;
+    top: 30px;
+    right: 90px;
+}
+
+.clydeside { 
+    position: absolute;
+    top: 260px;
+    right: 90px;
 }
 
 .container {
@@ -175,5 +184,11 @@ img {}
 }
 
 .pageTitle {
+    
+}
+
+#about_images {
+    position: relative;
+    top: 0;
     
 }

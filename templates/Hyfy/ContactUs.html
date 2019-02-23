@@ -2,7 +2,8 @@
 <html>
 
     <head>  
-        <link rel="stylesheet" type="text/css" href="/static/CSS/AboutUsContactUs.css"> 
+         <link rel="stylesheet" type="text/css" href="/static/CSS/AboutUsContactUs.css"> 
+        <link rel="stylesheet" type="text/css" href="/static/CSS/Header.css">
         <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Montserrat|Roboto" rel="stylesheet">
         <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -10,11 +11,10 @@
         <title>AboutUs</title>
            
         <div class="header">
-            <div class="HyfyLogo"><h1>HyFy</h1>
-            </div>
-            
-       
-            <div class="buttons">
+            <div class="HyfyLogo"><h1>HyFy</h1></div>
+            <h2 class="pageTitle"></h2>
+
+            <div class="btn-singupin">
                  <div class="signin">
                      <a href="#" class="signinButton">sign in</a>
                  </div>
@@ -23,23 +23,32 @@
                      <a href="#" class="signupButton">sign up</a>
                  </div>
             </div>
-            
-             <div class="search">
+
+            <div class=navBar>
+                <a href='#' class="btn-Home">Home</a>
+                <a href='#' class="btn-Venue">Venue</a>
+                <a href='#' class="btn-Genre">Genre</a>
+                <a href='#' class="btn-Myaccount">My Account</a>
+            </div>
+
+             <div class="search-bar">
                 <input type="text" class="searchText" placeholder="Search venues?">
                 <button type="submit" class="searchButton"><i class="fa fa-search"></i>
                 </button>
             </div>   
-            <div class="pageTitle">- Contact us</div>
         </div>
         
         <div class="textBox">
                 
             <div class="about">
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact us<br>
-
-                <textarea  name="comment" form="usrform" class="textArea" placeholder="Please leave your polite comments here. . . also, your email and password appear in the url lol "></textarea>
+                <br>
+                <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact us</h2>
 
                 <!-- easy enough to connect form to send emails -->
+            </div>
+            
+               <textarea  name="comment" form="usrform" class="textArea" placeholder="Please leave your polite comments here. . . also, your email and password appear in the url lol "></textarea>  
+             
                 <form class="userForm">
 
                     Email: <input class="email" type="text" name="usrname"> 
@@ -47,10 +56,6 @@
                     <input type="submit">
 
                 </form>
-                <br>
-
-            </div>
-                 
         </div>
     </head>
 </html>

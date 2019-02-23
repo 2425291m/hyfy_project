@@ -5,6 +5,11 @@
     
 }
 
+html{
+    /*  Need to add images dependent on button clicked at introduction - default is Glasgow */
+    background: url(/static/images/Glasgow_image.jpg) no-repeat top center fixed; 
+    background-size: cover;
+}
 
 .header {  
     height: 130px;
@@ -18,9 +23,8 @@
 .HyfyLogo{
     position: absolute;
     float: left;
-   
-    margin-left: 10px;
     margin-top: 5px;
+    margin-left: 10px;
     font-size: 140%;
 }
 
@@ -58,9 +62,6 @@
   color: #000000;
 }
 
-
-
-
 .navBar {
     width: 100%;
     float: left;
@@ -68,7 +69,7 @@
     overflow: hidden;
     position: absolute;
     bottom:0;
-    border-bottom: 1px solid #333;  
+    border-bottom: 2px solid #ffffff;  
 }
 
 .navBar a.active {
@@ -87,7 +88,7 @@
     text-align: left;
     padding: 6px;
     text-decoration: none;
-    margin-bottom: 1px;
+    margin-bottom: 0px;
     font-size: 17px;
     background-color: white;
 }
@@ -98,7 +99,6 @@
     float: right;
 
 }
-
 
 .signinButton, .signupButton {
   background-color: #9a9a9a; 

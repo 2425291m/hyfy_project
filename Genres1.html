@@ -1,37 +1,29 @@
 <!DOCTYPE html>
 <html>
     
-    <head lang="en">
-        <title>Base</title>
-           
- 
+    <head lang="en"> 
     <link rel="stylesheet" type="text/css" href="/static/CSS/Header.css"> 
+    <link rel="stylesheet" type="text/css" href="/static/CSS/Genres.css"> 
     <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Montserrat|Roboto" rel="stylesheet">
     <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     </head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+    <body>
         <div class="header">
-            <div class="HyfyLogo"><h1>HyFy</h1>
-                 
-            </div>
+            <div class="HyfyLogo"><h1>HyFy</h1></div>
             <h2 class="pageTitle"></h2>
-       
+
             <div class="btn-singupin">
                  <div class="signin">
                      <a href="#" class="signinButton">sign in</a>
                  </div>
-                
+
                  <div class="signup">
                      <a href="#" class="signupButton">sign up</a>
                  </div>
             </div>
-            
-            
-  
-           
 
             <div class=navBar>
                 <a href='#' class="btn-Home">Home</a>
@@ -39,13 +31,52 @@
                 <a href='#' class="btn-Genre">Genre</a>
                 <a href='#' class="btn-Myaccount">My Account</a>
             </div>
-            
+
              <div class="search-bar">
                 <input type="text" class="searchText" placeholder="Search venues?">
                 <button type="submit" class="searchButton"><i class="fa fa-search"></i>
                 </button>
             </div>   
         </div>
-    <body>
+        <div id="center-column">
+        <div class="city-select"><h2 id="city-title">City <i class="icon ion-md-arrow-dropdown"></i></h2>
+            <div class="city-list">
+                <a href="#">Glasgow</a>
+                <a href="#">Edinburgh</a>
+                <a href="#">Dundee</a>
+            </div>
+        </div>
+        
+         <div class="genres">
+             <div class="genre-box">
+                <h3 id="genre1">Genre 1</h3>
+                 <div id="genre1-details">
+                
+                    <img src="static/images/glasgow/Garage.jpg">
+                
+                     <div id="genre1-info">
+                         <h3 id="genre1-rating">RATING: </h3>
+
+                         <div id="info">
+                             <p> Address and stuff</p>
+                        </div>
+                     </div>
+                     <div id="to-venue">
+                         <h6>TO VENUE</h6>
+                         <i class="icon ion-md-arrow-forward"></i>
+                     </div>
+                 </div>
+                 
+             </div>
+            
+             
+            <div class="genre-box">
+            
+             </div>
+             <div class="genre-box">
+             
+             </div>
+        </div>
+        </div>
     </body>
 </html>
