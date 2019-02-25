@@ -11,7 +11,7 @@
 .genres {
     margin-top: 2%;
     height: 420px;
-    background-color: rgba(189,195,199, 0.8);;
+    background-color: rgba(189,195,199, 0.8);
     border: 1px solid #ffffff;
     padding-top: 2%;
     border-radius: 5px;
@@ -26,8 +26,10 @@
     margin-left: 2%;
     margin-bottom: 2%;
     border-radius: 4px;
-    border: 1px solid #878788;
+    border: 1px solid #535353;
     overflow: hidden;
+    box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
 }
 
 #genre1 {
@@ -50,7 +52,7 @@
     margin-top: 1%;
     background-color: white;
     width: 20%;
-    margin-left: 75%;
+    margin-left: 70%;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -59,24 +61,25 @@
     display: none;
     position: absolute;
     min-width: 100%;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 /* Links inside the dropdown */
 .city-list a {
-    background-color: white;
-    color: black;
+    color: white;
+    background-color: black;
+ 
     margin-top: 5px;
      border: 2px solid black;
     text-decoration: none;
     display: block;
-    border-radius: 3px;
+    border-radius: 7px;
     
 }
 
 /* Change color of dropdown links on hover */
 .city-list a:hover {
-    background-color: #c7c7c7
+    background-color: white;
+        color: black;
 }
 
 /* Show the dropdown menu on hover */
@@ -87,10 +90,13 @@
 
 #genre1-details {
     border: 0.5px solid black;
+    border-radius: 3px;
     width:inherit;
     height: 75%;
     margin: 0 auto;
     margin-left: 2%;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
 }
 
 img {
@@ -136,4 +142,9 @@ img {
     padding-left: 23%;
     font-size: 50px;
     color: black;
+}
+
+
+.ion-md-arrow-forward:hover{
+    color: red;
 }
