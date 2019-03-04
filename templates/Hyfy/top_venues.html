@@ -2,8 +2,8 @@
 <html>
     
     <head lang="en"> 
-    <link rel="stylesheet" type="text/css" href="/static/CSS/Header.css"> 
-    <link rel="stylesheet" type="text/css" href="/static/CSS/Genres.css"> 
+    <link rel="stylesheet" type="text/css" href="/static/CSS/header.css"> 
+    <link rel="stylesheet" type="text/css" href="/static/CSS/top_venues.css"> 
     <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Montserrat|Roboto" rel="stylesheet">
     <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -11,25 +11,25 @@
     </head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <body>
-        <div class="header">
+           <div class="header">
             <div class="HyfyLogo"><h1>HyFy</h1></div>
             <h2 class="pageTitle"></h2>
 
             <div class="btn-singupin">
                  <div class="signin">
-                     <a href="#" class="signinButton">sign in</a>
+                     <a href="/templates/Hyfy/login.html" class="signinButton">sign in</a>
                  </div>
 
                  <div class="signup">
-                     <a href="#" class="signupButton">sign up</a>
+                     <a href="/templates/Hyfy/signup.html" class="signupButton">sign up</a>
                  </div>
             </div>
 
             <div class=navBar>
-                <a href='#' class="btn-Home">Home</a>
-                <a href='#' class="btn-Venue">Venue</a>
-                <a href='#' class="btn-Genre">Genre</a>
-                <a href='#' class="btn-Myaccount">My Account</a>
+                <a href='/templates/Hyfy/homepage.html' class="btn-Home">Home</a>
+                <a href='/templates/Hyfy/about_us.html' class="btn-about-us">About Us</a>
+                <a href='/templates/Hyfy/contact_us.html' class="btn-contact-us">Contact Us</a>
+                <a href='/templates/Hyfy/account.html' class="btn-Myaccount">My Account</a>
             </div>
 
              <div class="search-bar">
