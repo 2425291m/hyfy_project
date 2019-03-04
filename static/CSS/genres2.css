@@ -2,31 +2,35 @@
 
 
 #genres2-center-column {
-    background-color: red;
-    width: 70%;
-    height: 450px;
+    background-color: rgba(189,195,199, 0.8);
+    
+    width: 95%;
+    height: 435px;
     margin: 0 auto; 
+    margin-top:0.3%;
+    padding-top: 1px;
 }
 
 #main-box {
-    margin-top: 2%;
-    height: 100%;
-    background-color: rgba(189,195,199, 0.4);
-    overflow: hidden;
+    height: 90%;
+    margin: 0 auto;
+    width: 98%;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 0.1px solid black;
+    overflow-y: scroll;
 }
 
 #genres2-navigation {
     margin: 0 auto;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    height: 6%;
+    margin-top: 0.5%;
+    height: 3%;
 }
 
 #city {
     float: right;
     background-color: white;
     height: 100%;
-    width: 15%;
+    width: 10%;
     padding: 2px;
     text-align: center;
     vertical-align: middle;
@@ -37,7 +41,6 @@
 #back {
     padding: 3px;
     margin-left: 10%;
-    font-size: 15px;
     border-radius: 3px;
 }
 
@@ -45,4 +48,69 @@
 
 h3 {
      display: inline;
+}
+
+#venue-name {
+margin-left: 2%;
+margin-top: 0.3%;
+}
+
+img {
+    width: 100%;
+}
+
+#venue-picture {
+    width: 15%;
+    margin: 1.5%;
+    margin-left: 2%;
+    margin-right: 2%;
+    float: left;
+}
+
+#likes-box {
+    background-color: white;
+    width: 20%;
+    height: 80%;
+    margin-left:2%;
+    margin-top: -7%;
+    border: 0.5px solid black;
+}
+
+#google-maps {
+  height: 400px;  /* The height is 400 pixels */
+  width: 100%;  /* The width is the width of the web page */
+}
+
+#googleMap {
+    float: right;
+    display: inline;
+    margin: 1.5%;
+    width:30%;
+    height:80%;
+    top:0;
+    border: 0.9px solid black;
+}
+
+
+#top-row {
+    height: 75%;
+    width: 100%;
+
+}
+
+#second-row {
+    height: 50%;
+    width: 100%;
+}
+
+#venue-bio {
+    font-size: 10px;
+    float: left;
+ 
+    border: 0.5px solid black;
+    padding: 4px;
+    height: 60%;
+    width: 48%;
+    margin-top: 1.5%;
+    overflow: hidden;
 }
