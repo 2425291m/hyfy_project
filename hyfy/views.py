@@ -9,10 +9,20 @@ def index(request):
     response = render(request, 'hyfy/HomePage.html')
     return response
 
+def Account(request):
+
+    response = render(request, 'hyfy/Account.html')
+    return response
+
 
 def about_us(request):
 
     response = render(request, 'hyfy/about_us.html')
+    return response
+
+def faq(request):
+
+    response = render(request, 'hyfy/faq.html')
     return response
 
 
