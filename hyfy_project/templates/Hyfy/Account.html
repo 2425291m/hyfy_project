@@ -1,0 +1,81 @@
+{% extends 'hyfy/header.html' %}
+{% block title_block %}
+AboutUs
+{% endblock %}
+    
+{% block links_block %} 
+    <link rel="stylesheet" type="text/css" href="/static/CSS/account.css"> 
+{% endblock %}
+
+{% block main_block %}
+        <div id="column">
+            <div id="main-box">
+                <div id="pofile-box">
+       
+                    <div id="profile-picture">
+                     <!--src="{{ MEDIA_URL }}{{ userprofile.picture }}" -->
+                        <img src="/media/profile-pictures/Barry.png" alt="{{selecteduser.username}}" />
+                    </div>
+                    <div id="account-name">
+                    Barry Galbraith</div>
+                    <div id="line">
+                    </div>
+                    <div class="block">
+                        <label id="email-address">E-Mail :</label>
+                        <input type="text" id="email-text" value="ladiesMan@hotmail.com"  readonly>
+                    </div>
+                    <div class="block">
+                        <label id="spotify-username">Spotify Username :</label>
+                        <input type="text" id="spotify-username-text" value="BigBarryTheMan1963"  readonly>
+                    </div>
+                    <div class="block">
+                        <label id="profile-city">City :</label>
+                        <input type="text" id="profile-city-text" value="Edinburgh, Obviously."  readonly>
+                    </div>
+                    <div class="block">
+                        <label id="selected-genre">Selected Genre :</label>
+                        <select>
+                            <option value="jazz">Jazz</option>
+                            <option value="rock">Rock</option>
+                            <option value="dance">Dance</option>
+                            <option value="R+B">R+B</option>
+                            <option value="Classical">Classical</option>
+                        </select>
+                    </div>
+                    <div class="block">
+                        <label id="bio">BIO :</label>
+                        <div id="bio-box">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.</p></div>
+                    </div>
+                </div>
+
+                <div id="reviews-main-box">
+                    <div class="review-box">
+                        <h3 class="review">Review - 25/02/19</h3>
+                        <div id="line"></div>
+                        <div id="review-1-box">
+                            
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
+                    </div>
+                    <div class="review-box">
+                        <h3 class="review">Review - 20/02/19</h3>
+                        <div id="line"></div>
+                        <div id="review-1-box">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
+                    </div>
+                    <div class="review-box">
+                        <h3 class="review">Review - 08/02/19</h3>
+                        <div id="line"></div>
+                        <div id="review-1-box">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
+                    </div>
+                    <div class="review-box">
+                        <h3 class="review">Review - 15/01/19</h3>
+                        <div id="line"></div>
+                        <div id="review-1-box">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>   
+{% endblock %}

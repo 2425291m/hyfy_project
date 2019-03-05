@@ -1,0 +1,30 @@
+{% extends 'hyfy/header.html' %}
+{% block title_block %}
+ContactUs
+{% endblock %}
+    
+{% block links_block %} 
+         <link rel="stylesheet" type="text/css" href="/static/CSS/about_us_contact_us.css"> 
+{% endblock %}
+
+{% block main_block %}
+        <div class="textBox">
+                
+            <div class="about">
+                <br>
+                <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact us</h2>
+
+                <!-- easy enough to connect form to send emails -->
+            </div>
+            
+               <textarea  name="comment" form="usrform" class="textArea" placeholder="Please leave your polite comments here. . . also, your email and password appear in the url lol "></textarea>  
+             
+                <form class="userForm">
+
+                    Email: <input class="email" type="text" name="usrname"> 
+                    Password: <input class="password" type="password" name="pwd"> 
+                    <input type="submit">
+
+                </form>
+        </div>
+{% endblock %}
