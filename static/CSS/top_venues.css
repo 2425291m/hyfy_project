@@ -83,7 +83,7 @@
 }
 
 /* Show the dropdown menu on hover */
-.city-select:hover .city-list {
+.city-select:hover city-list {
     display: block;
 }
 

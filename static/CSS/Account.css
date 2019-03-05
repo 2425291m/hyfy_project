@@ -66,17 +66,6 @@ label {
     padding-left: 3%;
 }
 
-#email-address {
-
-}
-
-textarea {
-
-    
-}
-
-
-
 .block * {
   //  margin-top: 2%;
     vertical-align: middle;
@@ -94,9 +83,6 @@ textarea {
 
 }
 
-input {
-    
-}
 
 #bio-box {
     font-size: 10px;
