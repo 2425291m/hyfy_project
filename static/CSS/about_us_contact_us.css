@@ -1,3 +1,27 @@
+* {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+html{
+    background: url(/static/images/Glasgow_image.jpg) no-repeat top center fixed; 
+    background-size: cover;
+
+}
+
+.header {  
+    height: 125px;
+    background-color: #bdc3c7;
+    opacity: .8;
+    min-width: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+
 h1 {
     float: left;
 }
@@ -9,10 +33,62 @@ h1 {
     padding-top: 5%;
 }
 
+.search {
+ float: right;
+    padding-top: 60px;
+    padding-left: 5%;
+}
+
+.searchText {
+  float: left;
+  border: 2px solid #6d6d6d;
+  padding-left: 8%;
+  border-radius: 8px;
+}
+
+.searchButton {
+  float: right;
+  position: absolute;  
+  border: 1px solid #6d6d6d;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.searchText:focus{
+  color: #000000;
+}
+
+
 
 .buttons{
 float: right;
 }
+
+.signin{
+float: left;
+}
+
+.signup{
+    float: right;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.signinButton, .signupButton {
+  background-color: #9a9a9a; 
+  font-size: 12px;
+  border: none;
+  color: white;
+  padding: 1px 7px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
 
 .textBox {
     float: left;
@@ -25,6 +101,12 @@ float: right;
     border: 3px solid #9a9a9a ;
     opacity: .9;
     border-radius: 40px;
+}
+
+.about{
+   
+
+
 }
 
 .aboutUsText {
@@ -83,7 +165,11 @@ float: right;
     right: 90px;
 }
 
-img {
+.container {
+ 
+}
+
+img {}
   width: 100%;
   height: auto;
 }
@@ -94,6 +180,10 @@ img {
 
 .ContactUsButton {
     margin-left: 1%;
+}
+
+.pageTitle {
+    
 }
 
 #about_images {
