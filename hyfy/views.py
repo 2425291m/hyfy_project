@@ -31,6 +31,11 @@ def contact_us(request):
     response = render(request, 'hyfy/contact_us.html')
     return response
 
+def show_top_venues(request, city_name_slug):
+
+    context_dict = {}
+    
+    return render(request,'hyfy/top_venues.html',context_dict)
 
 def show_venue(request):
 
