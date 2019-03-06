@@ -15,7 +15,13 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
+# page 46
+MEDIA_DIR = os.path.join(BASE_DIR, 'media')
+
+STATICFILES_DIRS = [STATIC_DIR, ]
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
@@ -39,12 +45,6 @@ INSTALLED_APPS = [
     'hyfy',
 ]
 
-PASSWORD_HASHERS = [
-    'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
-    'django.contrib.auth.hashers.BCryptPasswordHasher',
-    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
-    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
-]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -57,24 +57,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'hyfy_project.urls'
-# 'C:\Users\Stephen\tango_with_django_project\templates'
 
 
-# print(__file__)
-# print(os.path.dirname(__file__))
-# print(os.path.dirname(os.path.dirname(__file__)))
 
-TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
-STATIC_DIR = os.path.join(BASE_DIR, 'static')
-
-
-# page 46
-MEDIA_DIR = os.path.join(BASE_DIR, 'media')
-
-
-# page 41 of book
-STATIC_DIR = os.path.join(BASE_DIR, 'static')
-STATICFILES_DIRS = [STATIC_DIR, ]
 
 TEMPLATES = [
     {
@@ -95,7 +80,7 @@ TEMPLATES = [
     },
 ]
 
-# WSGI_APPLICATION = 'tango_with_django_project.wsgi.application'
+# WSGI_APPLICATION = 'hyfy_project.wsgi.application'
 
 
 # Database
@@ -155,13 +140,13 @@ MEDIA_URL = '/media/'
 LOGIN_URL = '/accounts/login/'
 
 # If True, users can register
-REGISTRATION_OPEN = True
+# REGISTRATION_OPEN = True
 # One-week activation window; you may, of course, use a different value.
-ACCOUNT_ACTIVATION_DAYS = 7
+# ACCOUNT_ACTIVATION_DAYS = 7
 # If True, the user will be automatically logged in.
-REGISTRATION_AUTO_LOGIN = True
+# REGISTRATION_AUTO_LOGIN = True
 # The page you want users to arrive at after they successfully log in
 # LOGIN_REDIRECT_URL = '/rango/'
 # The page users are directed to if they are not logged in,
 # and are trying to access pages requiring authentication
-LOGIN_URL = '/accounts/login/'
+# LOGIN_URL = '/accounts/login/'
