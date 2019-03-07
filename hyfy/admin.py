@@ -1,5 +1,5 @@
 from django.contrib import admin
-from hyfy.models import City, Genre
+from hyfy.models import City, Genre, UserProfile
 # from hyfy.models import Venue
 
 # Register your models here.
@@ -14,4 +14,5 @@ class GenreAdmin (admin.ModelAdmin):
 
 admin.site.register(City, CityAdmin)
 admin.site.register(Genre, GenreAdmin)
+admin.site.register(UserProfile)
 # admin.site.register(Venue, VenueAdmin)
