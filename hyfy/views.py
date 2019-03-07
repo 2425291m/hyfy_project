@@ -14,9 +14,9 @@ def index(request):
     response = render(request, 'hyfy/HomePage.html')
     return response
 
-def Account(request):
+def account(request):
 
-    response = render(request, 'hyfy/Account.html')
+    response = render(request, 'hyfy/account.html')
     return response
 
 
@@ -48,7 +48,6 @@ def show_venue(request):
     return response
 
 def user_login(request):
-
     response = render(request, 'hyfy/login.html')
     return response
 

@@ -1,0 +1,54 @@
+
+#main-box {
+    width: 90%;
+    height: 400px;
+    margin: 0 auto; 
+    text-align: center;
+    margin-top: 2%;   
+}
+
+#login-box {
+    margin: 5%;
+}
+
+.input-box {
+    height: 50px;
+}
+
+
+
+p {
+    float: left;
+}
+
+input {
+    float: right;
+}
+
+#login_form {
+   width: 100%;
+}
+
+#hyfy-login {
+    float: left;
+    height: 60%;
+    width: 47.5%;
+    padding-top:  2%;
+    background-color: rgba(189,195,199, 0.8);
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+}
+
+#spotify-login {
+    float: right;
+    height: 60%;
+    width: 47.5%;
+    padding-top:  2%;
+    background-color: rgba(189,195,199, 0.8);
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+}
+
+#spotify_login_form {
+
+}
