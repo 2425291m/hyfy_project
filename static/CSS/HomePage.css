@@ -9,20 +9,6 @@ html{
     background: url(/static/images/Glasgow_image.jpg) no-repeat top center fixed; 
     background-size: cover;
 }
-
-.header {
-    height: 100px;
-    background-color: #bdc3c7;
-    opacity: .8;
-    min-width: 500px;
-}
-
-.HyfyLogo{
-    float: left;
-    margin-left: 20px;
-    padding-top: 20px
-}
-
 h1 {
     float: left;
 }
@@ -87,60 +73,4 @@ ul li:hover ul li{
 }
 
 
-.search {
- float: right;
-    padding-top: 60px;
-    padding-left: 5%;
-}
-
-.searchText {
-  float: left;
-  border: 2px solid #6d6d6d;
-  padding-left: 8%;
-  border-radius: 8px;
-}
-
-.searchButton {
-  float: right;
-  position: absolute;  
-  border: 1px solid #6d6d6d;
-  text-align: center;
-  color: #ffffff;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 15px;
-}
-
-.searchText:focus{
-  color: #000000;
-}
-
-
-
-
-.btn-singupin {
-    margin: 0.5%;
-    float: right;
-
-}
-
-.signinButton, .signupButton {
-  background-color: #9a9a9a; 
-  font-size: 12px;
-  border: none;
-  color: white;
-  padding: 1px 7px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
-}
-.signin{
-    float: left;
-    padding-right: 5px;
-}
-
-.signup{
-    float: right;
-}
 
