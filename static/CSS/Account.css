@@ -1,12 +1,11 @@
 #column {
     width: 70%;
-    height: 445px;
+    height: 420px;
     margin: 0 auto; 
 }
 #main-box {
-    margin-top: 2%;
     height: 100%;
-     background-color: rgba(189,195,199, 0.4);
+    background-color: rgba(189,195,199, 0.4);
     overflow: hidden;
 }
 
@@ -70,15 +69,8 @@ label {
 
 }
 
-textarea {
-
-    
-}
-
-
-
 .block * {
-  //  margin-top: 2%;
+   margin-top: 2%;
     vertical-align: middle;
 }
 
@@ -92,10 +84,6 @@ textarea {
     resize: none;
     overflow: hidden;
 
-}
-
-input {
-    
 }
 
 #bio-box {

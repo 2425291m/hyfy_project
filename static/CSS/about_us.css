@@ -1,0 +1,50 @@
+.glasgowUni, .clydeside { 
+    width: 27%;
+    border-radius: 20px;
+    border: 1.5px solid #ffffff ;
+    box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.6), 0 20px 30px 0 rgba(0, 0, 0, 0.6);
+}
+#about_images {
+    position: relative;
+    top: 0px;
+}
+
+.aboutUsText {
+    font-size: 16px;
+    margin: 3%;
+    padding: 3%;
+    height: 79%;
+    border: 0.7px solid #9a9a9a;
+    border-radius: 35px;
+}
+
+.textBox {
+    float: left;
+    position: absolute;
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 50%;
+    height: 70%;
+    background-color: #ffffff;
+    border: 3px solid #9a9a9a ;
+    opacity: .9;
+    border-radius: 40px;
+}
+
+
+.glasgowUni {
+    position: absolute;
+    top: 30px;
+    right: 90px;
+}
+
+.clydeside { 
+    position: absolute;
+    top: 250px;
+    right: 90px;
+}
+
+img {}
+  width: 100%;
+  height: auto;
+}
