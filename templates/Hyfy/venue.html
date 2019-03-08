@@ -4,11 +4,11 @@ Venue
 {% endblock %}
     
 {% block links_block %} 
-    <link rel="stylesheet" type="text/css" href="/static/CSS/venue.css">    
+    <link rel="stylesheet" type="text/css" href="/static/CSS/venue.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 {% endblock %}
         
 {% block main_block %}           
-              
         <div id="genres2-navigation">
             <button id="back"><i class="icon ion-md-arrow-back"></i><h3> BACK TO GENRE</h3></button>
             <div id="city"><h3 id="city-title">GLASGOW<i class="icon ion-   md-arrow-dropdown"></i></h3>
@@ -19,32 +19,49 @@ Venue
                 <h2 id="venue-name">VENUE NAME</h2>
                 <div id="main-box">
                     <div id="top-row">
-                  <div id="venue-picture">
-                     <!--src="{{ MEDIA_URL }}{{ userprofile.picture }}" -->
-                        <img src="/static/images/glasgow/Garage.jpg" alt="{{selecteduser.username}}" />
-                </div>
-                <div id="venue-bio">
-                        
+                        <div id="venue-picture">
+                             <!--src="{{ MEDIA_URL }}{{ userprofile.picture }}" -->
+                            <img src="/static/images/glasgow/Garage.jpg" alt="{{selecteduser.username}}" />
                         </div>
-                
-                    
-                    <div id="googleMap"></div>
-                </div>
-                <div id="second-row">
-                    <div id="likes-box">
-                    
+                        <div id="venue-bio">
+
+                        </div>
+                        <div id="googleMap"></div>
                     </div>
-                    
-                </div>
-                    
-                
-                
-                
-                </div>
-                
-                
+                    <div id="second-row">
+                        <div id="leave-review-box">
+                            <textarea  name="comment" form="usrform" class="textArea" placeholder="If you're logged in, please leave a review here."></textarea>  
+             
+                        <form class="userForm">
+                            {% if user.is_authenticated %}
+                            <input type="submit">
+                            {% else %}
+                            <div class="login">
+                                <a href="{% url 'login' %}"class="login-btn">log in to leave a review</a>
+                            </div>
+                            {% endif %}
+                        </form>
+                        </div>
+
+                        <div id="submitted-review-box">
+                            
+                            <div id="reviewer">
+                         <!--src="{{ MEDIA_URL }}{{ userprofile.picture }}" -->
+                                <div id="picture-box">
+                                <img id ="reviewer-picture" src="/media/profile-pictures/Barry.png" alt="{{selecteduser.username}}" />
+                                </div>
+                                <h4 id="reviewer-details">Barry Galbraith - { date }</h4>
+                            </div>
+                            
+                            <div id="review-text">
+                            <p>
+                                lorem etc</p>
+                            </div>
+                      
+                        </div>
+                    </div>
+                </div>           
             </div>
- 
         
  <script>
 function myMap() {

@@ -5,7 +5,7 @@
     background-color: rgba(189,195,199, 0.8);
     
     width: 95%;
-    height: 435px;
+    height: 430px;
     margin: 0 auto; 
     margin-top:0.3%;
     padding-top: 1px;
@@ -23,7 +23,7 @@
 #genres2-navigation {
     margin: 0 auto;
     margin-top: 0.5%;
-    height: 3%;
+    height: 2%;
 }
 
 #city {
@@ -42,38 +42,43 @@
     padding: 3px;
     margin-left: 10%;
     border-radius: 3px;
+    
 }
 
 
 
 h3 {
-     display: inline;
+    display: inline;
+    font-size: 12px;
 }
 
 #venue-name {
-margin-left: 2%;
-margin-top: 0.3%;
+    margin-left: 2%;
+    margin-top: 0.3%;
+    font-size: 20px;
 }
 
 img {
     width: 100%;
+    border-radius: 50%;
 }
 
 #venue-picture {
     width: 15%;
     margin: 1.5%;
     margin-left: 2%;
-    margin-right: 2%;
+    margin-right: 1%;
     float: left;
 }
 
-#likes-box {
+#leave-review-box {
+    float: left;
     background-color: white;
-    width: 20%;
-    height: 80%;
+    width: 30%;
+    height: 90%;
     margin-left:2%;
-    margin-top: -7%;
     border: 0.5px solid black;
+    font-size: 10px;
 }
 
 #google-maps {
@@ -85,32 +90,114 @@ img {
     float: right;
     display: inline;
     margin: 1.5%;
-    width:30%;
-    height:80%;
+    width:32%;
+    height:100%;
     top:0;
     border: 0.9px solid black;
 }
 
 
 #top-row {
-    height: 75%;
+    height: 45%;
     width: 100%;
 
 }
 
 #second-row {
-    height: 50%;
+    float: left;
+    height: 43%;
     width: 100%;
 }
 
 #venue-bio {
     font-size: 10px;
     float: left;
- 
     border: 0.5px solid black;
     padding: 4px;
-    height: 60%;
-    width: 48%;
+    height: 101%;
+    width: 46%;
     margin-top: 1.5%;
     overflow: hidden;
+}
+
+#submitted-review-box {
+    background-color: white;
+    margin-left: 2%;
+    float: left;
+    width: 64.5%;
+    height: 90%;
+}
+
+
+
+
+
+textarea {
+    resize: none;
+    width: 98%;
+    height: 79%;
+    margin: 1%;
+    margin-bottom: 0%;
+    
+}
+
+input {
+    float: right;
+    margin-right: 2%;
+}
+
+.login {
+    
+    float: right;
+    margin-right: 1%;
+    margin-top: 1%;
+    background-color: #9a9a9a; 
+    font-size: 12px;
+    border: none;
+    padding: 1px 7px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    border: 0.5px solid black;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#reviewer {
+    float: left;
+    margin: 0.5%;
+    width: 99%;
+    height: 20%;
+    background-color: #fff;
+}
+
+#reviewer-picture {
+    border-radius: 0%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+#reviewer-details {
+    margin: 0.5%;
+    padding-left: 5%;
+}
+
+#picture-box {
+    overflow: hidden;
+    border-radius: 50%;
+    float: left;
+    height: 100%;
+    width: 5%;
+}
+
+#review-text {
+    margin: 1%;
+    height: 70%;
+    margin-top: 5%;
+    width: 98%;
+    border: 0.5px solid black;
+    padding: 0.5%;
 }

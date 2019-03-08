@@ -42,9 +42,18 @@ def show_top_venues(request, city_name_slug):
     
     return render(request,'hyfy/top_venues.html',context_dict)
 
+def venue(request):
+    response = render(request, 'hyfy/venue.html')
+    return response
+    
 def show_venue(request):
 
     response = render(request, 'hyfy/venue.html')
+    return response
+
+def top_venues(request):
+
+    response = render(request, 'hyfy/top_venues.html')
     return response
 
 def user_login(request):
