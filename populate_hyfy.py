@@ -3,9 +3,31 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE','hyfy_project.settings')
 
 import django
 django.setup()
-from hyfy.models import City, Genre
+from hyfy.models import City, Genre, Venue
 
 def populate():
+
+    glarock_venues = [
+        {"name": "Oran Mor", "likes": 10, "lat": 55.8776, "long": 4.2898},
+        {"name": "Broadcast", "likes": 2, "lat": 55.8660, "long": 4.2691},
+    ]
+
+    glapop_venues = [
+        {"name": "The Blue Arrow", "likes": 3, "lat": 55.8616, "long": 4.2586,}
+    ]
+
+    gladance_venues = [
+        {"name": "The Garage", "likes": 100, "lat": 55.8661, "long": 4.2685}
+    ]
+
+    glajazz_venues = [
+        {"name": "Swing", "likes": 9, "lat": 55.8630, "long": 4.2581}
+    ]
+
+    genres = {"Glasgow_rock": {"venues": glarock_venues},
+        "Glasgow_pop": {"venues": glapop_venues},
+        "Glasgow_jazz": {"venues": glajazz_venues},
+        "Glasgow_dance": {"venues": glajazz_venues} }
 
     glasgow_genres = [
         {"name": "gla_rock", "genrename": "rock"},
@@ -28,41 +50,18 @@ def populate():
     cities = {"Glasgow": {"genres": glasgow_genres},
         "Edinburgh": {"genres": edinburgh_genres},
         "Dundee": {"genres": dundee_genres} }
-
-    glarock_venues = [
-        {"name": "Oran Mor", "likes": 10, "lat": 55.8776, "long": 4.2898},
-        {"name": "Broadcast", "likes": 2, "lat": 55.8660, "long": 4.2691},
-    ]
-
-    glapop_venues = [
-        {"name": "The Blue Arrow", "likes": 3, "lat": 55.8616, "long": 4.2586,}
-    ]
-
-    gladance_venues = [
-        {"name": "The Garage", "likes": 100, "lat": 55.8661, "long": 4.2685}
-    ]
-
-    glajazz_venues = [
-        {"name": "Swing", "likes": 9, "lat": 55.8630, "long": 4.2581}
-    ]
-
-    city_genres = {"Glasgow_rock": {"genres": glasgow_rock},
-        {"Glasgow_pop": {"genres": glasgow_pop},
-        {"Glasgow_jazz": {"genres": glasgow_dance},
-        {"Glasgow_dance": {"genres": glasgow_jazz} }
-
+    
     for city, city_data in cities.items():
         c = add_city(city)
-        for g in city_data["genres"]:
-            add_genre(g["name"], g["genrename"], c)
-            
-    for city_genre, genre_data in city_genres.items():
-       for v in genre_data["venues"]:
-           add_venue(v["name"], )
-            
+        for g, city_data in city_data["genres"]:
+            add_genre(g["name"], g["genrename"], c["name"])
+            for v in genres.items():
+                add_venue(v["name"], g["genrename"], g["city"], v["likes"], v["lat"], v["long"])
+        
 
 def add_genre(name, genrename, city):
-    g = Genre.objects.get_or_create(name=name, genrename=genrename, city=city)[0]
+    g = Genre.objects.get_or_create(name=name, city=city)[0]
+    g.genrename = genrename
     g.save()
     return g
 
@@ -72,7 +71,7 @@ def add_city(name):
     return c
 
 def add_venue(name, genre, city, likes, longitude, latitude):
-    v = Genre.objects.get_or_create(name=name, gname=genre, city=city)[0]
+    v = Genre.objects.get_or_create(name=name, genre=genre, city=city)[0]
     v.likes=likes
     v.longitude=longitude
     v.latitude=latitude

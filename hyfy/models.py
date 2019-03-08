@@ -20,7 +20,7 @@ class City(models.Model):
 
 class Genre(models.Model):
     name = models.CharField(max_length=36, unique=False)
-    genrename = models.CharField(max_length=36, unique=False)
+    genrename = models.CharField(max_length=36)
     city = models.ForeignKey(City, on_delete=models.CASCADE)
     # slug = models.SlugField(unique=True)
 
@@ -34,19 +34,11 @@ class Genre(models.Model):
     def __str__(self):
         return self.name
 
-class UserProfile(models.Model):
-
-    user = models.OneToOneField(User)
-    website = models.URLField(blank=True)
-    picture = models.ImageField(upload_to='profile_images', blank=True)
-
-    def __str__(self):
-        return self.user.username
 
 class Venue(models.Model):
     name = models.CharField(max_length=36, unique=True)
-    genre = models.ForeignKey(Genre, on_delete=models.CASCADE)
-    city = models.ForeignKey(Genre, on_delete=models.CASCADE)
+    genre = models.ForeignKey(Genre, on_delete=models.CASCADE, related_name='genre_venue_set')
+    city = models.ForeignKey(Genre, on_delete=models.CASCADE, related_name='city_venue_set')
     likes = models.IntegerField(default=0)
     latitude = models.FloatField(default=0)
     longitude = models.FloatField(default=0)
@@ -58,10 +50,13 @@ class Venue(models.Model):
         return self.name
 
 
+class UserProfile(models.Model):
 
-#    def __str__(self):
-#        return self.name
+    user = models.OneToOneField(User)
+    website = models.URLField(blank=True)
+    picture = models.ImageField(upload_to='profile_images', blank=True)
 
-
+    def __str__(self):
+        return self.user.username
 
 
