@@ -17,13 +17,15 @@
             <div class="city-box">
                 <ul>
                     <li><a>CITY? <i class="icon ion-md-arrow-dropdown"></i></a>
+                        {% if cities %}
                         <ul> 
                             <div class="city-list">
-                                <li><a href="{% url 'top_venues' %}">Glasgow</a></li>
-                                <li><a href="{% url 'top_venues' %}">Edinburgh</a></li>
-                                <li><a href="{% url 'top_venues' %}">Dundee</a></li>
+                                {% for city in cities %}
+                                <li><a href="{% url 'top_venues' %}">{{ city.name }}</a></li>
+                                {% endfor %}
                             </div>
                         </ul>
+                        {% endif %}
                     </li>
                 </ul>
             </div>

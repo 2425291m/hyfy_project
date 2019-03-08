@@ -5,13 +5,16 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
+from hyfy.models import City
 
 # Create your views here.
 
 
 def index(request):
+    city_list = City.objects.all
+    context_dict = {'cities': city_list}
 
-    response = render(request, 'hyfy/HomePage.html')
+    response = render(request, 'hyfy/HomePage.html', context_dict)
     return response
 
 def account(request):
@@ -39,13 +42,20 @@ def contact_us(request):
 def show_top_venues(request, city_name_slug):
 
     context_dict = {}
-    
+
+    try:
+        city = City.objects.all()
+        # venues = Venue.obects. get top venues
+        context_dict['city'] = city
+    except City.DoesNotExist:
+        context_dict['city'] = None
+
     return render(request,'hyfy/top_venues.html',context_dict)
 
 def venue(request):
     response = render(request, 'hyfy/venue.html')
     return response
-    
+
 def show_venue(request):
 
     response = render(request, 'hyfy/venue.html')
@@ -111,10 +121,6 @@ def user_login(request):
 
     else:
         return render(request, 'hyfy/login.html', {})
-
-@login_required
-def restricted(request):
-    return HttpResponse("Since you're logged in, you can see this")
 
 
 @login_required

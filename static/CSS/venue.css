@@ -39,10 +39,12 @@
 }
 
 #back {
-    padding: 3px;
+    padding: 0.2%;
+    background-color: #fff;
+    text-align: center;
     margin-left: 10%;
     border-radius: 3px;
-    
+    color: black;
 }
 
 
@@ -200,4 +202,8 @@ a {
     width: 98%;
     border: 0.5px solid black;
     padding: 0.5%;
+}
+
+.back-btn {
+    color: black;
 }

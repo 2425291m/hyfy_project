@@ -10,12 +10,9 @@ urlpatterns = [
     url(r'^contact_us/$', views.contact_us, name='contact_us'),
     # url(r'^venue/(?P<venue_name_slug>[\w\-]+)/$', views.show_venue, name='show_venue'),
     url(r'^venue/$', views.venue, name='venue'),
-    
-    
     url(r'^login/$', views.user_login, name='login'),
     url(r'^account/$', views.account, name='account'),
     url(r'^register/$', views.register, name='register'),
-    url(r'^restricted/', views.restricted, name='restricted'),
     url(r'^login/$', views.user_login, name='login'),
     url(r'^logout/$', views.user_logout, name='logout'),
     url(r'^top_venues/$', views.top_venues, name='top_venues'),
