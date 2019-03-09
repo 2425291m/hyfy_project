@@ -44,11 +44,14 @@ def show_top_venues(request, city_name_slug):
     context_dict = {}
 
     try:
-        city = City.objects.all()
+        city = City.objects.get(slug=city_name_slug)
         # venues = Venue.obects. get top venues
+        venues = Venue.objects.filter(city=city)
+        context_dict['venues'] = venues
         context_dict['city'] = city
     except City.DoesNotExist:
         context_dict['city'] = None
+        context_dict['venues'] = None
 
     return render(request,'hyfy/top_venues.html',context_dict)
 

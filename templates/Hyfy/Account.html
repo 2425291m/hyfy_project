@@ -11,13 +11,14 @@ AboutUs
         <div id="column">
             <div id="main-box">
                 <div id="pofile-box">
-       
+                    <div id="top-section">
                     <div id="profile-picture">
                      <!--src="{{ MEDIA_URL }}{{ userprofile.picture }}" -->
                         <img src="/media/profile-pictures/Barry.png" alt="{{selecteduser.username}}" />
                     </div>
                     <div id="account-name">
-                    Barry Galbraith</div>
+                   {{ user.username }}</div>
+                        </div>
                     <div id="line">
                     </div>
                     <div class="block">

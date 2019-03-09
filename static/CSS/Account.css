@@ -4,9 +4,10 @@
     margin: 0 auto; 
 }
 #main-box {
-    height: 100%;
+    height: 105%;
     background-color: rgba(189,195,199, 0.4);
     overflow: hidden;
+    margin-top: 2%;
 }
 
 #pofile-box {
@@ -36,17 +37,15 @@ img {
     overflow: hidden;
     float: left;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-left: 5%;
-    margin-top: 5%;
-    width: 40%;
-    height: 35%;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
 }
 
 #account-name {
-    margin-top: 15%;
-    padding-left: 50%;
-    padding-bottom: 15%;
+    padding-left: 40%;
+
+    padding-top: 10%;
     font-size: 30px;
 }
 
@@ -56,6 +55,7 @@ img {
     background-color: black;
     opacity: 0.2;
     margin-left: 1%;
+    margin-top: 2%;
 } 
 
 label {
@@ -89,11 +89,10 @@ label {
 #bio-box {
     font-size: 10px;
     float: right;
-    width: 320px;
+    width: 85%;
     border: 0.5px solid black;
     padding: 4px;
     height: 100px;
-    margin-top: 1%;
     margin-right: 2%;
     overflow: hidden;
 }
@@ -152,4 +151,11 @@ label {
     padding: 5px;
     border-radius: 5px; 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#top-section {
+    width: 100%;
+    height: 30%;
+    margin-left: 3%;
+    margin-top: 3%;
 }
