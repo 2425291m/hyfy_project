@@ -12,50 +12,69 @@ def populate():
     glarock_venues = [
         {"name": "Oran Mor", "likes": 10, "lat": 55.8776, "long": 4.2898},
         {"name": "Broadcast", "likes": 2, "lat": 55.8660, "long": 4.2691},
+        {"name": "O2 ABC Glasgow", "likes": 4, "lat": 55.8656, "long": 4.2642},
     ]
 
     glapop_venues = [
-        {"name": "The Blue Arrow", "likes": 3, "lat": 55.8616, "long": 4.2586, }
+        {"name": "The Blue Arrow", "likes": 3, "lat": 55.8616, "long": 4.2586},
+        {"name": "O2 Academy Glasgow", "likes": 15, "lat": 55.8506, "long": 4.2595},
+        {"name": "SSE Hydro", "likes": 8, "lat": 55.8602, "long": 44.2853},
     ]
 
     gladance_venues = [
-        {"name": "The Garage", "likes": 100, "lat": 55.8661, "long": 4.2685}
+        {"name": "The Garage", "likes": 40, "lat": 55.8661, "long": 4.2685},
+        {"name": "The Sanctuary", "likes": 15, "lat": 55.8698, "long": 4.2966},
+        {"name": "The Viper", "likes": 5, "lat": 55.8757, "long": 4.2823},
     ]
 
     glajazz_venues = [
-        {"name": "Swing", "likes": 9, "lat": 55.8630, "long": 4.2581}
+        {"name": "Swing", "likes": 9, "lat": 55.8630, "long": 4.2581},
+        {"name": "Dukes Bar", "likes": 18, "lat": 55.8670, "long": 4.2922},
+        {"name": "Three Judges", "likes": 3, "lat": 55.8703, "long": 4.2994},
     ]
 
     edirock_venues = [
-        {"name": "edirockPH", "likes": 10, "lat": 55.8776, "long": 4.2898}
+        {"name": "Electric Circus", "likes": 20, "lat": 55.9512, "long": 3.1900},
+        {"name": "Bannerman's Bar", "likes": 1, "lat": 55.9488, "long": 3.1866},
+        {"name": "edirockPH", "likes": 10, "lat": 55.8776, "long": 4.2898},
     ]
 
     edipop_venues = [
-        {"name": "edipopPH", "likes": 3, "lat": 55.8616, "long": 4.2586, }
+        {"name": "The Queen's Hall", "likes": 4, "lat": 55.9412, "long": 3.1816},
+        {"name": "Strasmash Live Music Bar", "likes": 17, "lat": 55.9486, "long": 3.1878},
+        {"name": "La Belle Angele", "likes": 5, "lat": 55.9485, "long": 3.1875},
     ]
 
     edidance_venues = [
-        {"name": "edidancePH", "likes": 100, "lat": 55.8661, "long": 4.2685}
+        {"name": "Cabaret Voltaire", "likes": 2, "lat": 55.9489, "long": 3.1873},
+        {"name": "The Liquid Room", "likes": 4, "lat": 55.9486, "long": 3.1938},
+        {"name": "Hive", "likes": 60, "lat": 55.9496, "long": 3.1870},
     ]
 
     edijazz_venues = [
-        {"name": "edijazzPH", "likes": 9, "lat": 55.8630, "long": 4.2581}
+        {"name": "The Jazz Bar", "likes": 2, "lat": 55.9481, "long": 3.1870},
+        {"name": "Dirty Martini", "likes": 8, "lat": 55.9534, "long": 3.1960},
+        {"name": "Voodoo Rooms", "likes": 6, "lat": 55.9538, "long": 3.1906},
     ]
 
     dunrock_venues = [
-        {"name": "dunrockPH", "likes": 10, "lat": 55.8776, "long": 4.2898}
+        {"name": "Conroy's Basement", "likes": 5, "lat": 56.4636, "long": 2.9703},
+        {"name": "Church", "likes": 4, "lat": 56.4617, "long": 2.9758},
     ]
 
     dunpop_venues = [
-        {"name": "dunpopPH", "likes": 3, "lat": 55.8616, "long": 4.2586, }
+        {"name": "Dundee University SU", "likes": 10, "lat": 56.4578, "long": 2.9822},
+        {"name": "Fat Sams", "likes": 30, "lat": 56.4608, "long": 2.9770},
     ]
 
     dundance_venues = [
-        {"name": "dundancePH", "likes": 100, "lat": 55.8661, "long": 4.2685}
+        {"name": "Beat Generator Live!", "likes": 9, "lat": 56.4608, "long": 2.9761},
+        {"name": "Club Tropicana", "likes": 2, "lat": 56.4606, "long": 2.9771},
     ]
 
     dunjazz_venues = [
-        {"name": "dunjazzPH", "likes": 9, "lat": 55.8630, "long": 4.2581}
+        {"name": "Gardyne Theatre", "likes": 16, "lat": 56.4721, "long": 2.9113},
+        {"name": "Clarks", "likes": 2, "lat": 56.4611, "long": 2.9766},
     ]
 
     genres = {"Glasgow_rock": {"venues": glarock_venues},
