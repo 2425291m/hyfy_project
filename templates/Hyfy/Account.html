@@ -17,7 +17,8 @@ AboutUs
                         <img src="/media/profile-pictures/Barry.png" alt="{{selecteduser.username}}" />
                     </div>
                     <div id="account-name">
-                   {{ user.username }}</div>
+                   {{ user.username }}
+                    </div>
                         </div>
                     <div id="line">
                     </div>
@@ -42,6 +43,9 @@ AboutUs
                             <option value="R+B">R+B</option>
                             <option value="Classical">Classical</option>
                         </select>
+                    </div>
+                    <div>
+                        <a href="{% url "social:begin" "spotify" %}">login with spotify.</a>
                     </div>
                     <div class="block">
                         <label id="bio">BIO :</label>

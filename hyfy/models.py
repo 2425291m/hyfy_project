@@ -7,6 +7,18 @@ from django.dispatch import receiver
 
 # Create your models here.
 
+class spotAuth(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    identifier = models.CharField(max_length=50)
+    access_token = models.CharField(max_length=256, null=True)
+    refresh_token = models.CharField(max_length=256, null=True)
+    integration_user_id = models.CharField(max_length=256, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"{self.identifier} ({self.id})"
+
 class City(models.Model):
     name = models.CharField(max_length=36, unique=True)
     slug = models.SlugField()
