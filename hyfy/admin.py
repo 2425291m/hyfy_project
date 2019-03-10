@@ -1,18 +1,19 @@
 from django.contrib import admin
 from hyfy.models import City, UserProfile
 from hyfy.models import Venue
+from hyfy.models import Genre
 
 # Register your models here.
 class CityAdmin (admin.ModelAdmin):
     list_display = ('name',)
 
-#class GenreAdmin (admin.ModelAdmin):
-#    list_display = ('name','genrename',)
+class GenreAdmin (admin.ModelAdmin):
+   list_display = ('name','genrename',)
 
 class VenueAdmin (admin.ModelAdmin):
     list_display = ('name', 'city', 'likes', 'latitude', 'longitude', 'genre')
 
 admin.site.register(City, CityAdmin)
-#admin.site.register(Genre, GenreAdmin)
+admin.site.register(Genre, GenreAdmin)
 admin.site.register(UserProfile)
 admin.site.register(Venue, VenueAdmin)
