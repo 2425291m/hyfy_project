@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 from hyfy.models import City
 from hyfy.models import Venue
-
+from hyfy.models import Genre
 # Create your views here.
 
 
@@ -48,11 +48,18 @@ def show_city(request, city_name_slug):
         city = City.objects.get(slug=city_name_slug)
         # venues = Venue.obects. get top venues
         venues = Venue.objects.filter(city=city)
+        genres = Genre.objects.filter(city=city)
+        # venue_list = Venue.objects.filter(genre=genres)
+        # venue_list = venue_list.order_by('-likes')[:1]
+
         context_dict['venues'] = venues
         context_dict['city'] = city
+        context_dict['genres'] = genres
+
     except City.DoesNotExist:
         context_dict['city'] = None
         context_dict['venues'] = None
+        context_dict['genres'] = None
 
     return render(request,'hyfy/city.html',context_dict)
 

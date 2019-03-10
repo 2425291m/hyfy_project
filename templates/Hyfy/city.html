@@ -20,15 +20,18 @@ ContactUs
         </div>
         
          <div class="genres">
-           
+             {% if city %}
+               {% for genres in genres %}
              <div class="genre-box">
-                <h3 class="genre-title">Dance</h3>
+                <h3 class="genre-title">{{ genres.genrename }} </h3>
                  <div id="genre1-details">
                 
                     <img src="/static/images/glasgow/Garage.jpg">
                 
                      <div id="genre1-info">
-                         <h3 id="genre1-rating">RATING: </h3>
+                         <h3 id="genre1-rating">RATING:
+                         
+                         </h3>
 
                          <div id="info">
                              <p> Address and stuff</p>
@@ -41,8 +44,10 @@ ContactUs
                  </div>
                  
              </div>
-            
+            {% endfor %}
+            {% endif %}
              
+<!--
             <div class="genre-box">
              <h3 class="genre-title">Rock</h3>
                  <div id="genre1-details">
@@ -100,6 +105,7 @@ ContactUs
                      </div>
                  </div>
              </div>
+-->
         </div>
         </div>
 
