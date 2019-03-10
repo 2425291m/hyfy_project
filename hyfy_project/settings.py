@@ -160,7 +160,9 @@ SOCIAL_AUTH_SPOTIFY_SECRET = 'a536e1e7b77c49d5abaa6e39764c4cf9'
 SOCIAL_AUTH_SPOTIFY_SCOPE = ['user-read-email', 'user-library-read']
 LOGIN_REDIRECT_URL = '/releases'
 
-
 AUTHENTICATION_BACKENDS = (
-    'social_core.backends.spotify.SpotifyOAuth2',
+    ('django.contrib.auth.backends.ModelBackend'),
 )
+# AUTHENTICATION_BACKENDS = (
+#     'social_core.backends.spotify.SpotifyOAuth2',
+# )
