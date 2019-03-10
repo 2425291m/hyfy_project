@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
+
 # Create your models here.
 
 class City(models.Model):
@@ -58,6 +59,16 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return self.user.username
+
+# class SpotifyProfile(models.Model):
+#     spotifyUser = models.OneToOneField(UserProfile, on_delete=models.CASCADE)
+#     displayName = models.CharField(max_length=100, blank=True)
+#     spotifyURL = models.URLField(max_length=150, blank=True)
+#     #topArtists = SeparatedValuesField() #should we make artists an entity
+#     topGenres = SeparatedValuesField()
+    
+
+
 
 # @receiver(post_save, sender=User)
 # def create_user_profile(sender, instance, created, **kwargs):

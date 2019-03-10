@@ -1,0 +1,411 @@
+{
+  "items": [
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/7Ln80lUS6He07XvHI8qqHH"
+      },
+      "followers": {
+        "href": null,
+        "total": 7452726
+      },
+      "genres": [
+        "garage rock",
+        "indie rock",
+        "modern rock",
+        "permanent wave",
+        "rock",
+        "sheffield indie"
+      ],
+      "href": "https://api.spotify.com/v1/artists/7Ln80lUS6He07XvHI8qqHH",
+      "id": "7Ln80lUS6He07XvHI8qqHH",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ed0552e9746ed2bbf04ae4bcb5525700ca31522d",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/b435e99aa7f1e27db56b6a4dc9df85e5636b22d6",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/73c4e49abed008fe0c5e4f1437b8b486c7670ecd",
+          "width": 160
+        }
+      ],
+      "name": "Arctic Monkeys",
+      "popularity": 83,
+      "type": "artist",
+      "uri": "spotify:artist:7Ln80lUS6He07XvHI8qqHH"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/2DaxqgrOhkeH0fpeiQq2f4"
+      },
+      "followers": {
+        "href": null,
+        "total": 3678705
+      },
+      "genres": [
+        "britpop",
+        "madchester",
+        "permanent wave",
+        "rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/2DaxqgrOhkeH0fpeiQq2f4",
+      "id": "2DaxqgrOhkeH0fpeiQq2f4",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/2a8c10fe954e2038fb74251cba601a5594cc5878",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/87d18c79bbfdb1905bb202d200e1c191afc46aa5",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/b4d024ebb4863438b92a1b029bff7f9737263a57",
+          "width": 160
+        }
+      ],
+      "name": "Oasis",
+      "popularity": 79,
+      "type": "artist",
+      "uri": "spotify:artist:2DaxqgrOhkeH0fpeiQq2f4"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/70BYFdaZbEKbeauJ670ysI"
+      },
+      "followers": {
+        "href": null,
+        "total": 1792780
+      },
+      "genres": [
+        "alternative metal",
+        "nu metal",
+        "post-grunge",
+        "rap rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/70BYFdaZbEKbeauJ670ysI",
+      "id": "70BYFdaZbEKbeauJ670ysI",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/a0a141df4a705b15c35ba43d34bd2f617a51aa27",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/c39add1fbef07cbc396021bb77fd8e19558f1581",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/040b0d9a274232f654e8adc50b59ed65735fa017",
+          "width": 160
+        }
+      ],
+      "name": "Shinedown",
+      "popularity": 73,
+      "type": "artist",
+      "uri": "spotify:artist:70BYFdaZbEKbeauJ670ysI"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/1km0R7wy712AzLkA1WjKET"
+      },
+      "followers": {
+        "href": null,
+        "total": 465094
+      },
+      "genres": [
+        "indie rock",
+        "modern alternative rock",
+        "modern rock",
+        "rock",
+        "scottish rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/1km0R7wy712AzLkA1WjKET",
+      "id": "1km0R7wy712AzLkA1WjKET",
+      "images": [
+        {
+          "height": 1000,
+          "url": "https://i.scdn.co/image/b8d63b10d900e3b5a15210959ab9eb28bdf61f4a",
+          "width": 1000
+        },
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/4788577f1b4b879980d58ad1ad97891378a65339",
+          "width": 640
+        },
+        {
+          "height": 200,
+          "url": "https://i.scdn.co/image/bbb2737a6c9c31732b7c8b2748f4dc28514e67b7",
+          "width": 200
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/5c007424928a989f795ebd2d6145b3c293903114",
+          "width": 64
+        }
+      ],
+      "name": "Biffy Clyro",
+      "popularity": 62,
+      "type": "artist",
+      "uri": "spotify:artist:1km0R7wy712AzLkA1WjKET"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/7mnBLXK823vNxN3UWB7Gfz"
+      },
+      "followers": {
+        "href": null,
+        "total": 2685275
+      },
+      "genres": [
+        "alternative rock",
+        "blues-rock",
+        "garage rock",
+        "indie rock",
+        "modern blues rock",
+        "modern rock",
+        "punk blues",
+        "rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/7mnBLXK823vNxN3UWB7Gfz",
+      "id": "7mnBLXK823vNxN3UWB7Gfz",
+      "images": [
+        {
+          "height": 667,
+          "url": "https://i.scdn.co/image/d9c6db5cc59db589396be9a10c074311e327e35d",
+          "width": 1000
+        },
+        {
+          "height": 427,
+          "url": "https://i.scdn.co/image/cdbeb38203304cc867653986feca753a6f06864c",
+          "width": 640
+        },
+        {
+          "height": 133,
+          "url": "https://i.scdn.co/image/15de21342d3e93ecfb05ca00b2203133dfb13d89",
+          "width": 200
+        },
+        {
+          "height": 43,
+          "url": "https://i.scdn.co/image/3741da5cae72ef8bb550675af6faf5dd50796833",
+          "width": 64
+        }
+      ],
+      "name": "The Black Keys",
+      "popularity": 73,
+      "type": "artist",
+      "uri": "spotify:artist:7mnBLXK823vNxN3UWB7Gfz"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/1hzfo8twXdOegF3xireCYs"
+      },
+      "followers": {
+        "href": null,
+        "total": 1051853
+      },
+      "genres": [
+        "german pop"
+      ],
+      "href": "https://api.spotify.com/v1/artists/1hzfo8twXdOegF3xireCYs",
+      "id": "1hzfo8twXdOegF3xireCYs",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/483bd9108018d913d31d066e828e2bea96954eb6",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/feef5d11083e1bbeae8300c1d1620d960b4a001b",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/aca23f256daed02dbf671b5de92599475f1b3212",
+          "width": 160
+        }
+      ],
+      "name": "Milky Chance",
+      "popularity": 71,
+      "type": "artist",
+      "uri": "spotify:artist:1hzfo8twXdOegF3xireCYs"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/74ASZWbe4lXaubB36ztrGX"
+      },
+      "followers": {
+        "href": null,
+        "total": 3075004
+      },
+      "genres": [
+        "album rock",
+        "classic rock",
+        "folk",
+        "folk rock",
+        "folk-pop",
+        "mellow gold",
+        "rock",
+        "roots rock",
+        "singer-songwriter"
+      ],
+      "href": "https://api.spotify.com/v1/artists/74ASZWbe4lXaubB36ztrGX",
+      "id": "74ASZWbe4lXaubB36ztrGX",
+      "images": [
+        {
+          "height": 1263,
+          "url": "https://i.scdn.co/image/e8b81b4850f3374ecfc5c45eff323d17213dc6e4",
+          "width": 1000
+        },
+        {
+          "height": 808,
+          "url": "https://i.scdn.co/image/8a192bc60775e48300813c40b9e30aa6a39a925c",
+          "width": 640
+        },
+        {
+          "height": 253,
+          "url": "https://i.scdn.co/image/30e844bb9b6799119c208548a77ea4fccb8932c2",
+          "width": 200
+        },
+        {
+          "height": 81,
+          "url": "https://i.scdn.co/image/eb9532420f2358404b9635d8bd14f42ad36ae516",
+          "width": 64
+        }
+      ],
+      "name": "Bob Dylan",
+      "popularity": 75,
+      "type": "artist",
+      "uri": "spotify:artist:74ASZWbe4lXaubB36ztrGX"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/7dlqUnjoF2U2DkNDMhcgG4"
+      },
+      "followers": {
+        "href": null,
+        "total": 337027
+      },
+      "genres": [
+        "australian hip hop",
+        "australian pop",
+        "pop rap"
+      ],
+      "href": "https://api.spotify.com/v1/artists/7dlqUnjoF2U2DkNDMhcgG4",
+      "id": "7dlqUnjoF2U2DkNDMhcgG4",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/819d23dd2bfcc56bc39b0c3a1480d84dc5f48b2e",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/1e7e372c6b221e0d2d242e06df7278c92262ed09",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/b99158e117993355d5979d4413c3b6548a0292e6",
+          "width": 160
+        }
+      ],
+      "name": "Hilltop Hoods",
+      "popularity": 71,
+      "type": "artist",
+      "uri": "spotify:artist:7dlqUnjoF2U2DkNDMhcgG4"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/0RqtSIYZmd4fiBKVFqyIqD"
+      },
+      "followers": {
+        "href": null,
+        "total": 2117742
+      },
+      "genres": [
+        "modern rock",
+        "pop punk",
+        "post-grunge",
+        "rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/0RqtSIYZmd4fiBKVFqyIqD",
+      "id": "0RqtSIYZmd4fiBKVFqyIqD",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/77c0b320fcd21be3329a0b2251409a2081247b57",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/e45c3f34b1a88245f5c8ef16c5b9fb6b0fe1c8a9",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/731ed9a97b37aa46ee522317ede95895c3f3ec89",
+          "width": 160
+        }
+      ],
+      "name": "Thirty Seconds To Mars",
+      "popularity": 72,
+      "type": "artist",
+      "uri": "spotify:artist:0RqtSIYZmd4fiBKVFqyIqD"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3YQKmKGau1PzlVlkL1iodx"
+      },
+      "followers": {
+        "href": null,
+        "total": 11892012
+      },
+      "genres": [
+        "pop punk",
+        "rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/3YQKmKGau1PzlVlkL1iodx",
+      "id": "3YQKmKGau1PzlVlkL1iodx",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/f8e28a81feb9baa0fbc3d69e12587755745a122d",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/a7874e7d94d92b71b8c39d41eb674b4dc66f5941",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/f550532cbacaf6b0ff00339e5ae7e408c51ec969",
+          "width": 160
+        }
+      ],
+      "name": "Twenty One Pilots",
+      "popularity": 86,
+      "type": "artist",
+      "uri": "spotify:artist:3YQKmKGau1PzlVlkL1iodx"
+    }
+  ],
+  "total": 50,
+  "limit": 10,
+  "offset": 0,
+  "previous": null,
+  "href": "https://api.spotify.com/v1/me/top/artists?limit=10&offset=0&time_range=long_term",
+  "next": "https://api.spotify.com/v1/me/top/artists?limit=10&offset=10&time_range=long_term"
+}

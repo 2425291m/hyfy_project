@@ -1,0 +1,397 @@
+{
+  "items": [
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/4WjeQi9wm84lYTIWZ95QoM"
+      },
+      "followers": {
+        "href": null,
+        "total": 50377
+      },
+      "genres": [
+        "alternative emo",
+        "anthem emo",
+        "modern alternative rock",
+        "uk pop punk"
+      ],
+      "href": "https://api.spotify.com/v1/artists/4WjeQi9wm84lYTIWZ95QoM",
+      "id": "4WjeQi9wm84lYTIWZ95QoM",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/e917d3cd075acab70d278f82b997ea44239271f0",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/2e6df9230a8b993c8a12d595d6b41a6cbeb7ffd4",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/8c9cfab89b8272db54b1fb091baa3163cd18ef36",
+          "width": 160
+        }
+      ],
+      "name": "Boston Manor",
+      "popularity": 52,
+      "type": "artist",
+      "uri": "spotify:artist:4WjeQi9wm84lYTIWZ95QoM"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/2fgl3me4n9diODTrVfruF3"
+      },
+      "followers": {
+        "href": null,
+        "total": 84512
+      },
+      "genres": [
+        "alternative emo",
+        "anthem emo",
+        "dreamo",
+        "emo",
+        "melodic hardcore",
+        "modern rock",
+        "philly indie",
+        "pop punk",
+        "progressive post-hardcore",
+        "screamo"
+      ],
+      "href": "https://api.spotify.com/v1/artists/2fgl3me4n9diODTrVfruF3",
+      "id": "2fgl3me4n9diODTrVfruF3",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/94a31d2152e03f0c903b0a2c63f6f409a64a6778",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/bd3e6f8930b050a910617b3ff4a8be0b4370e58b",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/1c222e1f37e606677864c2be33aa6c13a9633b8d",
+          "width": 160
+        }
+      ],
+      "name": "Balance And Composure",
+      "popularity": 49,
+      "type": "artist",
+      "uri": "spotify:artist:2fgl3me4n9diODTrVfruF3"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/5LyRnL0rysObxDRxzSfV1z"
+      },
+      "followers": {
+        "href": null,
+        "total": 80149
+      },
+      "genres": [
+        "alternative emo",
+        "anthem emo",
+        "canadian hardcore",
+        "canadian metal",
+        "death core",
+        "deep melodic metalcore",
+        "melodic hardcore",
+        "melodic metalcore",
+        "metalcore",
+        "screamo"
+      ],
+      "href": "https://api.spotify.com/v1/artists/5LyRnL0rysObxDRxzSfV1z",
+      "id": "5LyRnL0rysObxDRxzSfV1z",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/51002ea5536f7c1cbd0ccfaf1cc63d79c719d96b",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/0839ede7d11c3103565db5f1fe9b09b6b9930aca",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/1da7dea0612571b521c180113edd0572735c7060",
+          "width": 160
+        }
+      ],
+      "name": "Counterparts",
+      "popularity": 50,
+      "type": "artist",
+      "uri": "spotify:artist:5LyRnL0rysObxDRxzSfV1z"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/7KqVvL7NOdUWyQg2B63cck"
+      },
+      "followers": {
+        "href": null,
+        "total": 24726
+      },
+      "genres": [
+        "anthem emo",
+        "melodic hardcore"
+      ],
+      "href": "https://api.spotify.com/v1/artists/7KqVvL7NOdUWyQg2B63cck",
+      "id": "7KqVvL7NOdUWyQg2B63cck",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/34dd61eacae7eab3c31fbaa3af63ce1826fc77db",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/8d4d4302ee3eead85985ba22dcba359316ee8e23",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/537bb10bad873c2b06659a5cdbd531c6b761c35a",
+          "width": 160
+        }
+      ],
+      "name": "Casey",
+      "popularity": 43,
+      "type": "artist",
+      "uri": "spotify:artist:7KqVvL7NOdUWyQg2B63cck"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/5fEKZRCUa0JApec5Xy095q"
+      },
+      "followers": {
+        "href": null,
+        "total": 128954
+      },
+      "genres": [
+        "alternative emo",
+        "anthem emo",
+        "emo",
+        "modern alternative rock",
+        "pop punk"
+      ],
+      "href": "https://api.spotify.com/v1/artists/5fEKZRCUa0JApec5Xy095q",
+      "id": "5fEKZRCUa0JApec5Xy095q",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/3a7e9dcef928dac02ff15312874a487b58210a55",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/0967d963928298659f46d491aac6f66b93487e7f",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/6de95ab6f7de5ef9594f51173eeb082843c7cb18",
+          "width": 160
+        }
+      ],
+      "name": "Moose Blood",
+      "popularity": 54,
+      "type": "artist",
+      "uri": "spotify:artist:5fEKZRCUa0JApec5Xy095q"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/1lKZzN2d4IqiEYxyECIEHI"
+      },
+      "followers": {
+        "href": null,
+        "total": 17376
+      },
+      "genres": [
+        "alternative emo",
+        "anthem emo",
+        "emo"
+      ],
+      "href": "https://api.spotify.com/v1/artists/1lKZzN2d4IqiEYxyECIEHI",
+      "id": "1lKZzN2d4IqiEYxyECIEHI",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/d9ced0fa00c299bc26115377f6b309053a285951",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/150cb9e362f59cfe5eb4a48b15a017ce4b88b5ab",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/5e02c109a8d398c26d6f42b1cd3872ff63a3408d",
+          "width": 160
+        }
+      ],
+      "name": "Hot Mulligan",
+      "popularity": 48,
+      "type": "artist",
+      "uri": "spotify:artist:1lKZzN2d4IqiEYxyECIEHI"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/15UsOTVnJzReFVN1VCnxy4"
+      },
+      "followers": {
+        "href": null,
+        "total": 11192958
+      },
+      "genres": [
+        "emo rap",
+        "miami hip hop"
+      ],
+      "href": "https://api.spotify.com/v1/artists/15UsOTVnJzReFVN1VCnxy4",
+      "id": "15UsOTVnJzReFVN1VCnxy4",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/80eeb2600b7b7eddbef44bcc1fbc87aac9ab2e59",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/3aae68e363871095051f421dff0203cb9084805b",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/b296f763e7f305e51ce70da0955f290b3c038b6b",
+          "width": 160
+        }
+      ],
+      "name": "XXXTENTACION",
+      "popularity": 95,
+      "type": "artist",
+      "uri": "spotify:artist:15UsOTVnJzReFVN1VCnxy4"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/2cFrymmkijnjDg9SS92EPM"
+      },
+      "followers": {
+        "href": null,
+        "total": 1899080
+      },
+      "genres": [
+        "pop",
+        "pop rap"
+      ],
+      "href": "https://api.spotify.com/v1/artists/2cFrymmkijnjDg9SS92EPM",
+      "id": "2cFrymmkijnjDg9SS92EPM",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/e578851857f939e5d18f045dc8c0340aec0cc81a",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/16e7395e6619a47682ccf5b2d292781873644129",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/adfecf6105638876c5e003bfedf378766ecd5623",
+          "width": 160
+        }
+      ],
+      "name": "blackbear",
+      "popularity": 81,
+      "type": "artist",
+      "uri": "spotify:artist:2cFrymmkijnjDg9SS92EPM"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/1kkyfIopIiVvaPHHlbsfac"
+      },
+      "followers": {
+        "href": null,
+        "total": 63563
+      },
+      "genres": [
+        "alternative emo",
+        "anthem emo",
+        "emo",
+        "midwest emo",
+        "modern alternative rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/1kkyfIopIiVvaPHHlbsfac",
+      "id": "1kkyfIopIiVvaPHHlbsfac",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/b76d00be2c230d3a649cc7a827f3b87ab6c1563f",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/74d80391b4b05ca425ce7743b32a2b98484a6036",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/318a16f5da5565d6e8374ae9d63c0b5e56e35920",
+          "width": 160
+        }
+      ],
+      "name": "Movements",
+      "popularity": 55,
+      "type": "artist",
+      "uri": "spotify:artist:1kkyfIopIiVvaPHHlbsfac"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/2TM0qnbJH4QPhGMCdPt7fH"
+      },
+      "followers": {
+        "href": null,
+        "total": 360648
+      },
+      "genres": [
+        "anthem emo",
+        "emo",
+        "pop punk",
+        "uk pop punk"
+      ],
+      "href": "https://api.spotify.com/v1/artists/2TM0qnbJH4QPhGMCdPt7fH",
+      "id": "2TM0qnbJH4QPhGMCdPt7fH",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/f57b0d367a631d4bc617a2e28076faeac9ce9ee5",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/5521e69845a3838ed406114dd6517ad428638a07",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/d3e141fbc51ff18551f6f19623e118f3713f2f80",
+          "width": 160
+        }
+      ],
+      "name": "Neck Deep",
+      "popularity": 65,
+      "type": "artist",
+      "uri": "spotify:artist:2TM0qnbJH4QPhGMCdPt7fH"
+    }
+  ],
+  "total": 50,
+  "limit": 10,
+  "offset": 0,
+  "href": "https://api.spotify.com/v1/me/top/artists?limit=10&offset=0&time_range=long_term",
+  "previous": null,
+  "next": "https://api.spotify.com/v1/me/top/artists?limit=10&offset=10&time_range=long_term"
+}

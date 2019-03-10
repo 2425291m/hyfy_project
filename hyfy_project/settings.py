@@ -43,7 +43,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'hyfy',
+    'social_django',
 ]
+
+SOCIAL_AUTH_URL_NAMESPACE = 'social'
 
 
 MIDDLEWARE = [
@@ -151,3 +154,13 @@ LOGIN_URL = '/accounts/login/'
 # The page users are directed to if they are not logged in,
 # and are trying to access pages requiring authentication
 # LOGIN_URL = '/accounts/login/'
+
+SOCIAL_AUTH_SPOTIFY_KEY = '294156b84c3a4659838991a3ebec94e2'
+SOCIAL_AUTH_SPOTIFY_SECRET = 'a536e1e7b77c49d5abaa6e39764c4cf9'
+SOCIAL_AUTH_SPOTIFY_SCOPE = ['user-read-email', 'user-library-read']
+LOGIN_REDIRECT_URL = '/releases'
+
+
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.spotify.SpotifyOAuth2',
+)

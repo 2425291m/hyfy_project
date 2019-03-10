@@ -1,0 +1,406 @@
+{
+  "items": [
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/1hJuGCUpefX24GFmss9bjH"
+      },
+      "followers": {
+        "href": null,
+        "total": 256352
+      },
+      "genres": [
+        "folk-pop",
+        "scottish singer-songwriter"
+      ],
+      "href": "https://api.spotify.com/v1/artists/1hJuGCUpefX24GFmss9bjH",
+      "id": "1hJuGCUpefX24GFmss9bjH",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/3ebd5c1b72eddf4eccac3743358421a930885433",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/fce4b21021000484bd4eac43b2cbe53e114b77c5",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/08e4c3b355127378b05b1888ec4279ff54a7e647",
+          "width": 160
+        }
+      ],
+      "name": "Amy Macdonald",
+      "popularity": 60,
+      "type": "artist",
+      "uri": "spotify:artist:1hJuGCUpefX24GFmss9bjH"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/1HY2Jd0NmPuamShAr6KMms"
+      },
+      "followers": {
+        "href": null,
+        "total": 6711903
+      },
+      "genres": [
+        "dance pop",
+        "pop"
+      ],
+      "href": "https://api.spotify.com/v1/artists/1HY2Jd0NmPuamShAr6KMms",
+      "id": "1HY2Jd0NmPuamShAr6KMms",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/6fdeaf010a560e24ed9fdfab939dd0ab01d3d32c",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab1f49b3c51613a517e01eae5173fde2b3fdabaa",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/4fb4cec0ed27f5e933f3ca8e8e2410b0b3b52623",
+          "width": 160
+        }
+      ],
+      "name": "Lady Gaga",
+      "popularity": 90,
+      "type": "artist",
+      "uri": "spotify:artist:1HY2Jd0NmPuamShAr6KMms"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/7x5rK9BClDQ8wmCkYAGsQp"
+      },
+      "followers": {
+        "href": null,
+        "total": 735394
+      },
+      "genres": [
+        "british soul",
+        "folk-pop",
+        "neo mellow",
+        "neo soul",
+        "scottish singer-songwriter"
+      ],
+      "href": "https://api.spotify.com/v1/artists/7x5rK9BClDQ8wmCkYAGsQp",
+      "id": "7x5rK9BClDQ8wmCkYAGsQp",
+      "images": [
+        {
+          "height": 600,
+          "url": "https://i.scdn.co/image/7e1d6d8856af16a2be2814b98831f4014c41eeef",
+          "width": 450
+        },
+        {
+          "height": 267,
+          "url": "https://i.scdn.co/image/8e9f1df95831197765b0f2de64bfa321f6c9fbce",
+          "width": 200
+        },
+        {
+          "height": 85,
+          "url": "https://i.scdn.co/image/e32c2bb89f162a95139622602172c53f4e8f4b57",
+          "width": 64
+        }
+      ],
+      "name": "Paolo Nutini",
+      "popularity": 66,
+      "type": "artist",
+      "uri": "spotify:artist:7x5rK9BClDQ8wmCkYAGsQp"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/6eUKZXaKkcviH0Ku9w2n3V"
+      },
+      "followers": {
+        "href": null,
+        "total": 40827148
+      },
+      "genres": [
+        "pop",
+        "uk pop"
+      ],
+      "href": "https://api.spotify.com/v1/artists/6eUKZXaKkcviH0Ku9w2n3V",
+      "id": "6eUKZXaKkcviH0Ku9w2n3V",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/f0370da3f52161b07a461b4be9a64d0adbfb498d",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/e21f791b600f04f9dd8ad2b6d9b3304a82e048ca",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/f39b705ba6b1070c77bce4e9c21dff5bac96f21c",
+          "width": 160
+        }
+      ],
+      "name": "Ed Sheeran",
+      "popularity": 91,
+      "type": "artist",
+      "uri": "spotify:artist:6eUKZXaKkcviH0Ku9w2n3V"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/1dfeR4HaWDbWqFHLkxsg1d"
+      },
+      "followers": {
+        "href": null,
+        "total": 13603220
+      },
+      "genres": [
+        "glam rock",
+        "rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/1dfeR4HaWDbWqFHLkxsg1d",
+      "id": "1dfeR4HaWDbWqFHLkxsg1d",
+      "images": [
+        {
+          "height": 806,
+          "url": "https://i.scdn.co/image/b040846ceba13c3e9c125d68389491094e7f2982",
+          "width": 999
+        },
+        {
+          "height": 516,
+          "url": "https://i.scdn.co/image/af2b8e57f6d7b5d43a616bd1e27ba552cd8bfd42",
+          "width": 640
+        },
+        {
+          "height": 161,
+          "url": "https://i.scdn.co/image/c06971e9ff81696699b829484e3be165f4e64368",
+          "width": 200
+        },
+        {
+          "height": 52,
+          "url": "https://i.scdn.co/image/6dd0ffd270903d1884edf9058c49f58b03db893d",
+          "width": 64
+        }
+      ],
+      "name": "Queen",
+      "popularity": 93,
+      "type": "artist",
+      "uri": "spotify:artist:1dfeR4HaWDbWqFHLkxsg1d"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/6vWDO969PvNqNYHIOW5v0m"
+      },
+      "followers": {
+        "href": null,
+        "total": 17637485
+      },
+      "genres": [
+        "dance pop",
+        "pop",
+        "post-teen pop",
+        "r&b"
+      ],
+      "href": "https://api.spotify.com/v1/artists/6vWDO969PvNqNYHIOW5v0m",
+      "id": "6vWDO969PvNqNYHIOW5v0m",
+      "images": [
+        {
+          "height": 1000,
+          "url": "https://i.scdn.co/image/673cd94546df0536954198867516fee18cee1605",
+          "width": 1000
+        },
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/8ce3e8ae21481b60e3fb2604384b82175a949603",
+          "width": 640
+        },
+        {
+          "height": 200,
+          "url": "https://i.scdn.co/image/ac2280a08e63bcb88f71bd3697fdc103b322ed9d",
+          "width": 200
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/4ad7f7740a04dee61cf4115cabbddad186def63d",
+          "width": 64
+        }
+      ],
+      "name": "Beyoncé",
+      "popularity": 85,
+      "type": "artist",
+      "uri": "spotify:artist:6vWDO969PvNqNYHIOW5v0m"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/5WUlDfRSoLAfcVSX1WnrxN"
+      },
+      "followers": {
+        "href": null,
+        "total": 10733656
+      },
+      "genres": [
+        "australian dance",
+        "australian pop",
+        "dance pop",
+        "pop"
+      ],
+      "href": "https://api.spotify.com/v1/artists/5WUlDfRSoLAfcVSX1WnrxN",
+      "id": "5WUlDfRSoLAfcVSX1WnrxN",
+      "images": [
+        {
+          "height": 1333,
+          "url": "https://i.scdn.co/image/652b6bb0dfaf8aa444f4414ee018699260e74306",
+          "width": 1000
+        },
+        {
+          "height": 853,
+          "url": "https://i.scdn.co/image/a82822ab211cbe28a0a1dbcb16902a1a8a2ea791",
+          "width": 640
+        },
+        {
+          "height": 267,
+          "url": "https://i.scdn.co/image/dd3e336d456172bbda56b543c5389e1490903a30",
+          "width": 200
+        },
+        {
+          "height": 85,
+          "url": "https://i.scdn.co/image/95a2aa98384b31336b8d56f8b470c45b12dcd550",
+          "width": 64
+        }
+      ],
+      "name": "Sia",
+      "popularity": 87,
+      "type": "artist",
+      "uri": "spotify:artist:5WUlDfRSoLAfcVSX1WnrxN"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/0SCbttzoZTnLFebDYmAWCm"
+      },
+      "followers": {
+        "href": null,
+        "total": 1007104
+      },
+      "genres": [
+        "hollywood",
+        "pop",
+        "post-teen pop",
+        "viral pop"
+      ],
+      "href": "https://api.spotify.com/v1/artists/0SCbttzoZTnLFebDYmAWCm",
+      "id": "0SCbttzoZTnLFebDYmAWCm",
+      "images": [
+        {
+          "height": 450,
+          "url": "https://i.scdn.co/image/5b5a95f260ac429405e871777e3c17c9126c30ad",
+          "width": 600
+        },
+        {
+          "height": 150,
+          "url": "https://i.scdn.co/image/446aee35047292c4ba3e57e83ef97e6a9ffea669",
+          "width": 200
+        },
+        {
+          "height": 48,
+          "url": "https://i.scdn.co/image/ba0a93f82502495617bc233f726b0debed5c43d9",
+          "width": 64
+        }
+      ],
+      "name": "Glee Cast",
+      "popularity": 74,
+      "type": "artist",
+      "uri": "spotify:artist:0SCbttzoZTnLFebDYmAWCm"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/4dpARuHxo51G3z768sgnrY"
+      },
+      "followers": {
+        "href": null,
+        "total": 14331489
+      },
+      "genres": [
+        "british soul",
+        "pop",
+        "uk pop"
+      ],
+      "href": "https://api.spotify.com/v1/artists/4dpARuHxo51G3z768sgnrY",
+      "id": "4dpARuHxo51G3z768sgnrY",
+      "images": [
+        {
+          "height": 1000,
+          "url": "https://i.scdn.co/image/ccbe7b4fef679f821988c78dbd4734471834e3d9",
+          "width": 1000
+        },
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/f8737f6fda048b45efe91f81c2bda2b601ae689c",
+          "width": 640
+        },
+        {
+          "height": 200,
+          "url": "https://i.scdn.co/image/df070ad127f62d682596e515ac69d5bef56e0897",
+          "width": 200
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/cbbdfb209cc38b2999b1882f42ee642555316313",
+          "width": 64
+        }
+      ],
+      "name": "Adele",
+      "popularity": 83,
+      "type": "artist",
+      "uri": "spotify:artist:4dpARuHxo51G3z768sgnrY"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/2WX2uTcsvV5OnS0inACecP"
+      },
+      "followers": {
+        "href": null,
+        "total": 2636141
+      },
+      "genres": [
+        "dance pop",
+        "neo mellow",
+        "pop"
+      ],
+      "href": "https://api.spotify.com/v1/artists/2WX2uTcsvV5OnS0inACecP",
+      "id": "2WX2uTcsvV5OnS0inACecP",
+      "images": [
+        {
+          "height": 1000,
+          "url": "https://i.scdn.co/image/b6feba3d55a45401b5ef463ba4c8b20d764e48af",
+          "width": 1000
+        },
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/1de4a0124740841da21bac08084fbf1161ec97ab",
+          "width": 640
+        },
+        {
+          "height": 200,
+          "url": "https://i.scdn.co/image/eaeb98ea55ed040da59575913c0d35bff7260139",
+          "width": 200
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/38bad69baea399ebb87f1882097dc441b24e9862",
+          "width": 64
+        }
+      ],
+      "name": "Birdy",
+      "popularity": 73,
+      "type": "artist",
+      "uri": "spotify:artist:2WX2uTcsvV5OnS0inACecP"
+    }
+  ],
+  "total": 50,
+  "limit": 10,
+  "offset": 0,
+  "href": "https://api.spotify.com/v1/me/top/artists?limit=10&offset=0&time_range=long_term",
+  "previous": null,
+  "next": "https://api.spotify.com/v1/me/top/artists?limit=10&offset=10&time_range=long_term"
+}

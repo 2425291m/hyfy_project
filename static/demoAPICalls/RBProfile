@@ -1,0 +1,15 @@
+{
+  "display_name": "rachelbirse",
+  "external_urls": {
+    "spotify": "https://open.spotify.com/user/rachelbirse"
+  },
+  "followers": {
+    "href": null,
+    "total": 10
+  },
+  "href": "https://api.spotify.com/v1/users/rachelbirse",
+  "id": "rachelbirse",
+  "images": [],
+  "type": "user",
+  "uri": "spotify:user:rachelbirse"
+}

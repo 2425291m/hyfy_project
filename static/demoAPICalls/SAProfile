@@ -1,0 +1,21 @@
+{
+  "display_name": "Simon Ascher",
+  "external_urls": {
+    "spotify": "https://open.spotify.com/user/1155290217"
+  },
+  "followers": {
+    "href": null,
+    "total": 14
+  },
+  "href": "https://api.spotify.com/v1/users/1155290217",
+  "id": "1155290217",
+  "images": [
+    {
+      "height": null,
+      "url": "https://scontent.xx.fbcdn.net/v/t1.0-1/p200x200/13731451_1338175586211026_7221566474875473153_n.jpg?_nc_cat=110&_nc_ht=scontent.xx&oh=3ebcd6a55acc45fd5d1d5314cc2d38e3&oe=5D15C00A",
+      "width": null
+    }
+  ],
+  "type": "user",
+  "uri": "spotify:user:1155290217"
+}

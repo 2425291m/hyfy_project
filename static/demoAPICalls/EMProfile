@@ -1,0 +1,15 @@
+{
+  "display_name": "euan_m108",
+  "external_urls": {
+    "spotify": "https://open.spotify.com/user/euan_m108"
+  },
+  "followers": {
+    "href": null,
+    "total": 0
+  },
+  "href": "https://api.spotify.com/v1/users/euan_m108",
+  "id": "euan_m108",
+  "images": [],
+  "type": "user",
+  "uri": "spotify:user:euan_m108"
+}

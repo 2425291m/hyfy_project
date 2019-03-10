@@ -1,0 +1,21 @@
+{
+  "display_name": "Michael Scott",
+  "external_urls": {
+    "spotify": "https://open.spotify.com/user/kappaccinoh"
+  },
+  "followers": {
+    "href": null,
+    "total": 9
+  },
+  "href": "https://api.spotify.com/v1/users/kappaccinoh",
+  "id": "kappaccinoh",
+  "images": [
+    {
+      "height": null,
+      "url": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=679455898786597&height=200&width=200&ext=1554196514&hash=AeTrxErR5RVJa5XW",
+      "width": null
+    }
+  ],
+  "type": "user",
+  "uri": "spotify:user:kappaccinoh"
+}
