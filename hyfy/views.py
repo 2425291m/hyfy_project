@@ -6,6 +6,7 @@ from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 from hyfy.models import City
+from hyfy.models import Venue
 
 # Create your views here.
 
@@ -39,7 +40,7 @@ def contact_us(request):
     response = render(request, 'hyfy/contact_us.html')
     return response
 
-def show_top_venues(request, city_name_slug):
+def show_city(request, city_name_slug):
 
     context_dict = {}
 
@@ -53,7 +54,7 @@ def show_top_venues(request, city_name_slug):
         context_dict['city'] = None
         context_dict['venues'] = None
 
-    return render(request,'hyfy/top_venues.html',context_dict)
+    return render(request,'hyfy/city.html',context_dict)
 
 def venue(request):
     response = render(request, 'hyfy/venue.html')
@@ -62,11 +63,6 @@ def venue(request):
 def show_venue(request):
 
     response = render(request, 'hyfy/venue.html')
-    return response
-
-def top_venues(request):
-
-    response = render(request, 'hyfy/top_venues.html')
     return response
 
 def user_login(request):
