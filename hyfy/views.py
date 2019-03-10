@@ -47,21 +47,40 @@ def show_city(request, city_name_slug):
     try:
         city = City.objects.get(slug=city_name_slug)
         # venues = Venue.obects. get top venues
-        venues = Venue.objects.filter(city=city)
         genres = Genre.objects.filter(city=city)
         # venue_list = Venue.objects.filter(genre=genres)
         # venue_list = venue_list.order_by('-likes')[:1]
+        venues = Venue.objects.filter(city=city)
+        rock = genres.filter(genrename="rock")
+        pop = genres.filter(genrename="pop")
+        dance = genres.filter(genrename="dance")
+        jazz = genres.filter(genrename="jazz")
 
+        top_rock = venues.filter(genre=rock).order_by('-likes')[:1]
+        top_pop = venues.filter(genre=pop).order_by('-likes')[:1]
+        top_dance = venues.filter(genre=dance).order_by('-likes')[:1]
+        top_jazz = venues.filter(genre=jazz).order_by('-likes')[:1]
+        
+        rock = top_rock.values('name')
+        pop = top_pop.values('name')
+        dance = top_dance.values('name')
+        jazz = top_jazz.values('name')
+        top_venues = {rock, pop, dance, jazz}
+        print(rock)
+        print(pop)
+        print(dance)
+        print(jazz)
         context_dict['venues'] = venues
         context_dict['city'] = city
         context_dict['genres'] = genres
+        context_dict['top_venues'] = top_venues
 
     except City.DoesNotExist:
         context_dict['city'] = None
         context_dict['venues'] = None
         context_dict['genres'] = None
 
-    return render(request,'hyfy/city.html',context_dict)
+    return render(request,'hyfy/city.html', context=context_dict)
 
 def venue(request):
     response = render(request, 'hyfy/venue.html')

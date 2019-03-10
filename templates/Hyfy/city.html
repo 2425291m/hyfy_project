@@ -21,9 +21,9 @@ ContactUs
         
          <div class="genres">
              {% if city %}
-               {% for genres in genres %}
+               {% for venues in top_venues %}
              <div class="genre-box">
-                <h3 class="genre-title">{{ genres.genrename }} </h3>
+                <h3 class="genre-title">{{ venues.name }}</h3>
                  <div id="genre1-details">
                 
                     <img src="/static/images/glasgow/Garage.jpg">
@@ -44,7 +44,8 @@ ContactUs
                  </div>
                  
              </div>
-            {% endfor %}
+             {% endfor %}
+            
             {% endif %}
              
 <!--
