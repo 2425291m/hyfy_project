@@ -20,34 +20,34 @@ class City(models.Model):
     def __str__(self):
         return self.name
 
-class Genre(models.Model):
-    name = models.CharField(max_length=36, unique=False)
-    genrename = models.CharField(max_length=36)
-    city = models.ForeignKey(City, on_delete=models.CASCADE)
+#class Genre(models.Model):
+#    name = models.CharField(max_length=36, unique=False)
+#    genrename = models.CharField(max_length=36)
+#    city = models.ForeignKey(City, on_delete=models.CASCADE)
     # slug = models.SlugField(unique=True)
 
-    def save(self, *args, **kwargs):
+#    def save(self, *args, **kwargs):
         # self.slug = slugify(self.name)
-        super(Genre, self).save(*args, **kwargs)
+#        super(Genre, self).save(*args, **kwargs)
 
-    class Meta:
-        verbose_name_plural = 'genres'  
+#    class Meta:
+#        verbose_name_plural = 'genres'  
 
-    def __str__(self):
-        return self.name
+#    def __str__(self):
+#        return self.name
 
 
 class Venue(models.Model):
     name = models.CharField(max_length=36, unique=True)
-    genre = models.ForeignKey(Genre, on_delete=models.CASCADE, related_name='genre_venue_set')
-    city = models.ForeignKey(Genre, on_delete=models.CASCADE, related_name='city_venue_set')
+    city = models.ForeignKey(City)
     likes = models.IntegerField(default=0)
     latitude = models.FloatField(default=0)
     longitude = models.FloatField(default=0)
+    genre = models.CharField(max_length=36, unique=False)
     
-    def save(self, *args, **kwargs):
-        self.slug = slugify(self.name)
-        super(City, self).save(*args, **kwargs)
+    #def save(self, *args, **kwargs):
+        #self.slug = slugify(self.name)
+    #    super(City, self).save(*args, **kwargs)
 
     class Meta:
         verbose_name_plural = 'venues' 

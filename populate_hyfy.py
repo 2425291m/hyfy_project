@@ -3,78 +3,54 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE','hyfy_project.settings')
 
 import django
 django.setup()
-from hyfy.models import City, Genre, Venue
+from hyfy.models import City, Venue
 
 def populate():
 
-    glarock_venues = [
-        {"name": "Oran Mor", "likes": 10, "lat": 55.8776, "long": 4.2898},
-        {"name": "Broadcast", "likes": 2, "lat": 55.8660, "long": 4.2691},
-    ]
+    glasgow_venues = [
+        {"name": "Oran Mor", "likes": 10, "lat": 55.8776, "long": 4.2898, "genre": "rock"},
+        {"name": "Broadcast", "likes": 2, "lat": 55.8660, "long": 4.2691, "genre": "rock"},
+        {"name": "The Blue Arrow", "likes": 3, "lat": 55.8616, "long": 4.2586, "genre": "pop"},
+        {"name": "The Garage", "likes": 100, "lat": 55.8661, "long": 4.2685, "genre": "dance"},
+        {"name": "Swing", "likes": 9, "lat": 55.8630, "long": 4.2581, "genre": "jazz"} ]
 
-    glapop_venues = [
-        {"name": "The Blue Arrow", "likes": 3, "lat": 55.8616, "long": 4.2586,}
-    ]
 
-    gladance_venues = [
-        {"name": "The Garage", "likes": 100, "lat": 55.8661, "long": 4.2685}
-    ]
+    edinburgh_venues = [
+        {"name": "The Jazz Bar", "likes": 15, "lat": 55.9481, "long": 3.1870, "genre": "jazz"},
+        {"name": "Hive", "likes": 200, "lat": 55.9496, "long": 3.1870, "genre": "dance"} ]
 
-    glajazz_venues = [
-        {"name": "Swing", "likes": 9, "lat": 55.8630, "long": 4.2581}
-    ]
-
-    genres = {"Glasgow_rock": {"venues": glarock_venues},
-        "Glasgow_pop": {"venues": glapop_venues},
-        "Glasgow_jazz": {"venues": glajazz_venues},
-        "Glasgow_dance": {"venues": glajazz_venues} }
-
-    glasgow_genres = [
-        {"name": "gla_rock", "genrename": "rock"},
-        {"name": "gla_pop", "genrename": "pop"},
-        {"name": "gla_dance", "genrename": "dance"},
-        {"name": "gla_jazz", "genrename": "jazz"} ]
-
-    edinburgh_genres = [
-        {"name": "edi_rock", "genrename": "rock"},
-        {"name": "edi_pop", "genrename": "pop"},
-        {"name": "edi_dance", "genrename": "dance"},
-        {"name": "edi_jazz", "genrename": "jazz"} ]
-
-    dundee_genres = [
-        {"name": "dun_rock", "genrename": "rock"},
-        {"name": "dun_pop", "genrename": "pop"},
-        {"name": "dun_dance", "genrename": "dance"},
-        {"name": "dun_jazz", "genrename": "jazz"} ]
+    dundee_venues = [
+        {"name": "DUSU", "likes": 300, "lat": 56.4578, "long": 2.9822, "genre": "pop"},
+        {"name": "Club Tropicana", "likes": 17, "lat": 56.4606, "long": 2.9771, "genre": "dance"} ]
     
-    cities = {"Glasgow": {"genres": glasgow_genres},
-        "Edinburgh": {"genres": edinburgh_genres},
-        "Dundee": {"genres": dundee_genres} }
+    cities = {"Glasgow": {"venues": glasgow_venues},
+        "Edinburgh": {"venues": edinburgh_venues},
+        "Dundee": {"venues": dundee_venues} }
     
     for city, city_data in cities.items():
         c = add_city(city)
-        for g, city_data in city_data["genres"]:
-            add_genre(g["name"], g["genrename"], c["name"])
-            for v in genres.items():
-                add_venue(v["name"], g["genrename"], g["city"], v["likes"], v["lat"], v["long"])
+        for v in city_data["venues"]:
+            add_venue(v["name"], c, v['likes'], v["lat"], v["long"], v["genre"])
         
 
-def add_genre(name, genrename, city):
-    g = Genre.objects.get_or_create(name=name, city=city)[0]
-    g.genrename = genrename
-    g.save()
-    return g
+#def add_genre(name, genrename, city):
+#    g = Genre.objects.get_or_create(name=name, city=city)[0]
+#    g.genrename = genrename
+#    g.save()
+#    return g
 
 def add_city(name):
     c = City.objects.get_or_create(name=name)[0]
     c.save()
     return c
 
-def add_venue(name, genre, city, likes, longitude, latitude):
-    v = Genre.objects.get_or_create(name=name, genre=genre, city=city)[0]
+def add_venue(name, city, likes, longitude, latitude, genre):
+    v = Venue.objects.get_or_create(city=city, name=name)[0]
     v.likes=likes
     v.longitude=longitude
     v.latitude=latitude
+    v.genre = genre
+    v.save()
     return v
 
 # Start execution here!
