@@ -15,6 +15,7 @@ urlpatterns = [
     url(r'^login/$', views.user_login, name='login'),
     url(r'^logout/$', views.user_logout, name='logout'),
     url(r'^venue/$', views.venue, name='venue'),
+    url(r'^show_venue/(?P<venue_name_slug>[\w\-]+)/$', views.show_venue, name='show_venue'),
     url(r'^oauth/', include('social_django.urls', namespace='social')),  # <--
 
     #    path('social/', include('social_django.urls')),

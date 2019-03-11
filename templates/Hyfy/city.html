@@ -1,6 +1,6 @@
 {% extends 'hyfy/header.html' %}
 {% block title_block %}
-ContactUs
+City
 {% endblock %}
     
 {% block links_block %} 
@@ -41,7 +41,9 @@ ContactUs
                      </div>
                      <div id="to-venue">
                          <h6>TO VENUE</h6>
-                         <a href="/hyfy/venue/{{ venues.name }}"> <i class="icon ion-md-arrow-forward"></i></a>
+                        <a href="/hyfy/show_venue/{{ venues.slug }}">
+                            
+                            <i class="icon ion-md-arrow-forward"></i></a>
                      </div>
                  </div>
                  

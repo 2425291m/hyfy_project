@@ -8,23 +8,24 @@ Venue
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 {% endblock %}
         
-{% block main_block %}           
+{% block main_block %}     
+        {% if venue %}
         <div id="genres2-navigation">
             
-<!--           <a href="/hyfy/city/{{ city.slug }}" id="back"><i class="icon ion-md-arrow-back"></i><h3> BACK TO TOP VENUES</h3></a>-->
+           <a href="/hyfy/city/{{ venue.city.slug }}" id="back"><i class="icon ion-md-arrow-back"></i><h3> BACK TO TOP VENUES</h3></a>
             
            
-            <div id="city"><h3 id="city-title">CITY TITLE</h3>
+            <div id="city"><h3 id="city-title">{{ venue.city }}</h3>
             </div>
         </div>
-                
+            
             <div id="genres2-center-column">
-                <h2 id="venue-name">VENUE NAME</h2>
+                <h2 id="venue-name">{{ venue.name }}</h2>
                 <div id="main-box">
                     <div id="top-row">
                         <div id="venue-picture">
                              <!--src="{{ MEDIA_URL }}{{ userprofile.picture }}" -->
-                            <img src="/static/images/glasgow/Garage.jpg" alt="{{selecteduser.username}}" />
+                            <img src="/static/images/venues/{{ venue.name }}.jpg">
                         </div>
                         <div id="venue-bio">
 
@@ -65,7 +66,7 @@ Venue
                     </div>
                 </div>           
             </div>
-        
+        {% endif %}
  <script>
 function myMap() {
 var mapProp= {

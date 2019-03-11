@@ -71,18 +71,20 @@ def show_city(request, city_name_slug):
 
     return render(request,'hyfy/city.html', context=context_dict)
 
-def venue(request, venue_name_slug):
+def venue(request):
+    response = render(request, 'hyfy/venue.html')
+    return response
+
+def show_venue(request, venue_name_slug):
 
     context_dict = {}
-
     try:
         venue = Venue.objects.get(slug=venue_name_slug)
         context_dict['venue'] = venue
-    except Venue.DoesNotExist:
+    except City.DoesNotExist:
         context_dict['venue'] = None
 
-    response = render(request, 'hyfy/venue.html', context_dict)
-    return response
+    return render(request,'hyfy/venue.html', context=context_dict)
 
 def user_login(request):
     response = render(request, 'hyfy/login.html')
