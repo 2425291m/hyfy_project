@@ -50,35 +50,28 @@ def show_city(request, city_name_slug):
         genres = Genre.objects.filter(city=city)
         # venue_list = Venue.objects.filter(genre=genres)
         # venue_list = venue_list.order_by('-likes')[:1]
-        venues = Venue.objects.filter(city=city)
+        all_venues = Venue.objects.filter(city=city)
         rock = genres.filter(genrename="rock")
         pop = genres.filter(genrename="pop")
         dance = genres.filter(genrename="dance")
         jazz = genres.filter(genrename="jazz")
 
-        top_rock = venues.filter(genre=rock).order_by('-likes')[:1]
-        top_pop = venues.filter(genre=pop).order_by('-likes')[:1]
-        top_dance = venues.filter(genre=dance).order_by('-likes')[:1]
-        top_jazz = venues.filter(genre=jazz).order_by('-likes')[:1]
+        top_rock = all_venues.filter(genre=rock).first()
+        top_pop = all_venues.filter(genre=pop).first()
+        top_dance = all_venues.filter(genre=dance).first()
+        top_jazz = all_venues.filter(genre=jazz).first()
         
-        rock = top_rock.values('name')
-        pop = top_pop.values('name')
-        dance = top_dance.values('name')
-        jazz = top_jazz.values('name')
-        top_venues = {rock, pop, dance, jazz}
-        print(rock)
-        print(pop)
-        print(dance)
-        print(jazz)
-        context_dict['venues'] = venues
+        top_venues = {top_rock, top_pop, top_dance, top_jazz}
+
+        context_dict['top_venues'] = top_venues
         context_dict['city'] = city
         context_dict['genres'] = genres
-        context_dict['top_venues'] = top_venues
 
     except City.DoesNotExist:
         context_dict['city'] = None
-        context_dict['venues'] = None
+        context_dict['top_venues'] = None
         context_dict['genres'] = None
+        context_dict['top_venues'] = None
 
     return render(request,'hyfy/city.html', context=context_dict)
 

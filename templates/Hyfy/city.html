@@ -23,7 +23,9 @@ ContactUs
              {% if city %}
                {% for venues in top_venues %}
              <div class="genre-box">
-                <h3 class="genre-title">{{ venues.name }}</h3>
+                <h3 class="genre-title">
+                 {{ venues.genre.genrename }} - {{ venues.name }}
+                 </h3>
                  <div id="genre1-details">
                 
                     <img src="/static/images/glasgow/Garage.jpg">
@@ -39,7 +41,7 @@ ContactUs
                      </div>
                      <div id="to-venue">
                          <h6>TO VENUE</h6>
-                         <a href="{% url 'venue' %}"> <i class="icon ion-md-arrow-forward"></i></a>
+                         <a href="/hyfy/venue"> <i class="icon ion-md-arrow-forward"></i></a>
                      </div>
                  </div>
                  
