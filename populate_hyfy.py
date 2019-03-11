@@ -36,12 +36,12 @@ def populate():
     edirock_venues = [
         {"name": "Electric Circus", "likes": 20, "lat": 55.9512, "long": 3.1900},
         {"name": "Bannerman's Bar", "likes": 1, "lat": 55.9488, "long": 3.1866},
-        {"name": "edirockPH", "likes": 10, "lat": 55.8776, "long": 4.2898},
+        {"name": "The Bongo House", "likes": 10, "lat": 55.9482, "long": 3.1922},
     ]
 
     edipop_venues = [
         {"name": "The Queen's Hall", "likes": 4, "lat": 55.9412, "long": 3.1816},
-        {"name": "Strasmash Live Music Bar", "likes": 17, "lat": 55.9486, "long": 3.1878},
+        {"name": "Stramash Live Music Bar", "likes": 17, "lat": 55.9486, "long": 3.1878},
         {"name": "La Belle Angele", "likes": 5, "lat": 55.9485, "long": 3.1875},
     ]
 
