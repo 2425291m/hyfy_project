@@ -22,17 +22,17 @@
             {% if user.is_authenticated %}
             <div class="btn-signupin">
                  <div class="signin">
-                     <a href="{% url 'logout' %}">Logout</a>
+                     <a href="{% url 'auth_logout' %}?next=/hyfy/">Logout</a>
                  </div>
             </div>
             {% else %}
             <div class="btn-signupin">
                  <div class="signin">
-                     <a href="{% url 'login' %}"class="signinButton">sign in</a>
+                     <a href="{% url 'auth_login' %}" class="signinButton">sign in</a>
                  </div>
 
                  <div class="signup">
-                     <a href="{% url 'register' %}"class="signupButton">sign up</a>
+                     <a href="{% url 'registration_register' %}"class="signupButton">sign up</a>
                  </div>
             </div>
             {% endif %}

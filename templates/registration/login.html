@@ -1,0 +1,25 @@
+{% extends 'hyfy/header.html' %}
+
+{% block title_block %}
+    Login
+{% endblock %}
+
+{% block links_block %}
+<link rel="stylesheet" type="text/css" href="/static/CSS/login.css"> 
+{% endblock %}
+
+{% block main_block %}
+<h1>Login</h1> <a href="{% url "social:begin" "spotify" %}"><h3>Spotify</h3></a>
+<form method="post" action=".">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Log in" />
+    <input type="hidden" name="next" value="{{ next }}" />
+</form>
+<p>
+    Not a member?
+    <a href="{% url 'registration_register' %}">Register</a>
+</p>
+
+
+{% endblock %}

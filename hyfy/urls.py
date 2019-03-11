@@ -10,14 +10,12 @@ urlpatterns = [
     url(r'^about_us/$', views.about_us, name='about_us'),
     url(r'^faq/$', views.faq, name='faq'),
     url(r'^contact_us/$', views.contact_us, name='contact_us'),
-    url(r'^account/$', views.account, name='account'),
-    url(r'^register/$', views.register, name='register'),
-    url(r'^login/$', views.user_login, name='login'),
-    url(r'^logout/$', views.user_logout, name='logout'),
     url(r'^venue/$', views.venue, name='venue'),
     url(r'^show_venue/(?P<venue_name_slug>[\w\-]+)/$', views.show_venue, name='show_venue'),
+    url(r'^register_profile/$', views.register_profile, name='register_profile'),
+    url(r'^account/$', views.account, name='account'),
     url(r'^oauth/', include('social_django.urls', namespace='social')),  # <--
-
+    
     #    path('social/', include('social_django.urls')),
     # url(r'^category/(?P<category_name_slug>[\w\-]+)/$', views.show_category, name='show_category'),
     # url(r'^add_category/$', views.add_category, name='add_category'),

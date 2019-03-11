@@ -30,4 +30,6 @@ urlpatterns = [
     url(r'^hyfy/', include('hyfy.urls')),
     # above maps any URLs starting with hyfy/
     url(r'^admin/', admin.site.urls),
+    url(r'^accounts/register/$', views.HyfyRegistrationView.as_view(), name='registration_register'),
+    url(r'^accounts/', include('registration.backends.simple.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

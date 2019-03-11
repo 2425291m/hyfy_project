@@ -4,10 +4,12 @@ from django.contrib.auth import authenticate, login
 from django.http import HttpResponseRedirect, HttpResponse
 from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required
+from django.shortcuts import redirect
 from django.contrib.auth import logout
 from hyfy.models import City
 from hyfy.models import Venue
 from hyfy.models import Genre
+from registration.backends.simple.views import RegistrationView
 # Create your views here.
 
 
@@ -147,3 +149,24 @@ def user_login(request):
 def user_logout(request):
     logout(request)
     return HttpResponseRedirect(reverse('index'))
+
+@login_required
+def register_profile(request):
+    form = UserProfileForm()
+    if request.method == 'POST':
+        form = UserProfileForm(request.POST, request.FILES)
+        if form.is_valid():
+            user_profile = form.save(commit=False)
+            user_profile.user = request.user
+            user_profile.save()
+
+            return redirect('index')
+        else:
+            print(form.errors)
+
+    context_dict = {'form':form}
+    return render(request, 'hyfy/profile_registration.html', context_dict)
+
+class HyfyRegistrationView(RegistrationView):
+    def get_success_url(self, user):
+        return reverse('register_profile')

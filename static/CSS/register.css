@@ -1,4 +1,18 @@
 
 #registration-box {
-    color: red;
+    width: 70%;
+    height: 73vh;
+    margin: 0 auto; 
+    margin-top: 2vh;
+    background-color: #fff;
+    resize: none;
+    padding: 1%;
+}
+
+#user_form {
+    resize: none;
+}
+
+#registration-elements {
+ 
 }
