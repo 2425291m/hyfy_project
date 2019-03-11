@@ -54,6 +54,11 @@ class Venue(models.Model):
     likes = models.IntegerField(default=0)
     latitude = models.FloatField(default=0)
     longitude = models.FloatField(default=0)
+    slug = models.SlugField()
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name)
+        super(Venue, self).save(*args, **kwargs)
 
     class Meta:
         verbose_name_plural = 'venues' 

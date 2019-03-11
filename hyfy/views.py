@@ -46,10 +46,7 @@ def show_city(request, city_name_slug):
 
     try:
         city = City.objects.get(slug=city_name_slug)
-        # venues = Venue.obects. get top venues
         genres = Genre.objects.filter(city=city)
-        # venue_list = Venue.objects.filter(genre=genres)
-        # venue_list = venue_list.order_by('-likes')[:1]
         all_venues = Venue.objects.filter(city=city)
         rock = genres.filter(genrename="rock")
         pop = genres.filter(genrename="pop")
@@ -71,17 +68,20 @@ def show_city(request, city_name_slug):
         context_dict['city'] = None
         context_dict['top_venues'] = None
         context_dict['genres'] = None
-        context_dict['top_venues'] = None
 
     return render(request,'hyfy/city.html', context=context_dict)
 
-def venue(request):
-    response = render(request, 'hyfy/venue.html')
-    return response
+def venue(request, venue_name_slug):
 
-def show_venue(request):
+    context_dict = {}
 
-    response = render(request, 'hyfy/venue.html')
+    try:
+        venue = Venue.objects.get(slug=venue_name_slug)
+        context_dict['venue'] = venue
+    except Venue.DoesNotExist:
+        context_dict['venue'] = None
+
+    response = render(request, 'hyfy/venue.html', context_dict)
     return response
 
 def user_login(request):
