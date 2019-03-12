@@ -24,7 +24,6 @@ Venue
                 <div id="main-box">
                     <div id="top-row">
                         <div id="venue-picture">
-                             <!--src="{{ MEDIA_URL }}{{ userprofile.picture }}" -->
                             <img src="/static/images/venues/{{ venue.name }}.jpg">
                         </div>
                         <div id="venue-bio">
@@ -52,7 +51,7 @@ Venue
                             <div id="reviewer">
                          <!--src="{{ MEDIA_URL }}{{ userprofile.picture }}" -->
                                 <div id="picture-box">
-                                <img id ="reviewer-picture" src="/media/profile-pictures/Barry.png" alt="{{selecteduser.username}}" />
+                                <img id ="reviewer-picture" src="/media/profile-pictures/Barry.png" alt="dunno" />
                                 </div>
                                 <h4 id="reviewer-details">Barry Galbraith - { date }</h4>
                             </div>
@@ -74,7 +73,7 @@ var mapProp= {
   zoom:5,
 };
 var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-var myLocation = new google.maps.LatLng(parseFloat(33.7238029), parseFloat(-117.267504, 17));
+var myLocation = new google.maps.LatLng(parseFloat({{33.7238029}}), parseFloat(-117.267504, 17));
 }
 </script>
 

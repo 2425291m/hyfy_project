@@ -9,11 +9,12 @@ urlpatterns = [
     url(r'^city/(?P<city_name_slug>[\w\-]+)/$', views.show_city, name='show_city'),
     url(r'^about_us/$', views.about_us, name='about_us'),
     url(r'^faq/$', views.faq, name='faq'),
+    url(r'^account/(?P<username>[\w\-]+)/$', views.account, name='account'),
+    # url(r'^profile/(?P<username>[\w\-]+)/$', views.profile, name='profile'),
     url(r'^contact_us/$', views.contact_us, name='contact_us'),
     url(r'^venue/$', views.venue, name='venue'),
     url(r'^(?P<city_name_slug>[\w\-]+)/(?P<venue_name_slug>[\w\-]+)/$', views.show_venue, name='show_venue'),
     url(r'^register_profile/$', views.register_profile, name='register_profile'),
-    url(r'^account/$', views.account, name='account'),
     url(r'^oauth/', include('social_django.urls', namespace='social')),  # <--
     
     #    path('social/', include('social_django.urls')),

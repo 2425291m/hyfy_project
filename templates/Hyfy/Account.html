@@ -13,8 +13,8 @@ AboutUs
                 <div id="pofile-box">
                     <div id="top-section">
                     <div id="profile-picture">
-                     <!--src="{{ MEDIA_URL }}{{ userprofile.picture }}" -->
-                        <img src="/media/profile-pictures/Barry.png" alt="{{selecteduser.username}}" />
+<!--                     userprofile.picture below is not rading the userprofile -->
+                        <img src="{{ MEDIA_URL }}{{ userprofile.picture }}" />
                     </div>
                     <div id="account-name">
                    {{ user.username }}
@@ -24,7 +24,7 @@ AboutUs
                     </div>
                     <div class="block">
                         <label id="email-address">E-Mail :</label>
-                        <input type="text" id="email-text" value="ladiesMan@hotmail.com"  readonly>
+                        <input type="text" id="email-text" value={{ user.email }} readonly>
                     </div>
                     <div class="block">
                         <label id="spotify-username">Spotify Username :</label>
@@ -50,7 +50,7 @@ AboutUs
                     <div class="block">
                         <label id="bio">BIO :</label>
                         <div id="bio-box">
-                        <p></p></div>
+                        <p>{{ userprofile.bio }}</p></div>
                     </div>
                 </div>
 
