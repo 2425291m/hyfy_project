@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.models import User
-from hyfy.models import UserProfile
+from hyfy.models import UserProfile, Review
 
 class UserForm(forms.ModelForm):
 	password = forms.CharField(widget=forms.PasswordInput())
@@ -15,3 +15,7 @@ class UserProfileForm(forms.ModelForm):
 		model = UserProfile
 		exclude = ('user',)
 
+class ReviewForm(forms.ModelForm):
+	class Meta:
+        model = Review
+        fields = ('user_name', 'rating', 'comment')

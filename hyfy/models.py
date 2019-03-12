@@ -82,6 +82,20 @@ class UserProfile(models.Model):
     def __str__(self):
         return self.user.username
 
+class Review(models.Model):
+    RATING_CHOICES = (
+        (1, '1'),
+        (2, '2'),
+        (3, '3'),
+        (4, '4'),
+        (5, '5'),
+    )
+    venue = models.ForeignKey(Venue)
+    user_name = models.ForeignKey(UserProfile)
+    pub_date = models.DateTimeField('date published')
+    comment = models.CharField(max_length=200)
+    rating = models.IntegerField(choices=RATING_CHOICES)
+
 
 # user = models.OneToOneField(User, on_delete=models.CASCADE)
 # bio = models.TextField(max_length=500, blank=True)

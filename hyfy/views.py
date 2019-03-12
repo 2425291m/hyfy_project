@@ -142,6 +142,27 @@ def user_login(request):
     else:
         return render(request, 'hyfy/login.html', {})
 
+def review(request, Venue, User):
+    venue = get_object_or_404(Venue)
+    user_name = get_object_or_404(User)
+    form = ReviewForm(request.POST)
+    if form.is_valid():
+        rating = form.cleaned_data['rating']
+        comment = form.cleaned_data['comment']
+        review = Review()
+        review.venue = venue
+        review.user_name = user_name
+        review.rating = rating
+        review.comment = comment
+        review.pub_date = datetime.datetime.now()
+        review.save()
+        # Always return an HttpResponseRedirect after successfully dealing
+        # with POST data. This prevents data from being posted twice if a
+        # user hits the Back button.
+        return HttpResponseRedirect(reverse('reviews':, args=(Venue,)))
+    return render(request, 'reviews/ajax_comment.html', {'review': review})
+
+
 
 @login_required
 def user_logout(request):

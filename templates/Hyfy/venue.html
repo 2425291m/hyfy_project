@@ -4,12 +4,20 @@ Venue
 {% endblock %}
     
 {% block links_block %} 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="{% static "js/hyfy-venue.js" %}"></script>
     <link rel="stylesheet" type="text/css" href="/static/CSS/venue.css">  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script type="text/javascript">
+    var csrf_token = '{{ csrf_token }}';
+    </script>
+
 {% endblock %}
         
 {% block main_block %}     
         {% if venue %}
+        <script>changeBackgroundImageWithVenue();</script>
         <div id="genres2-navigation">
             
            <a href="/hyfy/city/{{ venue.city.slug }}" id="back"><i class="icon ion-md-arrow-back"></i><h3> BACK TO TOP VENUES</h3></a>
@@ -33,17 +41,14 @@ Venue
                     </div>
                     <div id="second-row">
                         <div id="leave-review-box">
-                            <textarea  name="comment" form="usrform" class="textArea" placeholder="If you're logged in, please leave a review here."></textarea>  
-             
-                        <form class="userForm">
+                            <textarea  name="comment" form="reviewForm" class="textArea" placeholder="If you're logged in, please leave a review here."></textarea>
                             {% if user.is_authenticated %}
-                            <input type="submit">
+                            <button id="submitbutton">
                             {% else %}
                             <div class="login">
                                 <a href="{% url 'auth_login' %}" class="login-btn">log in to leave a review</a>
                             </div>
                             {% endif %}
-                        </form>
                         </div>
 
                         <div id="submitted-review-box">
@@ -76,6 +81,8 @@ var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 var myLocation = new google.maps.LatLng(parseFloat({{33.7238029}}), parseFloat(-117.267504, 17));
 }
 </script>
+
+
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8WJxmedig_2H0W1fe4-cLAXoppDt_7Ss&callback=myMap"></script>
 
