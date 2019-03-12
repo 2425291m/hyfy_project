@@ -4,13 +4,13 @@ City
 {% endblock %}
     
 {% block links_block %} 
-    <link rel="stylesheet" type="text/css" href="/static/CSS/top_venues.css"> 
+    <link rel="stylesheet" type="text/css" href="/static/CSS/city.css"> 
 {% endblock %}
 
 {% block main_block %}
-    
-        <div id="center-column">
 
+        <div id="center-column">
+            <script>changeBackgroundImageWithCity();</script>
         <div class="city-select"><h2 id="city-title">City <i class="icon ion-md-arrow-dropdown"></i></h2>
             <div class="city-list">
                 <a href="#">Glasgow</a>
@@ -22,6 +22,7 @@ City
          <div class="genres">
              {% if city %}
                {% for venues in top_venues %}
+                 
              <div class="genre-box">
                 <h3 class="genre-title">
                  {{ venues.genre.genrename }} - {{ venues.name }}
@@ -51,66 +52,6 @@ City
              {% endfor %}
             
             {% endif %}
-             
-<!--
-            <div class="genre-box">
-             <h3 class="genre-title">Rock</h3>
-                 <div id="genre1-details">
-                
-                    <img src="/static/images/glasgow/Garage.jpg">
-                
-                     <div id="genre1-info">
-                         <h3 id="genre1-rating">RATING: </h3>
-
-                         <div id="info">
-                             <p> Address and stuff</p>
-                        </div>
-                     </div>
-                     <div id="to-venue">
-                         <h6>TO VENUE</h6>
-                         <a href="{% url 'venue' %}"> <i class="icon ion-md-arrow-forward"></i></a>
-                     </div>
-                 </div>
-             </div>
-             <div class="genre-box">
-             <h3 class="genre-title">Rap</h3>
-                 <div id="genre1-details">
-                
-                    <img src="/static/images/glasgow/Garage.jpg">
-                
-                     <div id="genre1-info">
-                         <h3 id="genre1-rating">RATING: </h3>
-
-                         <div id="info">
-                             <p> Address and stuff</p>
-                        </div>
-                     </div>
-                     <div id="to-venue">
-                         <h6>TO VENUE</h6>
-                         <a href="{% url 'venue' %}"> <i class="icon ion-md-arrow-forward"></i></a>
-                     </div>
-                 </div>
-             </div>
-              <div class="genre-box">
-             <h3 class="genre-title">Jazz</h3>
-                 <div id="genre1-details">
-                
-                    <img src="/static/images/glasgow/Garage.jpg">
-                
-                     <div id="genre1-info">
-                         <h3 id="genre1-rating">RATING: </h3>
-
-                         <div id="info">
-                             <p> Address and stuff</p>
-                        </div>
-                     </div>
-                     <div id="to-venue">
-                         <h6>TO VENUE</h6>
-                         <a href="{% url 'venue' %}"> <i class="icon ion-md-arrow-forward"></i></a>
-                     </div>
-                 </div>
-             </div>
--->
         </div>
         </div>
 

@@ -4,10 +4,6 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-html{
-    /*  Need to add images dependent on button clicked at introduction - default is Glasgow */
-    background-size: cover;
-}
 h1 {
     float: left;
 }

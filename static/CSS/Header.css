@@ -5,12 +5,10 @@
     
 }
 
-html{
-    /*  Need to add images dependent on button clicked at introduction - default is Glasgow */
-    background: url(/static/images/edinburgh.jpg) no-repeat top center fixed; 
+body {
+    background: url(/static/images/glasgow.jpg) no-repeat top center fixed; 
     background-size: cover;
 }
-
 .header {  
     height: 110px;
     background-color: #bdc3c7;
