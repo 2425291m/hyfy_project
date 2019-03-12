@@ -1,59 +1,38 @@
-
-#main-box {
-    width: 90%;
-    height: 400px;
-    margin: 0 auto; 
-    text-align: center;
-    margin-top: 2%;   
-}
-
-#login-box {
-    margin: 5%;
-}
-
-.input-box {
+.flex{
+    display: flex;
     height: 100%;
-    padding-bottom: 5%;
+    justify-content: center;
+    align-items: center;
 }
 
-
-
-p {
-    float: left;
-}
-
-input {
-    float: right;
-}
-
-#login_form {
-   width: 100%;
-}
-
-#hyfy-login {
-    float: left;
-    height: 60%;
-    width: 47.5%;
-    padding-top:  2%;
-    background-color: rgba(189,195,199, 0.8);
-    border: 1px solid #ffffff;
-    border-radius: 5px;
-}
-
-#spotify-login {
-    float: right;
-    height: 60%;
-    width: 47.5%;
-    padding-top:  2%;
-    background-color: rgba(189,195,199, 0.8);
-    border: 1px solid #ffffff;
-    border-radius: 5px;
-}
-
-#spotify_login_form {
+.loginbox{
+    background-color: white;
+    padding: 2%;
+    margin: 5%;
+    flex: 1;
+    border-radius: 40px;
+    opacity: .8;
+    border: 3px solid #9a9a9a ;
 
 }
 
-.input-box {
-   
+.spotloginbox{
+    flex: 1;
+    align-self: center;
+    align-content: center;
+    text-align: center;
+}
+
+.head{
+    text-align: center;
+}
+
+.loginform{
+    text-align: center;
+    font-size: 30px;
+}
+
+.notmem{
+    font-size: 15px;
+    text-align: center;
 }

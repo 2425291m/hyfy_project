@@ -4,11 +4,42 @@
     FAQ
 {% endblock %}
 
-{% block links_block %}
+{% block links_block %}     
+ <link rel="stylesheet" type="text/css" href="/static/CSS/faq.css"> 
 {% endblock %}
 
 {% block main_block %}
-    <div>
-        FAQ PAGE 
+    <div class="faqbox">
+        <h1>Frequently Asked Questions</h1>
+        <br>
+        <div class="question">Where was the application developed?</div>
+        <UL>
+            <LI>Glasgow University.
+        </UL>
+        <br>
+        <div class="question">What course was it developed for?</div>
+        <UL>
+            <LI>Internet Technology.
+        </UL>
+        <br>
+        <div class="question">Logging in with Spotify doesnt seem to do anything?</div>
+        <UL>
+            <LI>Correct! The implimentation of the API was far too complex and would have involved <br> us coding our own
+                middleware. If we decide to work on this more in the future we will add functionality.
+        </UL>
+        <br>
+        <div class="question">OMG I LOVE THIS! PLEASE ADD MY CITY!!!</div>
+        <UL>
+                <LI>We're glad you like it! Unfortunately, there is no plans to add anymore cities at this point in time.
+            </UL>
+        <br>
+        <div class="question">The number of available genres is quite limiting. Whats up with that?</div>
+
+            <UL>
+                    <LI>With Spotify integrated we would have access to all of their genres. But, as this is just a proof of concept, <br>we didnt feel the need to programme them all!
+                        Spotify actually has 2811 genres at this point in time - ranging<br> from "classic rock" to "italian underground hip hop" - so we would also need to group them into sub genres. 
+                </UL>
+
+
     </div>
 {% endblock %}
