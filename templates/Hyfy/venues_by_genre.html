@@ -1,14 +1,58 @@
 {% extends 'hyfy/header.html' %}
 
 {% block title_block %}
-    FAQ
+    venues by genre
 {% endblock %}
 
 {% block links_block %}
+<link rel="stylesheet" type="text/css" href="/static/CSS/venues_by_genre.css"> 
 {% endblock %}
 
 {% block main_block %}
-    <div>
-        VENUE BY GENRE
-    </div>
+    <div id="center-column">
+            <script>changeBackgroundImageWithCity();</script>
+        <div class="city-select"><h2 id="city-title">City <i class="icon ion-md-arrow-dropdown"></i></h2>
+            <div class="city-list">
+                {% for city in cities %}
+                                <a href="/hyfy/city/{{ city.slug }}">{{ city.name }}</a>
+                {% endfor %}
+            </div>
+        </div>
+        
+         <div class="genres">
+             {% if city %}
+               {% for venues in top_venues %}
+                 
+             <div class="genre-box">
+                <h3 class="genre-title">
+                 {{ venues.genre.genrename }} - {{ venues.name }}
+                    </h3>
+                 <div id="genre1-details">
+                
+                    <img src="/static/images/venues/{{ venues.name }}.jpg">
+                
+                     <div id="genre1-info">
+                         <h3 id="genre1-rating">RATING:
+                         
+                         </h3>
+
+                         <div id="info">
+                             <p> Address and stuff</p>
+                        </div>
+                     </div>
+                     <div id="to-venue">
+                         <h6>TO VENUE</h6>
+                        <a href="/hyfy/{{ venues.city.slug }}/{{ venues.slug }}">
+                            
+                            <i class="icon ion-md-arrow-forward"></i></a>
+                     </div>
+                 </div>
+                 
+             </div>
+             {% endfor %}
+            
+            {% endif %}
+        </div>
+        </div>
+
 {% endblock %}

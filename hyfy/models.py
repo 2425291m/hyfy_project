@@ -39,8 +39,11 @@ class Genre(models.Model):
     name = models.CharField(max_length=36, unique=False)
     genrename = models.CharField(max_length=36)
     city = models.ForeignKey(City, on_delete=models.CASCADE)
-    # slug = models.SlugField(unique=True)
+    slug = models.SlugField()
 
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.genrename)
+        super(Genre, self).save(*args, **kwargs)
 
     class Meta:
         verbose_name_plural = 'genres'  

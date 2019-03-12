@@ -1,0 +1,149 @@
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+.genres {
+    margin-top: 2%;
+    height: 70vh;
+    background-color: rgba(189,195,199, 0.8);
+    border: 1px solid #ffffff;
+    padding-top: 2%;
+    border-radius: 5px;
+    overflow-y: scroll;
+}
+
+.genre-box {
+    margin-bottom: 5%;
+    background-color: white;
+    width: 95%;
+    height: 45%; 
+    margin-left: 2%;
+    margin-bottom: 2%;
+    border-radius: 4px;
+    border: 1px solid #535353;
+    overflow: hidden;
+    box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+}
+
+.genre-title{
+    padding-left: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+#center-column {
+    width: 60%;
+    margin: 0 auto; 
+}
+
+/* The container <div> - needed to position the dropdown content */
+.city-select {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 1%;
+    background-color: white;
+    width: 20%;
+    margin-left: 70%;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.city-list {
+    font-size: 18px;
+    display: none;
+    position: absolute;
+    min-width: 100%;
+}
+
+/* Links inside the dropdown */
+.city-list a {
+    color: white;
+    background-color: black;
+ 
+    margin-top: 5px;
+     border: 2px solid black;
+    text-decoration: none;
+    display: block;
+    border-radius: 7px;
+    
+}
+
+/* Change color of dropdown links on hover */
+.city-list a:hover {
+    background-color: white;
+        color: black;
+}
+
+/* Show the dropdown menu on hover */
+.city-select:hover .city-list {
+    display: block;
+}
+
+
+#genre1-details {
+    border: 0.5px solid black;
+    border-radius: 3px;
+    width:inherit;
+    height: 75%;
+    margin: 0 auto;
+    margin-left: 2%;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+}
+
+img {
+    margin: 1%;
+    max-width: 17.4%;
+    float: left;
+
+}
+
+#genre1-info {
+    float: left;
+    width: 70%;
+    height: inherit;
+}
+
+#genre1-rating {
+
+}
+
+#info {
+     padding: 5px;
+    border: 0.5px solid #9d9d9d;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+#to-venue {
+    float: right;
+    margin-top: 3%;
+    margin-right: 1%;
+    color: #888;
+}
+
+.ion-md-arrow-forward {
+    padding-left: 23%;
+    font-size: 50px;
+    color: black;
+}
+
+
+.ion-md-arrow-forward:hover{
+    color: red;
+}

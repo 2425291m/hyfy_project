@@ -5,6 +5,12 @@ AboutUs
     
 {% block links_block %} 
     <link rel="stylesheet" type="text/css" href="/static/CSS/account.css"> 
+    <script>
+    function imgError(image) {
+    image.onerror = "";
+    image.src="{{ MEDIA_URL }}profile_images/no-profile-picture.png";
+    return true;
+}</script>
 {% endblock %}
 
 {% block main_block %}
@@ -14,7 +20,8 @@ AboutUs
                     <div id="top-section">
                     <div id="profile-picture">
 <!--                     userprofile.picture below is not rading the userprofile -->
-                        <img src="{{ MEDIA_URL }}{{ userprofile.picture }}" />
+                        
+                        <img src="{{ MEDIA_URL }}{{ userprofile.picture }}" onerror="imgError(this);" />
                     </div>
                     <div id="account-name">
                    {{ user.username }}

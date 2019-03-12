@@ -13,9 +13,9 @@ City
             <script>changeBackgroundImageWithCity();</script>
         <div class="city-select"><h2 id="city-title">City <i class="icon ion-md-arrow-dropdown"></i></h2>
             <div class="city-list">
-                <a href="#">Glasgow</a>
-                <a href="#">Edinburgh</a>
-                <a href="#">Dundee</a>
+                 {% for city in cities %}
+                                <a href="/hyfy/city/{{ city.slug }}">{{ city.name }}</a>
+                {% endfor %}
             </div>
         </div>
         
@@ -24,9 +24,9 @@ City
                {% for venues in top_venues %}
                  
              <div class="genre-box">
-                <h3 class="genre-title">
+                <a href="/hyfy/venues_by_genre/{{ city.slug }}/{{ venues.genre.genrename }}"><h3 class="genre-title">
                  {{ venues.genre.genrename }} - {{ venues.name }}
-                 </h3>
+                    </h3></a>
                  <div id="genre1-details">
                 
                     <img src="/static/images/venues/{{ venues.name }}.jpg">

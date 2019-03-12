@@ -14,6 +14,7 @@ urlpatterns = [
     url(r'^contact_us/$', views.contact_us, name='contact_us'),
     url(r'^venue/$', views.venue, name='venue'),
     url(r'^(?P<city_name_slug>[\w\-]+)/(?P<venue_name_slug>[\w\-]+)/$', views.show_venue, name='show_venue'),
+    url(r'^venues_by_genre/(?P<city_name_slug>[\w\-]+)/(?P<genre_name_slug>[\w\-]+)/$', views.show_venues_by_genre, name='show_venues_by_genre'),
     url(r'^register_profile/$', views.register_profile, name='register_profile'),
     url(r'^oauth/', include('social_django.urls', namespace='social')),  # <--
     

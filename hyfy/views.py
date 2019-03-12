@@ -40,11 +40,34 @@ def contact_us(request):
     response = render(request, 'hyfy/contact_us.html')
     return response
 
+def show_venues_by_genre(request, city_name_slug, genre_name_slug):
+
+    context_dict = {}
+    try:
+        cities = City.objects.all
+        city = City.objects.get(slug=city_name_slug)
+        genre = Genre.objects.get(city=city, slug=genre_name_slug)
+       
+        all_venues = Venue.objects.filter(city=city)
+
+        top_venues = all_venues.filter(genre=genre)
+
+        context_dict['top_venues'] = top_venues
+        context_dict['cities'] = cities
+        context_dict['city'] = city
+        context_dict['genre'] = genre
+    except City.DoesNotExist:
+        context_dict['city'] = None
+        context_dict['genre'] = None
+
+    return render(request,'hyfy/venues_by_genre.html', context=context_dict)
+
 def show_city(request, city_name_slug):
 
     context_dict = {}
 
     try:
+        cities = City.objects.all
         city = City.objects.get(slug=city_name_slug)
         genres = Genre.objects.filter(city=city)
         all_venues = Venue.objects.filter(city=city)
@@ -63,7 +86,7 @@ def show_city(request, city_name_slug):
         context_dict['top_venues'] = top_venues
         context_dict['city'] = city
         context_dict['genres'] = genres
-
+        context_dict['cities'] = cities
     except City.DoesNotExist:
         context_dict['city'] = None
         context_dict['top_venues'] = None
