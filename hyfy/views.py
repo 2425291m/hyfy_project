@@ -77,7 +77,7 @@ def venue(request):
     response = render(request, 'hyfy/venue.html')
     return response
 
-def show_venue(request, venue_name_slug):
+def show_venue(request, city_name_slug, venue_name_slug):
 
     context_dict = {}
     try:
