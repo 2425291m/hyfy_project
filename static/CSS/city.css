@@ -21,7 +21,7 @@
     margin-bottom: 5%;
     background-color: white;
     width: 95%;
-    height: 45%; 
+    height: 55%; 
     margin-left: 2%;
     margin-bottom: 2%;
     border-radius: 4px;
@@ -32,10 +32,22 @@
 }
 
 .genre-title{
-    padding-left: 3%;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    margin-left: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-top: 1%;
+    padding-top: 0.5%;
+    margin-bottom: 1%;
+    padding-bottom: 0.5%;
+    border: 0.5px solid black;
+    display: inline-block;
+     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 30px;
+    background-color: rgb(63, 86, 109);
+    color: aliceblue;
+    font-family: 'Montserrat';
 }
+
 
 #center-column {
     width: 60%;
@@ -75,10 +87,16 @@
     
 }
 
+a {
+    text-decoration: none;
+    color: black;
+    color: black;
+}
+
 /* Change color of dropdown links on hover */
 .city-list a:hover {
     background-color: white;
-        color: black;
+    color: black;
 }
 
 /* Show the dropdown menu on hover */
@@ -86,7 +104,11 @@
     display: block;
 }
 
-
+.city-select:hover{
+    background-color: #bdc3c7;
+    border: 1 solid black;
+    transition: 0.5s;
+}
 #genre1-details {
     border: 0.5px solid black;
     border-radius: 3px;
@@ -109,10 +131,6 @@ img {
     float: left;
     width: 70%;
     height: inherit;
-}
-
-#genre1-rating {
-
 }
 
 #info {
@@ -147,3 +165,15 @@ img {
 .ion-md-arrow-forward:hover{
     color: red;
 }
+
+#to-genre-icon {
+    float: right;
+    display: none;
+}
+
+.genre-title:hover{
+    background-color: #202d3b; 
+    transition: 0.5s;
+}
+
+

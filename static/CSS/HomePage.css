@@ -26,6 +26,9 @@ h1 {
     opacity: .9;
 }
 
+
+
+
 .city-box {
     margin-left: 40%;
     margin-right: 40%;
@@ -56,16 +59,22 @@ ul li ul li a:hover{
     opacity: 1;
     background-color: black;
     color:  white;
-    
 }
 
 ul li ul li{
-   display: none;
+  transition: all 0.4s ease-out;
+  opacity: 0;
+  height: 0em;
 }
 
 ul li:hover ul li{
-    display: block;
+    opacity: 1;
 }
 
+ul li:hover li {
+  transition: all 0.4s ease-out;
+  opacity: 1;
+  height: 2em;
+}
 
 
