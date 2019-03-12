@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id="html">
     <title>
     {% block title_block %}
     {% endblock %}
@@ -56,5 +56,12 @@
 
         {% block main_block %}
         {% endblock %}
+
+        <script>
+            function changeBackgroundImage(citySlug){
+                var urlString = '/static/images/'+citySlug+'.jpg'; 
+                document.getElementById("html").background = urlString;
+            }
+        </script>
     </body>
 </html>

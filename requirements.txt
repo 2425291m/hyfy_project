@@ -5,3 +5,4 @@ pytz==2018.9
 wincertstore==0.2
 social-auth-core
 social-auth-app-django
+django-registration-redux==1.4

@@ -22,6 +22,7 @@
                             <div class="city-list">
                                 {% for city in cities %}
                                 <li><a href="/hyfy/city/{{ city.slug }}">{{ city.name }}</a></li>
+                                changeBackgroundImage({{ city.slug }})
                                 {% endfor %}
                             </div>
                         </ul>
