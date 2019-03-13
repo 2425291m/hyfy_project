@@ -14,6 +14,7 @@ hash = hash.slice(14, hash.length-34)
 console.log(hash)
 
 var doc = document.getElementById('thanksuser')
+var newText = ''
 
 jQuery.ajax({
     url: 'https://api.spotify.com/v1/me',
@@ -22,7 +23,7 @@ jQuery.ajax({
     },
     dataType: "json",
     success: function(result){
-        var newText = result.id + "<br>"  + result.display_name + "<br>" +  result.birthdate + "<br>" + result.email + "<br>" + result.external_urls.spotify
+        newText = result.id + "<br>"  + result.display_name + "<br>" +  result.birthdate + "<br>" + result.email + "<br>" + result.external_urls.spotify
         console.log(result)
         console.log(result.birthdate)
         console.log(result.display_name)
@@ -30,18 +31,21 @@ jQuery.ajax({
         console.log(result.id);
         console.log(result.external_urls.spotify)
 
-        doc.innerHTML = newText
+        //doc.innerHTML = newText
     }
 });
 
-// jQuery.ajax({
-//     url: 'https://api.spotify.com/v1/me/top/artists?time_range=medium_term&limit=10&offset=0',
-//     headers: {
-//        'Authorization': 'Bearer ' + hash
-//     },
-//     dataType: "json",
-//     success: function(result){
-//         console.log(result)
-//         doc.innerHTML = result.items[0].name
-//     }
-// });
+jQuery.ajax({
+    url: 'https://api.spotify.com/v1/me/top/artists?time_range=long_term&limit=10&offset=0',
+    headers: {
+       'Authorization': 'Bearer ' + hash
+    },
+    dataType: "json",
+    success: function(result){
+        console.log(result)
+        for(var i=0; i<10;i++){
+            newText += "<br>" + result.items[i].name
+        }
+        doc.innerHTML = newText
+    }
+});
