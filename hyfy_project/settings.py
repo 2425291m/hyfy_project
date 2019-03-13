@@ -151,7 +151,7 @@ LOGIN_URL = '/accounts/login/'
 SOCIAL_AUTH_SPOTIFY_KEY = '294156b84c3a4659838991a3ebec94e2'
 SOCIAL_AUTH_SPOTIFY_SECRET = 'a536e1e7b77c49d5abaa6e39764c4cf9'
 SOCIAL_AUTH_SPOTIFY_SCOPE = ['user-read-email', 'user-library-read']
-LOGIN_REDIRECT_URL = 'http://127.0.0.1:8000/hyfy/'
+LOGIN_REDIRECT_URL = 'http://127.0.0.1:8000/hyfy/register_profile/'
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',

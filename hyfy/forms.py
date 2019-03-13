@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
 from hyfy.models import UserProfile
+from hyfy.models import Genre
 
 class UserForm(forms.ModelForm):
 	password = forms.CharField(widget=forms.PasswordInput())
@@ -11,6 +12,8 @@ class UserForm(forms.ModelForm):
 
 class UserProfileForm(forms.ModelForm):
 	picture = forms.ImageField(required=False)
+
+	# genre = forms.ModelChoiceField(queryset=genres.all, required=False)
 	class Meta:
 		model = UserProfile
 		exclude = ('user',)
