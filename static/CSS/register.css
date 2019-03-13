@@ -1,12 +1,12 @@
 
-#registration-box {
-    width: 70%;
-    height: 73vh;
-    margin: 0 auto; 
-    margin-top: 2vh;
-    background-color: #fff;
-    resize: none;
-    padding: 1%;
+.regform {
+    margin: 2%;
+    padding: 2%;
+    width: auto;
+    background-color: #ffffff;
+    border: 3px solid #9a9a9a ;
+    opacity: .9;
+    border-radius: 40px;
 }
 
 #user_form {

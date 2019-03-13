@@ -5,14 +5,19 @@
 {% endblock %}
 
 {% block links_block %}
-<link rel="stylesheet" type="text/css" href="/static/CSS/login.css"> 
+<link rel="stylesheet" type="text/css" href="/static/CSS/register.css"> 
 {% endblock %}
 
 {% block main_block %}
-<h1>Register Here</h1>
-<form method="post" action=".">
-	{% csrf_token %}
-	{{ form.as_p }}
-	<input type="submit" value="Submit" />
-</form>
+<div class="regform">
+	<h1>Register Here</h1>
+	<br>
+	<form method="post" action=".">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<br>
+		<input type="submit" value="Submit" />
+	</form>
+</div>
+
 {% endblock %}
