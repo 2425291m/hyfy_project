@@ -31,7 +31,8 @@
   
 }
 
-.genre-title, .venue-title{
+.venue-title{
+
 }
 
 
@@ -177,14 +178,18 @@ h3:hover{
     display: inline-block;
 }
 
-.genre-title-box, .venue-title-box{
+.genre-title-box{
     display: inline-block;
     position: relative;
 }
 
-.venue-title-box{
-    float: right;
+.venue-title-box {
+    position: relative;
+    display: inline;
+    margin-right: 0%;
 }
+
+
 
 .genre-span {
     visibility: hidden;
@@ -198,4 +203,7 @@ h3:hover{
 
 .genre-title-box:hover .genre-span {
     visibility: visible;
+}
+.venue-title-a {
+  
 }
