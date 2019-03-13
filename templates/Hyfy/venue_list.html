@@ -1,0 +1,55 @@
+{% extends 'hyfy/header.html' %}
+{% block title_block %}
+ Search Page
+{% endblock %}
+    
+{% block links_block %}     
+     <link rel="stylesheet" type="text/css" href="/static/CSS/venue_list.css"> 
+{% endblock %}
+    
+{% block main_block %}
+    <div id="center-column">
+        <div class="city-select"><h2 id="city-title">City <i class="icon ion-md-arrow-dropdown"></i></h2>
+            <div class="city-list">
+                {% for city in cities %}
+                                <a href="/hyfy/city/{{ city.slug }}">{{ city.name }}</a>
+                {% endfor %}
+            </div>
+        </div>
+         <div class="genres">
+          {% if venues %}
+                {% for venue in venues %}
+           <div class="genre-box">
+                 <a href="/hyfy/venues_by_genre/{{ venue.city.slug }}/{{ venue.genre.genrename }}"><h3 class="genre-title">{{ venue.genre.genrename }}</h3></a>
+                 <a href="/hyfy/{{ venue.city.slug }}/{{ venue.slug }}"><h3 class="venue-title">{{ venue.name }}</h3></a>
+                    <div id="to-genre-icon">
+                 </div>
+                 <div id="genre1-details">
+                
+                    <img src="/static/images/venues/{{ venue.name }}.jpg">
+                
+                     <div id="genre1-info">
+                         <h4 id="genre1-rating">RATING:
+                         
+                         </h4>
+
+                         <div id="info">
+                             <p> Address and stuff</p>
+                        </div>
+                     </div>
+                     <div id="to-venue">
+                         <h6>TO VENUE</h6>
+                        <a href="/hyfy/{{ venue.city.slug }}/{{ venue.slug }}">
+                            
+                            <i class="icon ion-md-arrow-forward"></i></a>
+                     </div>
+                 </div>
+                 
+             </div>
+                 {% endfor %}
+            {% else %}
+                NO VENUES
+            {% endif %}
+        </div>
+</div>
+{% endblock %}

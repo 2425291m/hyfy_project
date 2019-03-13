@@ -1,18 +1,20 @@
 from django.shortcuts import render
+from django.shortcuts import redirect
 from hyfy.forms import UserForm, UserProfileForm
 from django.contrib.auth import authenticate, login
-from django.http import HttpResponseRedirect, HttpResponse
-from hyfy.models import UserProfile
-from django.core.urlresolvers import reverse
+from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import redirect
 from django.contrib.auth import logout
+from django.http import HttpResponseRedirect, HttpResponse
+from django.core.urlresolvers import reverse
+from hyfy.models import UserProfile
 from hyfy.models import City
 from hyfy.models import Venue
 from hyfy.models import Genre
-from django.contrib.auth.models import User
 from registration.backends.simple.views import RegistrationView
+from django.db.models import Q 
 import os
+
 # Create your views here.
 
 
@@ -217,3 +219,14 @@ def account(request, username):
     
     return render(request, 'hyfy/account.html', {'userprofile': userprofile, 'selecteduser': user, 'form': form})
 
+
+def search(request):
+    template = 'hyfy/venue_list.html'
+    city_list = City.objects.all
+    queryName = request.GET.get('q')
+    query = request.GET.get('q')
+    results = Venue.objects.filter(Q(name__icontains=query))
+
+    context = {'venues': results, 'cities': city_list}
+
+    return render(request, template, context)

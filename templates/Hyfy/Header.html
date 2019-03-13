@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Montserrat|Roboto" rel="stylesheet">
     <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        
     <script type = "text/javascript">
         function changeBackgroundImageWithCity(){
             document.body.style.backgroundImage = "url('/static/images/{{ city.slug }}.jpg')";
@@ -63,8 +65,12 @@
             </div>
 
              <div class="search-bar">
-                <input type="text" class="searchText" placeholder="Search venues?">
-                <button type="submit" class="searchButton"><i class="fa fa-search"></i>
+                 <form id="searchform" action="{% url 'search' %}" method="get" accept-charset="utf-8">
+                     <input class="searchField" id="searchbox" name="q" value="{{request.GET.q}}" type="text" placeholder="Search">
+                     <button class="searchButton" type="submit">
+                         <i class="fa fa-search"></i>
+                     </button>
+                 </form>
                 </button>
             </div>   
         </div>

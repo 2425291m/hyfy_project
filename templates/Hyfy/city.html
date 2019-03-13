@@ -23,8 +23,13 @@ City
              {% if city %}
                {% for venues in top_venues %}
                  
+             
              <div class="genre-box">
-                 <a href="/hyfy/venues_by_genre/{{ city.slug }}/{{ venues.genre.genrename }}"><h3 class="genre-title">{{ venues.genre.genrename }}</h3></a>
+                 <div class="genre-title-box">
+                 <a class="genre-title-a" href="/hyfy/venues_by_genre/{{ city.slug }}/{{ venues.genre.slug }}"><h3 class="genre-title">{{ venues.genre.genrename }}</h3></a>
+                     <span class="genre-span">Go to {{ city.name }}'s top {{ venues.genre.slug }} venues! </span>
+                </div>
+                 
                  <a href="/hyfy/{{ venues.city.slug }}/{{ venues.slug }}"><h3 class="venue-title">{{ venues.name }}</h3></a>
                     <div id="to-genre-icon">
                  <h3>Go to genre! <i class="fa fa-angle-double-right"></i></h3>

@@ -6,6 +6,7 @@ from hyfy import views
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
+    url(r'^search/$', views.search, name='search'),
     url(r'^about_us/$', views.about_us, name='about_us'),
     url(r'^faq/$', views.faq, name='faq'),
     url(r'^contact_us/$', views.contact_us, name='contact_us'),
