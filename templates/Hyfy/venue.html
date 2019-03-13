@@ -5,12 +5,20 @@ Venue
     
 {% block links_block %} 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-    <script src="{% static "js/hyfy-venue.js" %}"></script>
+    <script src="/hyfy/static/js/venue.js"></script>
     <link rel="stylesheet" type="text/css" href="/static/CSS/venue.css">  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script type="text/javascript">
     var csrf_token = '{{ csrf_token }}';
+    var venue_slug = '{{ venue.slug }}';
+
+    
+    document.getElementById('review_form').action = "/hyfy/add_review/{{ user.username }}/{{ venue_slug }}/";
+    
+
+    
+
     </script>
 
 {% endblock %}
@@ -40,21 +48,37 @@ Venue
                         <div id="googleMap"></div>
                     </div>
                     <div id="second-row">
-                        <div id="leave-review-box">
-                            <textarea  name="comment" form="reviewForm" class="textArea" placeholder="If you're logged in, please leave a review here."></textarea>
+                        
+                        <iframe id="review-frame" src="/hyfy/add_review/{{ user.username }}/{{ venue.slug }}" frameborder="0" allowfullscreen></iframe>
+                        <!-- <div id="leave-review-box">
                             {% if user.is_authenticated %}
+                            commment this too!!!<textarea  name="comment" form="reviewForm" class="textArea" placeholder="If you're logged in, please leave a review here."></textarea> -->
+                            <!-- <form id="review_form" method="post" action="/hyfy/add_review">
+                                {% csrf_token %}
+                                {% for hidden in form.hidden_fields %}
+                                    {{ hiden }}
+                                {% endfor %}
+                                {% for field in form.visible_fields %}
+                                    {{ field.errors }}
+                                    {{ field.help_text }}
+                                    {{ field }}
+                                {% endfor %}
+                                <input type="submit" name="submit" value="Create Review" />
+                            </form>
+                            
                             <button id="submitbutton">
                             {% else %}
                             <div class="login">
                                 <a href="{% url 'auth_login' %}" class="login-btn">log in to leave a review</a>
                             </div>
                             {% endif %}
-                        </div>
+                        </div> -->
+                        <iframe id="review-display" src="/hyfy/show_review/{{ user.username }}/{{ venue.slug }}" frameborder="0" allowfullscreen></iframe>
 
-                        <div id="submitted-review-box">
+                        <!-- <div id="submitted-review-box">
                             
                             <div id="reviewer">
-                         <!--src="{{ MEDIA_URL }}{{ userprofile.picture }}" -->
+                          src="{{ MEDIA_URL }}{{ userprofile.picture }}"
                                 <div id="picture-box">
                                 <img id ="reviewer-picture" src="/media/profile-pictures/Barry.png" alt="dunno" />
                                 </div>
@@ -66,7 +90,7 @@ Venue
                                 lorem etc</p>
                             </div>
                       
-                        </div>
+                        </div> -->
                     </div>
                 </div>           
             </div>

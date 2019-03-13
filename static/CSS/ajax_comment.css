@@ -1,0 +1,35 @@
+#reviewer {
+    float: left;
+    margin: 0.5%;
+    width: 99%;
+    height: 20%;
+    background-color: #fff;
+}
+
+#reviewer-picture {
+    border-radius: 0%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+#reviewer-details {
+    margin: 0.5%;
+    padding-left: 5%;
+}
+
+#picture-box {
+    overflow: hidden;
+    border-radius: 50%;
+    float: left;
+    height: 100%;
+    width: 5%;
+}
+
+#review-text {
+    margin: 1%;
+    height: 70%;
+    margin-top: 5%;
+    width: 98%;
+    border: 0.5px solid black;
+    padding: 0.5%;
+}

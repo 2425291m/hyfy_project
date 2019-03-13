@@ -15,9 +15,7 @@ class VenueAdmin (admin.ModelAdmin):
     list_display = ('name', 'city', 'likes', 'latitude', 'longitude', 'genre')
 
 class ReviewAdmin(admin.ModelAdmin):
-    list_display = ('wine', 'rating', 'user_name', 'comment', 'pub_date')
-    list_filter = ['pub_date', 'user_name']
-    search_fields = ['comment']
+    list_display = ('text',)
 
 
 
