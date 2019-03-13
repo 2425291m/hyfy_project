@@ -83,22 +83,22 @@ def populate():
             "Glasgow_dance": {"venues": glajazz_venues}}
 
     glasgow_genres = [
-        {"name": "gla_rock", "genrename": "rock", "venues": glarock_venues},
-        {"name": "gla_pop", "genrename": "pop", "venues": glapop_venues},
-        {"name": "gla_dance", "genrename": "dance", "venues": gladance_venues},
-        {"name": "gla_jazz", "genrename": "jazz", "venues": glajazz_venues}]
+        {"name": "gla_rock", "genrename": "ROCK", "venues": glarock_venues},
+        {"name": "gla_pop", "genrename": "POP", "venues": glapop_venues},
+        {"name": "gla_dance", "genrename": "DANCE", "venues": gladance_venues},
+        {"name": "gla_jazz", "genrename": "JAZZ", "venues": glajazz_venues}]
 
     edinburgh_genres = [
-        {"name": "edi_rock", "genrename": "rock", "venues": edirock_venues},
-        {"name": "edi_pop", "genrename": "pop", "venues": edipop_venues},
-        {"name": "edi_dance", "genrename": "dance", "venues": edidance_venues},
-        {"name": "edi_jazz", "genrename": "jazz", "venues": edijazz_venues}]
+        {"name": "edi_rock", "genrename": "ROCK", "venues": edirock_venues},
+        {"name": "edi_pop", "genrename": "POP", "venues": edipop_venues},
+        {"name": "edi_dance", "genrename": "DANCE", "venues": edidance_venues},
+        {"name": "edi_jazz", "genrename": "JAZZ", "venues": edijazz_venues}]
 
     dundee_genres = [
-        {"name": "dun_rock", "genrename": "rock", "venues": dunrock_venues},
-        {"name": "dun_pop", "genrename": "pop", "venues": dunpop_venues},
-        {"name": "dun_dance", "genrename": "dance", "venues": dundance_venues},
-        {"name": "dun_jazz", "genrename": "jazz", "venues": dunjazz_venues}]
+        {"name": "dun_rock", "genrename": "ROCK", "venues": dunrock_venues},
+        {"name": "dun_pop", "genrename": "POP", "venues": dunpop_venues},
+        {"name": "dun_dance", "genrename": "DANCE", "venues": dundance_venues},
+        {"name": "dun_jazz", "genrename": "JAZZ", "venues": dunjazz_venues}]
 
     cities = [{"name": "Glasgow", "genres": glasgow_genres},
             {"name": "Edinburgh", "genres": edinburgh_genres},

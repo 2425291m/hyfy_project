@@ -19,6 +19,9 @@
         function changeBackgroundImageWithVenue(){
              document.body.style.backgroundImage = "url('/static/images/{{ venue.city.slug }}.jpg')";
         }
+        function changeBackgroundImageToDefault(){
+             document.body.style.backgroundImage = "url('/static/images/glasgow.jpg')";
+        }
     </script>
         
     {% block links_block %}

@@ -6,12 +6,12 @@ from hyfy import views
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
-    url(r'^city/(?P<city_name_slug>[\w\-]+)/$', views.show_city, name='show_city'),
     url(r'^about_us/$', views.about_us, name='about_us'),
     url(r'^faq/$', views.faq, name='faq'),
+    url(r'^contact_us/$', views.contact_us, name='contact_us'),
+    url(r'^(?P<city_name_slug>[\w\-]+)/$', views.show_city, name='show_city'),
     url(r'^account/(?P<username>[\w\-]+)/$', views.account, name='account'),
     # url(r'^profile/(?P<username>[\w\-]+)/$', views.profile, name='profile'),
-    url(r'^contact_us/$', views.contact_us, name='contact_us'),
     url(r'^venue/$', views.venue, name='venue'),
     url(r'^(?P<city_name_slug>[\w\-]+)/(?P<venue_name_slug>[\w\-]+)/$', views.show_venue, name='show_venue'),
     url(r'^venues_by_genre/(?P<city_name_slug>[\w\-]+)/(?P<genre_name_slug>[\w\-]+)/$', views.show_venues_by_genre, name='show_venues_by_genre'),

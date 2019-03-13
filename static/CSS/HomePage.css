@@ -62,7 +62,7 @@ ul li ul li a:hover{
 }
 
 ul li ul li{
-  transition: all 0.4s ease-out;
+  transition: all 0.2s ease-out;
   opacity: 0;
   height: 0em;
 }

@@ -32,7 +32,10 @@
 }
 
 .genre-title{
-    margin-left: 2%;
+       margin-left: 2%;
+}
+h3{
+
     padding-left: 1%;
     padding-right: 1%;
     margin-top: 1%;
@@ -43,7 +46,7 @@
     display: inline-block;
      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 30px;
-    background-color: rgb(63, 86, 109);
+    background-color: rgb(81, 117, 150);
     color: aliceblue;
     font-family: 'Montserrat';
 }
@@ -171,9 +174,15 @@ img {
     display: none;
 }
 
-.genre-title:hover{
+h3:hover{
     background-color: #202d3b; 
     transition: 0.5s;
 }
 
 
+
+.venue-title {
+    float: right;
+    margin-right: 2%;
+   
+}

@@ -14,7 +14,7 @@ City
         <div class="city-select"><h2 id="city-title">City <i class="icon ion-md-arrow-dropdown"></i></h2>
             <div class="city-list">
                  {% for city in cities %}
-                                <a href="/hyfy/city/{{ city.slug }}">{{ city.name }}</a>
+                                <a href="/hyfy/{{ city.slug }}">{{ city.name }}</a>
                 {% endfor %}
             </div>
         </div>
@@ -24,8 +24,9 @@ City
                {% for venues in top_venues %}
                  
              <div class="genre-box">
-                <a href="/hyfy/venues_by_genre/{{ city.slug }}/{{ venues.genre.genrename }}"><h3 class="genre-title">{{ venues.genre.genrename }} - {{ venues.name }}
-                    </h3></a><div id="to-genre-icon">
+                 <a href="/hyfy/venues_by_genre/{{ city.slug }}/{{ venues.genre.genrename }}"><h3 class="genre-title">{{ venues.genre.genrename }}</h3></a>
+                 <a href="/hyfy/{{ venues.city.slug }}/{{ venues.slug }}"><h3 class="venue-title">{{ venues.name }}</h3></a>
+                    <div id="to-genre-icon">
                  <h3>Go to genre! <i class="fa fa-angle-double-right"></i></h3>
                  </div>
                  <div id="genre1-details">
@@ -33,9 +34,9 @@ City
                     <img src="/static/images/venues/{{ venues.name }}.jpg">
                 
                      <div id="genre1-info">
-                         <h3 id="genre1-rating">RATING:
+                         <h4 id="genre1-rating">RATING:
                          
-                         </h3>
+                         </h4>
 
                          <div id="info">
                              <p> Address and stuff</p>
