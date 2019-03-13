@@ -31,14 +31,11 @@
   
 }
 
-.genre-title{
-       margin-left: 2%;
-    display: inline-block;
+.genre-title, .venue-title{
 }
 
 
 h3{
-
     padding-left: 1%;
     padding-right: 1%;
     margin-top: 1%;
@@ -146,14 +143,6 @@ img {
     width: 100%;
 }
 
-
-
-
-
-
-
-
-
 #to-venue {
     float: right;
     margin-top: 3%;
@@ -185,28 +174,28 @@ h3:hover{
 
 
 .venue-title {
-    float: right;
-    margin-right: 2%;
-   
+    display: inline-block;
 }
 
-.genre-title-box{
+.genre-title-box, .venue-title-box{
+    display: inline-block;
     position: relative;
-
 }
 
-.genre-title-box .genre-span {
-    opacity: 0;
+.venue-title-box{
+    float: right;
+}
+
+.genre-span {
+    visibility: hidden;
     background-color: #e67e22;
     color: #fff;
     text-align: center;
     font-size: 15px;
-    z-index: 1;
     position: absolute;
+    z-index: 1;
 }
 
 .genre-title-box:hover .genre-span {
-    opacity: 1;
-    transition: 0.5s;
+    visibility: visible;
 }
-
