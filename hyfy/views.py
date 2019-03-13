@@ -167,7 +167,11 @@ def user_login(request):
     else:
         return render(request, 'hyfy/login.html', {})
 
-
+	
+def thanks(request):
+    response = render(request, 'hyfy/thanks.html')
+    return response
+    
 @login_required
 def user_logout(request):
     logout(request)
