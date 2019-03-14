@@ -42,10 +42,14 @@ jQuery.ajax({
     },
     dataType: "json",
     success: function(result){
-        console.log(result)
-        for(var i=0; i<10;i++){
-            newText += "<br>" + result.items[i].name
+        for(var i=0; i<9;i++){
+            //newText += "<br>" + result.items[i].name + "<br>" + result.items[i].images[2].url + "<br>" + result.items[i].external_urls.spotify
+            document.getElementById("artist"+i).src=result.items[i].images[0].url
+            document.getElementById("artist"+i+"link").href=result.items[i].external_urls.spotify
+
         }
         doc.innerHTML = newText
     }
 });
+
+//document.getElementById("imageid").src="../template/save.png";
