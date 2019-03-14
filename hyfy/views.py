@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.shortcuts import redirect
 from hyfy.forms import UserForm, UserProfileForm
+from hyfy.forms import ReviewForm
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
@@ -166,6 +167,75 @@ def user_login(request):
 
     else:
         return render(request, 'hyfy/login.html', {})
+
+def add_review(request, username, venue_name_slug):
+    # form = ReviewForm()
+    venue = Venue.objects.get(slug=venue_name_slug)
+    user = User.objects.get(username=username)
+
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+
+        if form.is_valid():
+            form.save(commit=True)
+            return venue(request)
+        else:
+            print(form.errors)
+    return render(request, 'hyfy/add_review.html', {'form': form})
+
+def submitted(request):
+
+    response = render(request, 'hyfy/submitted.html')
+    return response
+
+# def show_review(request):
+
+#     try:
+#         all_reviews = Review.objects.filer(venue=venue)
+
+
+#     return render(request, 'show_reviews.html', {'review': review})
+
+#     context_dict{}
+
+#     try:
+
+#         all_venues = Venue.objects.filter(city=city)
+#         rock = genres.filter(genrename="rock")
+#         pop = genres.filter(genrename="pop")
+#         dance = genres.filter(genrename="dance")
+#         jazz = genres.filter(genrename="jazz")
+
+#         top_rock = all_venues.filter(genre=rock).first()
+#         top_pop = all_venues.filter(genre=pop).first()
+#         top_dance = all_venues.filter(genre=dance).first()
+#         top_jazz = all_venues.filter(genre=jazz).first()
+
+#         top_venues = {top_rock, top_pop, top_dance, top_jazz}
+
+#         context_dict['top_venues'] = top_venues
+#         context_dict['city'] = city
+#         context_dict['genres'] = genres
+
+#     venue = get_object_or_404(Venue)
+#     user_name = get_object_or_404(User)
+#     form = ReviewForm(request.POST)
+#     if form.is_valid():
+#         rating = form.cleaned_data['rating']
+#         comment = form.cleaned_data['comment']
+#         review = Review()
+#         review.venue = venue
+#         review.user_name = user_name
+#         review.rating = rating
+#         review.comment = comment
+#         review.pub_date = datetime.datetime.now()
+#         review.save()
+#         # Always return an HttpResponseRedirect after successfully dealing
+#         # with POST data. This prevents data from being posted twice if a
+#         # user hits the Back button.
+#         return HttpResponseRedirect(reverse('reviews':, args=(Venue,)))
+#     return render(request, 'reviews/ajax_comment.html', {'review': review})
+
 
 	
 def thanks(request):

@@ -26,6 +26,11 @@
     height: 2%;
 }
 
+#review-frame {
+    height: 100%;
+    width: 100%;
+}
+
 #city {
     float: right;
     background-color: white;
@@ -76,8 +81,6 @@ img {
 #leave-review-box {
     float: left;
     background-color: white;
-    width: 30%;
-    height: 90%;
     margin-left:2%;
     border: 0.5px solid black;
     font-size: 10px;

@@ -4,6 +4,15 @@ Venue
 {% endblock %}
     
 {% block links_block %} 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="/hyfy/static/js/venue.js"></script>
+    <script type="text/javascript"> 
+        var csrf_token = '{{ csrf_token }}';
+        var venue_slug = '{{ venue.slug }}';
+    
+    document.getElementById('review_form').action = "/hyfy/add_review/{{ user.username }}/{{ venue_slug }}/";
+
+    </script>
     <link rel="stylesheet" type="text/css" href="/static/CSS/venue.css">  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 {% endblock %}
@@ -11,7 +20,7 @@ Venue
 {% block main_block %}     
         {% if venue %}
         <div id="genres2-navigation">
-            
+        <script>changeBackgroundImageWithVenue();</script>
            <a href="/hyfy/{{ venue.city.slug }}" id="back"><i class="icon ion-md-arrow-back"></i><h3> BACK TO TOP VENUES</h3></a>
             
            
@@ -32,24 +41,37 @@ Venue
                         <div id="googleMap"></div>
                     </div>
                     <div id="second-row">
-                        <div id="leave-review-box">
-                            <textarea  name="comment" form="usrform" class="textArea" placeholder="If you're logged in, please leave a review here."></textarea>  
-             
-                        <form class="userForm">
+                        
+                        <iframe id="review-frame" src="/hyfy/add_review/{{ user.username }}/{{ venue.slug }}" frameborder="0" allowfullscreen></iframe>
+                        <!-- <div id="leave-review-box">
                             {% if user.is_authenticated %}
-                            <input type="submit">
+                            commment this too!!!<textarea  name="comment" form="reviewForm" class="textArea" placeholder="If you're logged in, please leave a review here."></textarea> -->
+                            <!-- <form id="review_form" method="post" action="/hyfy/add_review">
+                                {% csrf_token %}
+                                {% for hidden in form.hidden_fields %}
+                                    {{ hiden }}
+                                {% endfor %}
+                                {% for field in form.visible_fields %}
+                                    {{ field.errors }}
+                                    {{ field.help_text }}
+                                    {{ field }}
+                                {% endfor %}
+                                <input type="submit" name="submit" value="Create Review" />
+                            </form>
+             
+                            <button id="submitbutton">
                             {% else %}
                             <div class="login">
                                 <a href="{% url 'auth_login' %}" class="login-btn">log in to leave a review</a>
                             </div>
                             {% endif %}
-                        </form>
-                        </div>
+                        </div> -->
+                        <iframe id="review-display" src="/hyfy/show_review/{{ user.username }}/{{ venue.slug }}" frameborder="0" allowfullscreen></iframe>
 
-                        <div id="submitted-review-box">
+                       <!-- <div id="submitted-review-box">
                             
-                            <div id="reviewer">
-                         <!--src="{{ MEDIA_URL }}{{ userprofile.picture }}" -->
+                            <div id="reviewer"> 
+                         src="{{ MEDIA_URL }}{{ userprofile.picture }}"
                                 <div id="picture-box">
                                 <img id ="reviewer-picture" src="/media/profile-pictures/Barry.png" alt="dunno" />
                                 </div>
@@ -62,7 +84,7 @@ Venue
                             </div>
                       
                         </div>
-                    </div>
+                    </div> -->
                 </div>           
             </div>
         {% endif %}

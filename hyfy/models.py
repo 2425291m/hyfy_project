@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.db import models
-from django.utils import timezone
+import datetime
 import os
 
 # Create your models here.
@@ -85,6 +85,23 @@ class UserProfile(models.Model):
     def __str__(self):
         return self.user.username
 
+class Review(models.Model):
+    
+    venue = models.ForeignKey(Venue)
+    print(venue)
+    user = models.ForeignKey(UserProfile)
+    print(user)
+    date = datetime.date.today()
+    text = models.CharField(max_length=200)
+
+    def save(self, *args, **kwargs):
+        super(Review, self).save(*args, **kwargs)
+
+    class Meta:
+        verbose_name_plural = 'reviews' 
+
+    def __str__(self):
+        return self
 
 # user = models.OneToOneField(User, on_delete=models.CASCADE)
 # bio = models.TextField(max_length=500, blank=True)
