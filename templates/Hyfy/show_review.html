@@ -6,6 +6,9 @@
         
         {% if reviews %}   
             {% for review in reviews %}
+            <div class="review-block">
+                <div id="review-user">
+<!--        
             <div id="reviewer">
                 <div id="picture-box">
                 <img id ="reviewer-picture" src="/media/profile-pictures/Barry.png" alt="dunno" />
@@ -13,11 +16,13 @@
 
                 <h4 id="reviewer-details">{{ review.username }} - {{ review.date }</h4>
             </div>
-
-            <div id="review-text">
-                <p>{{ review.text }}</p>
-            </div> 
-        
+-->
+                        {{ review.username }}
+                    </div>
+                <div id="review-text">
+                    <p>{{ review.text }}</p>
+                </div> 
+            </div>
             {% endfor %}
         {% endif %}
     </div>

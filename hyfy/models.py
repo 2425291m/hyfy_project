@@ -87,9 +87,7 @@ class UserProfile(models.Model):
 
 class Review(models.Model):
     venue = models.ForeignKey(Venue)
-    print(venue)
-    user = models.ForeignKey(UserProfile).name    
-    print(user)
+    username = models.CharField(User, max_length=100)
     date = datetime.date.today()
     text = models.CharField(max_length=200)
 
@@ -100,7 +98,7 @@ class Review(models.Model):
         verbose_name_plural = 'reviews' 
 
     def __str__(self):
-        return self
+        return self.text
 
 # user = models.OneToOneField(User, on_delete=models.CASCADE)
 # bio = models.TextField(max_length=500, blank=True)

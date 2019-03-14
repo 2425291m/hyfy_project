@@ -15,7 +15,7 @@ class VenueAdmin (admin.ModelAdmin):
     list_display = ('name', 'city', 'likes', 'latitude', 'longitude', 'genre')
 
 class ReviewAdmin(admin.ModelAdmin):
-    list_display = ('text',)
+    list_display = ('id','text','username','venue','date')
 
 admin.site.register(City, CityAdmin)
 admin.site.register(Genre, GenreAdmin)

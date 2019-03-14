@@ -41,7 +41,7 @@ Venue
                         <div id="googleMap"></div>
                     </div>
                     <div id="second-row">
-                        
+                        {% if user.is_authenticated %}
                         <iframe id="review-frame" src="/hyfy/add_review/{{ user.username }}/{{ venue.slug }}" frameborder="0" allowfullscreen></iframe>
                         <!-- <div id="leave-review-box">
                             {% if user.is_authenticated %}
@@ -71,12 +71,16 @@ Venue
                         
                         
                         
-                        <iframe id="review-display" src="/hyfy/show_review/{{ user.username }}/{{ venue.slug }}" frameborder="0" allowfullscreen></iframe>
+                        <iframe id="review-display" src="/hyfy/show_review/{{ venue.slug }}" frameborder="0" allowfullscreen></iframe>
 
                         
                         
                         
-                        
+                        {% else %}
+                        <div class="login">
+                            <a href="{% url 'auth_login' %}" class="login-btn">log in to leave a review</a>
+                        </div>
+                        {% endif %}
 <!--
                     <div id="submitted-review-box">
                             
@@ -102,16 +106,18 @@ Venue
 </div>
         {% endif %}
  <script>
-function myMap() {
-var mapProp= {
-  center:new google.maps.LatLng(51.508742,-0.120850),
-  zoom:5,
-};
-var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-var myLocation = new google.maps.LatLng(parseFloat({{33.7238029}}), parseFloat(-117.267504, 17));
+function initMap() {
+  // The location of Uluru
+  var uluru = {lat: -25.344, lng: 131.036};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('googleMap'), {zoom: 4, center: uluru});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: uluru, map: map});
 }
+     
 </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8WJxmedig_2H0W1fe4-cLAXoppDt_7Ss&callback=myMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8WJxmedig_2H0W1fe4-cLAXoppDt_7Ss&callback=initMap"></script>
 
 {% endblock %}

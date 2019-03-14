@@ -173,6 +173,7 @@ def add_review(request, username, venue_name_slug):
     form = ReviewForm()
     venue = Venue.objects.get(slug=venue_name_slug)
     user = User.objects.get(username=username)
+
     if request.method == 'POST':
         form = ReviewForm(request.POST)
 
@@ -180,7 +181,7 @@ def add_review(request, username, venue_name_slug):
 
             review = form.save(commit=False)
             review.venue = venue
-            review.user = user
+            review.username = user.username
             review.save()
             return submitted(request)
         else:
@@ -196,16 +197,15 @@ def submitted(request):
     response = render(request, 'hyfy/submitted.html')
     return response
 
-def show_review(request, username, venue_name_slug):
+def show_review(request, venue_name_slug):
    
     context_dict = {}
     try:
-        username = User.objects.get(username=username)
         venue = Venue.objects.get(slug=venue_name_slug)
         reviews = Review.objects.filter(venue=venue)
 
         context_dict['reviews'] = reviews
-        context_dict['username'] = username
+
     except Review.DoesNotExist:
         context_dict['reviews'] = None
        
