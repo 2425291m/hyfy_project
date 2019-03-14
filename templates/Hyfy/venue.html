@@ -71,19 +71,20 @@ Venue
                         
                         
                         
-<!--                        <iframe id="review-display" src="/hyfy/show_review/{{ user.username }}/{{ venue.slug }}" frameborder="0" allowfullscreen></iframe>-->
+                        <iframe id="review-display" src="/hyfy/show_review/{{ user.username }}/{{ venue.slug }}" frameborder="0" allowfullscreen></iframe>
 
                         
                         
                         
                         
-                       <!-- <div id="submitted-review-box">
+<!--
+                    <div id="submitted-review-box">
                             
                             <div id="reviewer"> 
-                         src="{{ MEDIA_URL }}{{ userprofile.picture }}"
-                                <div id="picture-box">
-                                <img id ="reviewer-picture" src="/media/profile-pictures/Barry.png" alt="dunno" />
-                                </div>
+                            
+                            <div id="picture-box">
+                                <img src="{{ MEDIA_URL }}{{ userprofile.picture }}" onerror="imgError(this);"
+                                >
                                 <h4 id="reviewer-details">Barry Galbraith - { date }</h4>
                             </div>
                             
@@ -93,9 +94,12 @@ Venue
                             </div>
                       
                         </div>
-                    </div> -->
+                    </div> 
                 </div>           
+-->
             </div>
+        </div>
+</div>
         {% endif %}
  <script>
 function myMap() {

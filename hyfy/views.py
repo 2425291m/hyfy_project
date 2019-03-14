@@ -12,6 +12,7 @@ from hyfy.models import UserProfile
 from hyfy.models import City
 from hyfy.models import Venue
 from hyfy.models import Genre
+from hyfy.models import Review
 from registration.backends.simple.views import RegistrationView
 from django.db.models import Q 
 import os
@@ -172,8 +173,6 @@ def add_review(request, username, venue_name_slug):
     form = ReviewForm()
     venue = Venue.objects.get(slug=venue_name_slug)
     user = User.objects.get(username=username)
-
-
     if request.method == 'POST':
         form = ReviewForm(request.POST)
 
@@ -196,6 +195,23 @@ def submitted(request):
 
     response = render(request, 'hyfy/submitted.html')
     return response
+
+def show_review(request, username, venue_name_slug):
+   
+    context_dict = {}
+    try:
+        username = User.objects.get(username=username)
+        venue = Venue.objects.get(slug=venue_name_slug)
+        reviews = Review.objects.filter(venue=venue)
+
+        context_dict['reviews'] = reviews
+        context_dict['username'] = username
+    except Review.DoesNotExist:
+        context_dict['reviews'] = None
+       
+    response = render(request, 'hyfy/show_review.html', context_dict)
+    return response
+
 
 # def show_review(request):
 

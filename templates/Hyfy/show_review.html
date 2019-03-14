@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+    <link rel="stylesheet" type="text/css" href="/static/CSS/ajax_comment.css"> 
+    <div id="submitted-review-box">
+        
+        {% if reviews %}   
+            {% for review in reviews %}
+            <div id="reviewer">
+                <div id="picture-box">
+                <img id ="reviewer-picture" src="/media/profile-pictures/Barry.png" alt="dunno" />
+                </div>
+
+                <h4 id="reviewer-details">{{ review.username }} - {{ review.date }</h4>
+            </div>
+
+            <div id="review-text">
+                <p>{{ review.text }}</p>
+            </div> 
+        
+            {% endfor %}
+        {% endif %}
+    </div>
+</html>

@@ -12,6 +12,8 @@ urlpatterns = [
     url(r'^faq/$', views.faq, name='faq'),
     url(r'^contact_us/$', views.contact_us, name='contact_us'),
     url(r'^add_review/(?P<username>[\w\-]+)/(?P<venue_name_slug>[\w\-]+)/$', views.add_review, name='add_review'),
+    url(r'^show_review/(?P<username>[\w\-]+)/(?P<venue_name_slug>[\w\-]+)/$', views.show_review, name='show_review'),
+    
     url(r'^submitted/$', views.submitted, name='submitted'),
     # url(r'^show_review/(?P<username>[\w\-]+)/(?P<venue_name_slug>[\w\-]+)/$', views.show_review, name='show_review'),
     url(r'^(?P<city_name_slug>[\w\-]+)/$', views.show_city, name='show_city'),
