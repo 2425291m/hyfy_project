@@ -27,8 +27,7 @@
 }
 
 #review-frame {
-    width: 400px;
-    height: 100px;
+    
 }
 
 #city {
@@ -112,7 +111,7 @@ img {
     float: left;
     height: 43%;
     width: 100%;
-}
+}  
 
 #venue-bio {
     font-size: 10px;
@@ -209,4 +208,23 @@ a {
 
 .back-btn {
     color: black;
+}
+
+.leave-review {
+    width: 100%;
+    height: 100%;
+}
+
+.see-review {
+
+    width: 100%;
+    height: 100%;
+}
+
+.leave-box {
+    float: left;
+}
+
+.see-box {
+    float: right;
 }

@@ -41,66 +41,21 @@ Venue
                         <div id="googleMap"></div>
                     </div>
                     <div id="second-row">
-                        {% if user.is_authenticated %}
-                        <iframe id="review-frame" src="/hyfy/add_review/{{ user.username }}/{{ venue.slug }}" frameborder="0" allowfullscreen></iframe>
-                        <!-- <div id="leave-review-box">
-                            {% if user.is_authenticated %}
-                            commment this too!!!<textarea  name="comment" form="reviewForm" class="textArea" placeholder="If you're logged in, please leave a review here."></textarea> -->
-                            <!-- <form id="review_form" method="post" action="/hyfy/add_review">
-                                {% csrf_token %}
-                                {% for hidden in form.hidden_fields %}
-                                    {{ hiden }}
-                                {% endfor %}
-                                {% for field in form.visible_fields %}
-                                    {{ field.errors }}
-                                    {{ field.help_text }}
-                                    {{ field }}
-                                {% endfor %}
-                                <input type="submit" name="submit" value="Create Review" />
-                            </form>
-             
-                            <button id="submitbutton">
-                            {% else %}
-                            <div class="login">
-                                <a href="{% url 'auth_login' %}" class="login-btn">log in to leave a review</a>
+                        <div class="leave-box">
+                            <div class="leave-review">
+                                {% if user.is_authenticated %}
+                                <iframe id="review-frame" src="/hyfy/add_review/{{ user.username }}/{{ venue.slug }}" frameborder="0" allowfullscreen></iframe>              
+                                {% else %}
+                                <div class="login">
+                                    <a href="{% url 'auth_login' %}" class="login-btn">log in to leave a review</a>
+                                </div>
+                                {% endif %}
                             </div>
-                            {% endif %}
-                        </div> -->
-                        
-                        
-                        
-                        
-                        
-                        <iframe id="review-display" src="/hyfy/show_review/{{ venue.slug }}" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="see-box">                        <div class="see-review">                            <iframe id="review-display" src="/hyfy/show_review/{{ venue.slug }}" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        </div>
 
-                        
-                        
-                        
-                        {% else %}
-                        <div class="login">
-                            <a href="{% url 'auth_login' %}" class="login-btn">log in to leave a review</a>
-                        </div>
-                        {% endif %}
-<!--
-                    <div id="submitted-review-box">
-                            
-                            <div id="reviewer"> 
-                            
-                            <div id="picture-box">
-                                <img src="{{ MEDIA_URL }}{{ userprofile.picture }}" onerror="imgError(this);"
-                                >
-                                <h4 id="reviewer-details">Barry Galbraith - { date }</h4>
-                            </div>
-                            
-                            <div id="review-text">
-                            <p>
-                                lorem etc</p>
-                            </div>
-                      
-                        </div>
-                    </div> 
-                </div>           
--->
             </div>
         </div>
 </div>
