@@ -144,7 +144,7 @@ def user_login(request):
         return render(request, 'hyfy/login.html', {})
 
 def add_review(request, username, venue_name_slug):
-    # form = ReviewForm()
+    form = ReviewForm()
     venue = Venue.objects.get(slug=venue_name_slug)
     user = User.objects.get(username=username)
 
@@ -152,11 +152,16 @@ def add_review(request, username, venue_name_slug):
         form = ReviewForm(request.POST)
 
         if form.is_valid():
-            form.save(commit=True)
-            return venue(request)
+
+            review = form.save(commit=False)
+            review.venue = venue
+            review.user = user
+            review.save()
+            return add_review(request, username, venue_name_slug)
         else:
             print(form.errors)
-    return render(request, 'hyfy/add_review.html', {'form': form})
+    context_dict = {'form':form, 'venue':venue_name_slug}
+    return render(request, 'hyfy/add_review.html', context_dict)
 
 def submitted(request):
 

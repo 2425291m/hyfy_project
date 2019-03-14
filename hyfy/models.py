@@ -85,7 +85,7 @@ class UserProfile(models.Model):
 class Review(models.Model):
     venue = models.ForeignKey(Venue)
     print(venue)
-    user = models.ForeignKey(UserProfile)
+    user = models.ForeignKey(UserProfile).name
     print(user)
     date = datetime.date.today()
     text = models.CharField(max_length=200)
