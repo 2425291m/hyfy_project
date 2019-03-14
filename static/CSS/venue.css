@@ -67,6 +67,7 @@ h3 {
 img {
     width: 100%;
     border-radius: 50%;
+    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #venue-picture {
@@ -128,8 +129,6 @@ img {
     background-color: white;
     margin-left: 2%;
     float: left;
-    width: 64.5%;
-    height: 90%;
 }
 
 
@@ -173,8 +172,6 @@ a {
 #reviewer {
     float: left;
     margin: 0.5%;
-    width: 99%;
-    height: 20%;
     background-color: #fff;
 }
 
@@ -193,8 +190,6 @@ a {
     overflow: hidden;
     border-radius: 50%;
     float: left;
-    height: 100%;
-    width: 5%;
 }
 
 #review-text {
@@ -216,15 +211,18 @@ a {
 }
 
 .see-review {
-
     width: 100%;
     height: 100%;
 }
 
 .leave-box {
     float: left;
+    width: 50%;
+    background-color: red;
 }
 
 .see-box {
     float: right;
+    width: 50%;
+    background-color: green;
 }
