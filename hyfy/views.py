@@ -16,6 +16,7 @@ from hyfy.models import Review
 from registration.backends.simple.views import RegistrationView
 from django.db.models import Q 
 import os
+import datetime
 
 # Create your views here.
 
@@ -99,15 +100,17 @@ def show_city(request, city_name_slug):
     return render(request,'hyfy/city.html', context=context_dict)
 
 def venue(request):
-    response = render(request, 'hyfy/venue.html')
+    form = ReviewForm()
+    response = render(request, 'hyfy/venue.html', context={'form': form})
     return response
 
 def show_venue(request, city_name_slug, venue_name_slug):
-
     context_dict = {}
     try:
         venue = Venue.objects.get(slug=venue_name_slug)
+        reviews = Review.objects.all().filter(venue=venue)
         context_dict['venue'] = venue
+        context_dict['reviews'] = reviews
     except City.DoesNotExist:
         context_dict['venue'] = None
 
@@ -169,26 +172,44 @@ def user_login(request):
     else:
         return render(request, 'hyfy/login.html', {})
 
-def add_review(request, username, venue_name_slug):
-    form = ReviewForm()
-    venue = Venue.objects.get(slug=venue_name_slug)
-    user = User.objects.get(username=username)
+def add_review(request):
 
     if request.method == 'POST':
-        form = ReviewForm(request.POST)
+        venue_slug = request.POST.get('venue_slug', '')
+        venue = Venue.objects.get(slug=venue_slug)
+        comment_text = request.POST.get('comment', '')
 
-        if form.is_valid():
+        new_review = Review()
+        new_review.venue = venue
+        new_review.username = request.user
+        new_review.date = datetime.date.today()
+        new_review.text = comment_text
 
-            review = form.save(commit=False)
-            review.venue = venue
-            review.username = user.username
-            review.save()
-            return submitted(request)
-        else:
-            print(form.errors)
+        new_review.save()
+    
+    reviews = Review.objects.all().filter(venue=venue)
+    return render(request, 'hyfy/show_review.html', context={'reviews': reviews})
 
-    context_dict = {'form':form, 'venue': venue_name_slug}
-    return render(request, 'hyfy/add_review.html', {'form': form})
+
+    # form = ReviewForm()
+    # venue = Venue.objects.get(slug=venue_name_slug)
+    # user = User.objects.get(username=username)
+
+    # if request.method == 'POST':
+    #     form = ReviewForm(request.POST)
+
+    #     if form.is_valid():
+
+    #         review = form.save(commit=False)
+    #         review.venue = venue
+    #         review.username = user.username
+    #         review.save()
+    #         return submitted(request)
+    #     else:
+    #         print(form.errors)
+
+    # context_dict = {'form':form, 'venue': venue_name_slug}
+    # return render(request, 'hyfy/add_review.html', {'form': form})
 
     
 
