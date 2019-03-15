@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 {% load staticfiles %}
 <html>
-    <link rel="stylesheet" type="text/css" href="/static/CSS/ajax_comment.css"> 
+    <link rel="stylesheet" type="text/css" href="/static/CSS/ajax_comment.css">
+    <script src="/hyfy/static/js/hyfy-venue.js">
+        var csrf_token = '{{ csrf_token }}';
+    </script> 
     <div id="submitted-review-box">
         
         {% if reviews %}   
