@@ -17,6 +17,9 @@ class VenueAdmin (admin.ModelAdmin):
 class ReviewAdmin(admin.ModelAdmin):
     list_display = ('id','text','username','venue','date')
 
+class UserProfileAdmin(admin.ModelAdmin):
+    list_display = ('user', 'bio', 'picture', 'spotifypicture','spotifyDisplayName')
+
 admin.site.register(City, CityAdmin)
 admin.site.register(Genre, GenreAdmin)
 admin.site.register(UserProfile)

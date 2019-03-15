@@ -10,6 +10,7 @@ urlpatterns = [
     url(r'^about_us/$', views.about_us, name='about_us'),
     url(r'^thanks/$', views.thanks, name='thanks'),
     url(r'^faq/$', views.faq, name='faq'),
+    url(r'^user_details/$',views.user_details, name='user_details'),
     url(r'^contact_us/$', views.contact_us, name='contact_us'),
     url(r'^add_review/(?P<username>[\w\-]+)/(?P<venue_name_slug>[\w\-]+)/$', views.add_review, name='add_review'),
     url(r'^show_review/(?P<venue_name_slug>[\w\-]+)/$', views.show_review, name='show_review'),

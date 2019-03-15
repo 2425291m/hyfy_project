@@ -10,18 +10,6 @@ import os
 
 # Create your models here.
 
-class spotAuth(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    identifier = models.CharField(max_length=50)
-    access_token = models.CharField(max_length=256, null=True)
-    refresh_token = models.CharField(max_length=256, null=True)
-    integration_user_id = models.CharField(max_length=256, null=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-
-    def __str__(self):
-        return f"{self.identifier} ({self.id})"
-
 class City(models.Model):
     name = models.CharField(max_length=36, unique=True)
     slug = models.SlugField()
@@ -82,8 +70,30 @@ class UserProfile(models.Model):
     # The additional attributes we wish to include.
     bio = models.TextField(max_length=500,blank=True)
     picture = models.ImageField(upload_to='profile_images', blank=True)
+    spotifyPicture = models.URLField(max_length=500, default="placeholder")
+    spotifyDisplayName = models.TextField(max_length=100, default="placeholder")
+    spotifyLink = models.URLField(max_length=500 , default="placeholder")
+    artist0link = models.URLField(max_length=500, default="placeholder")
+    artist0imglink = models.URLField(max_length=500, default="placeholder")
+    artist1link = models.URLField(max_length=500, default="placeholder")
+    artist1imglink = models.URLField(max_length=500, default="placeholder")
+    artist2link = models.URLField(max_length=500, default="placeholder")
+    artist2imglink = models.URLField(max_length=500, default="placeholder")
+    artist3link = models.URLField(max_length=500, default="placeholder")
+    artist3imglink = models.URLField(max_length=500, default="placeholder")
+    artist4link = models.URLField(max_length=500, default="placeholder")
+    artist4imglink = models.URLField(max_length=500, default="placeholder")
+    artist5link = models.URLField(max_length=500, default="placeholder")
+    artist5imglink = models.URLField(max_length=500, default="placeholder")
+    artist6link = models.URLField(max_length=500, default="placeholder")
+    artist6imglink = models.URLField(max_length=500, default="placeholder")
+    artist7link = models.URLField(max_length=500, default="placeholder")
+    artist7imglink = models.URLField(max_length=500, default="placeholder")
+    artist8link = models.URLField(max_length=500, default="placeholder")
+    artist8imglink = models.URLField(max_length=500, default="placeholder")
+    
+
     # Override the __unicode__() method to return out something meaningful!
-    userJson = models
 
     def __str__(self):
         return self.user.username

@@ -117,6 +117,73 @@ def user_login(request):
     response = render(request, 'hyfy/login.html')
     return response
 
+def user_details(request):
+
+    if request.method == 'POST':
+        username = request.POST.get('id','')
+        display_name = request.POST.get('displayname','')
+        spotify_link = request.POST.get('spotifylink','')
+        spotify_img = request.POST.get('spotifyphoto','')
+        a0link = request.POST.get('artist0link','')
+        a0img = request.POST.get('artist0img','')
+        a1link = request.POST.get('artist1link','')
+        a1img = request.POST.get('artist1img','')
+        a2link = request.POST.get('artist2link','')
+        a2img = request.POST.get('artist2img','')
+        a3link = request.POST.get('artist3link','')
+        a3img = request.POST.get('artist3img','')
+        a4link = request.POST.get('artist4link','')
+        a4img = request.POST.get('artist4img','')
+        a5link = request.POST.get('artist5link','')
+        a5img = request.POST.get('artist5img','')
+        a6link = request.POST.get('artist6link','')
+        a6img = request.POST.get('artist6img','')
+        a7link = request.POST.get('artist7link','')
+        a7img = request.POST.get('artist7img','')
+        a8link = request.POST.get('artist8link','')
+        a8img = request.POST.get('artist8img','')
+        print(username)
+        print(display_name)
+        print(spotify_link)
+        print(spotify_img)
+        print(a0link)
+        print(a0img)
+        print("...")
+        print(a8link)
+        print(a8img)
+        user = User.objects.get(username=username)
+        userprofile = UserProfile.objects.get_or_create(user=user)[0]
+        print(userprofile)
+        print(userprofile.spotifyLink)
+        userprofile.spotifyDisplayName = display_name
+        userprofile.spotifyLink = spotify_link
+        userprofile.spotifyPicture = spotify_img
+        userprofile.artist0imglink = a0img
+        userprofile.artist0link = a0link
+        userprofile.artist1imglink = a0img
+        userprofile.artist1link = a0link
+        userprofile.artist2imglink = a0img
+        userprofile.artist2link = a0link
+        userprofile.artist3imglink = a0img
+        userprofile.artist3link = a0link
+        userprofile.artist40imglink = a0img
+        userprofile.artist4link = a0link
+        userprofile.artist5imglink = a0img
+        userprofile.artist5link = a0link
+        userprofile.artist6imglink = a0img
+        userprofile.artist6link = a0link
+        userprofile.artist7imglink = a0img
+        userprofile.artist7link = a0link
+        userprofile.artist8imglink = a0img
+        userprofile.artist8link = a0link
+
+        
+        userprofile.save()
+
+        return render(request, 'hyfy/account.html')
+
+
+
 def register(request):
     registered = False
 
