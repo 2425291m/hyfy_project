@@ -17,78 +17,109 @@ AboutUs
 {% endblock %}
 
 {% block main_block %}
-        <div id="column">
-            <div id="main-box">
-                <div id="pofile-box">
-                    <div id="top-section">
-                    <div id="profile-picture">
-<!--                     userprofile.picture below is not rading the userprofile -->                       
-                        <img src="{{ userprof.spotifyPicture }}" onerror="imgError(this);" />
-                    </div>
-                    <div id="account-name">
-                   {{ user.username }}
-                    </div>
+    <div class="flexcontainer">
+        <div class="profileInfo">
+                <div id="top-section">
+                        <div id="profile-picture">
+    <!--                     userprofile.picture below is not rading the userprofile -->                       
+                            <img src="{{ userprof.spotifyPicture }}" onerror="imgError(this);" />
                         </div>
-                    <div class="block">
-                    <label id="spotify-username">Display Name :</label>
-                    <input type="text" id="spotify-username-text" value="{{ userprof.spotifyDisplayName }}"  readonly>
+                        <div id="account-name">
+                       {{ user.username }}
+                        </div>
                     </div>
-                    <div class="block">
-                        <label id="email-address">E-Mail :</label>
-                        <input type="text" id="email-text" value={{ user.email }} readonly>
-                    </div>
-                    <div class="block">
-                    <label id="spotify-link">Spotify Profile Link :</label>
-                    <input type="text" id="spotify-link-text" value="{{ userprof.spotifyLink }}"  readonly>
-                    </div>
-                    <div class="block">
-                        <label id="profile-city">City :</label>
-                        <input type="text" id="profile-city-text" value="Edinburgh, Obviously."  readonly>
-                    </div>
-                    <div class="block">
-                        <label id="selected-genre">Selected Genre :</label>
-                        <select>
-                            <option value="jazz">Jazz</option>
-                            <option value="rock">Rock</option>
-                            <option value="dance">Dance</option>
-                            <option value="R+B">R+B</option>
-                            <option value="Classical">Classical</option>
-                        </select>
-                    </div>
-                    <div class="block">
-                        <label id="bio">BIO :</label>
-                        <div id="bio-box">
-                        <p>{{ userprof.bio }}</p></div>
-                    </div>
+                    <br> <br> <br>
+                <div class="block">
+                    <br>
+                <label id="spotify-username">Display Name: </label>
+                <input type="text" id="spotify-username-text" value="{{ userprof.spotifyDisplayName }}"  readonly>
                 </div>
-
-                <div id="reviews-main-box">
-                    <div class="review-box">
-                        <h3 class="review">Review - 25/02/19</h3>
-                        <div id="line"></div>
-                        <div id="review-1-box">
-                            
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
-                    </div>
-                    <div class="review-box">
-                        <h3 class="review">Review - 20/02/19</h3>
-                        <div id="line"></div>
-                        <div id="review-1-box">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
-                    </div>
-                    <div class="review-box">
-                        <h3 class="review">Review - 08/02/19</h3>
-                        <div id="line"></div>
-                        <div id="review-1-box">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
-                    </div>
-                    <div class="review-box">
-                        <h3 class="review">Review - 15/01/19</h3>
-                        <div id="line"></div>
-                        <div id="review-1-box">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
-                    </div>
+                <div class="block">
+                    <label id="email-address">E-Mail: </label>
+                    <input type="text" id="email-text" value={{ user.email }} readonly>
                 </div>
+                <div class="block">
+                <label id="spotify-link">Spotify Profile Link: </label>
+                <input type="text" id="spotify-link-text" value="{{ userprof.spotifyLink }}"  readonly>
+                </div>
+                <div class="block">
+                    <label id="profile-city">City: </label>
+                    <input type="text" id="profile-city-text" value="Edinburgh, Obviously."  readonly>
+                </div>
+                <div class="block">
+                    <label id="selected-genre">Selected Genre: </label>
+                    <select>
+                        <option value="jazz">Jazz</option>
+                        <option value="rock">Rock</option>
+                        <option value="dance">Dance</option>
+                        <option value="R+B">R+B</option>
+                        <option value="Classical">Classical</option>
+                    </select>
+                </div>
+                <div class="block">
+                    <label id="bio">BIO :</label>
+                    <div id="bio-box">
+                    <p>{{ userprof.bio }}</p></div>
+                </div>
+        </div>
+        <div class="artistgrid">
+                <div class="artist0div">
+                    <a href="{{ userprof.artist0link }}" id="artist0link" target="_blank"><img src="{{ userprof.artist0imglink }}" id="artist0"/></a>
+                </div>
+                <div class="artist1div">
+                    <a href="{{ userprof.artist1link }}" id="artist1link" target="_blank"><img src="{{ userprof.artist1imglink }}" id="artist1"/></a>
+                </div>
+                <div class="artist2div">
+                    <a href="{{ userprof.artist2link }}" id="artist2link" target="_blank"><img src="{{ userprof.artist2imglink }}" id="artist2"/></a>
+                </div>
+                <div class="artist3div">  
+                    <a href="{{ userprof.artist3link }}" id="artist3link" target="_blank"><img src="{{ userprof.artist3imglink }}" id="artist3"/></a>
+                </div>
+                <div class="artist4div">    
+                    <a href="{{ userprof.artist4link }}" id="artist4link" target="_blank"><img src="{{ userprof.artist4imglink }}" id="artist4"/></a>
+                </div>
+                <div class="artist5div">    
+                    <a href="{{ userprof.artist5link }}" id="artist5link" target="_blank"><img src="{{ userprof.artist5imglink }}" id="artist5"/></a>
+                </div>
+                <div class="artist6div">    
+                    <a href="{{ userprof.artist6link }}" id="artist6link" target="_blank"><img src="{{ userprof.artist6imglink }}" id="artist6"/></a>
+                </div>
+                <div class="artist7div">    
+                    <a href="{{ userprof.artist7link }}" id="artist7link" target="_blank"><img src="{{ userprof.artist7imglink }}" id="artist7"/></a>
+                </div>
+                <div class="artist8div">    
+                    <a href="{{ userprof.artist8link }}" id="artist8link" target="_blank"><img src="{{ userprof.artist8imglink }}" id="artist8"/></a>
+                </div>
+            
             </div>
-        </div>   
+
+    </div>
+    <div id="reviews-main-box">
+            <div class="review-box">
+                <h3 class="review">Review - 25/02/19</h3>
+                <div id="line"></div>
+                <div id="review-1-box">
+                    
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
+            </div>
+            <div class="review-box">
+                <h3 class="review">Review - 20/02/19</h3>
+                <div id="line"></div>
+                <div id="review-1-box">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
+            </div>
+            <div class="review-box">
+                <h3 class="review">Review - 08/02/19</h3>
+                <div id="line"></div>
+                <div id="review-1-box">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
+            </div>
+            <div class="review-box">
+                <h3 class="review">Review - 15/01/19</h3>
+                <div id="line"></div>
+                <div id="review-1-box">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
+            </div>
+        </div>
+
 {% endblock %}

@@ -160,22 +160,22 @@ def user_details(request):
         userprofile.spotifyPicture = spotify_img
         userprofile.artist0imglink = a0img
         userprofile.artist0link = a0link
-        userprofile.artist1imglink = a0img
-        userprofile.artist1link = a0link
-        userprofile.artist2imglink = a0img
-        userprofile.artist2link = a0link
-        userprofile.artist3imglink = a0img
-        userprofile.artist3link = a0link
-        userprofile.artist40imglink = a0img
-        userprofile.artist4link = a0link
-        userprofile.artist5imglink = a0img
-        userprofile.artist5link = a0link
-        userprofile.artist6imglink = a0img
-        userprofile.artist6link = a0link
-        userprofile.artist7imglink = a0img
-        userprofile.artist7link = a0link
-        userprofile.artist8imglink = a0img
-        userprofile.artist8link = a0link
+        userprofile.artist1imglink = a1img
+        userprofile.artist1link = a1link
+        userprofile.artist2imglink = a2img
+        userprofile.artist2link = a2link
+        userprofile.artist3imglink = a3img
+        userprofile.artist3link = a3link
+        userprofile.artist4imglink = a4img
+        userprofile.artist4link = a4link
+        userprofile.artist5imglink = a5img
+        userprofile.artist5link = a5link
+        userprofile.artist6imglink = a6img
+        userprofile.artist6link = a6link
+        userprofile.artist7imglink = a7img
+        userprofile.artist7link = a7link
+        userprofile.artist8imglink = a8img
+        userprofile.artist8link = a8link
 
         
         userprofile.save()
