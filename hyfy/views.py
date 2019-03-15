@@ -99,16 +99,16 @@ def show_city(request, city_name_slug):
 
     return render(request,'hyfy/city.html', context=context_dict)
 
-def venue(request):
-    form = ReviewForm()
-    response = render(request, 'hyfy/venue.html', context={'form': form})
-    return response
+# def venue(request):
+#     form = ReviewForm()
+#     response = render(request, 'hyfy/venue.html', context={'form': form})
+#     return response
 
 def show_venue(request, city_name_slug, venue_name_slug):
     context_dict = {}
     try:
         venue = Venue.objects.get(slug=venue_name_slug)
-        reviews = Review.objects.all().filter(venue=venue)
+        reviews = Review.objects.all().filter(venue=venue).order_by('-date').reverse()
         context_dict['venue'] = venue
         context_dict['reviews'] = reviews
     except City.DoesNotExist:
@@ -213,25 +213,25 @@ def add_review(request):
 
     
 
-def submitted(request):
+# def submitted(request):
 
-    response = render(request, 'hyfy/submitted.html')
-    return response
+#     response = render(request, 'hyfy/submitted.html')
+#     return response
 
-def show_review(request, venue_name_slug):
+# def show_review(request, venue_name_slug):
    
-    context_dict = {}
-    try:
-        venue = Venue.objects.get(slug=venue_name_slug)
-        reviews = Review.objects.filter(venue=venue)
+#     context_dict = {}
+#     try:
+#         venue = Venue.objects.get(slug=venue_name_slug)
+#         reviews = Review.objects.filter(venue=venue)
 
-        context_dict['reviews'] = reviews
+#         context_dict['reviews'] = reviews
 
-    except Review.DoesNotExist:
-        context_dict['reviews'] = None
+#     except Review.DoesNotExist:
+#         context_dict['reviews'] = None
        
-    response = render(request, 'hyfy/show_review.html', context_dict)
-    return response
+#     response = render(request, 'hyfy/show_review.html', context_dict)
+#     return response
 
 
 # def show_review(request):

@@ -11,7 +11,6 @@ $(document).ready(function() {
                 'csrfmiddlewaretoken': $('#review_form input[name=csrfmiddlewaretoken]').val(),
                 'venue_slug': $('#review_form input[name=venue_slug]').val(),
                 'comment': $('#comment_text').val(),
-                //'review': frm.serialize(),
             },
             success: function(data) {
                 $('#review-display').html(data);
