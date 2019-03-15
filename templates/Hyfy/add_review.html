@@ -7,7 +7,7 @@
 
 
     <div id="leave-review-box">
-        {% if user.is_authenticated %}
+ 
         <!-- <textarea  name="comment" form="reviewForm" class="textArea" placeholder="If you're logged in, please leave a review here."></textarea> -->
         <form id="review_form" method="post" action="">
             {% csrf_token %}
@@ -23,10 +23,6 @@
         </form>
 
         <!-- <button id="submitbutton"> -->
-        {% else %}
-        <div class="login">
-            <a href="{% url 'auth_login' %}" class="login-btn">log in to leave a review</a>
-        </div>
-        {% endif %}
+        
     </div>
 </html>

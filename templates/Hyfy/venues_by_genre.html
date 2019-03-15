@@ -14,7 +14,7 @@
         <div class="city-select"><h2 id="city-title">City <i class="icon ion-md-arrow-dropdown"></i></h2>
             <div class="city-list">
                 {% for city in cities %}
-                                <a href="/hyfy/city/{{ city.slug }}">{{ city.name }}</a>
+                                <a href="/hyfy/{{ city.slug }}">{{ city.name }}</a>
                 {% endfor %}
             </div>
         </div>
