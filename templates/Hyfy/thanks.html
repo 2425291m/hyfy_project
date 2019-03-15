@@ -12,9 +12,47 @@
 
 {% block main_block %}
 <div class="flexcontainer">
-<div id="thanksuser" class="thanksuser">
-     loading...
+    <br>
+<div id="thanksuser" class="thanksuser"></div>
+<div class="signupformdiv">
+    <form action="" method="POST">
+        <img src="" id="userprofile"/>
+        <br>
+        <label for="username">Your Spotify Username: </label>
+        <input id="usernamef" type="text" name="usernamefield" value="">
+        <br>
+        <label for="displayname">Your Spotify Display Name: </label>
+        <input id="displaynamef" type="text" name="displaynamefield" value="test">
+        <br>
+        <label for="email">Your Email Address:  </label>
+        <input id="emailf" type="text" name="emailfield" value="">
+        <br>
+        <label for="spotfylink">Your Spotify Link:  </label>
+        <input id="spotifylinkf" type="text" name="linkfield" value="">
+        <input type="hidden" id="artist0imgf" name="artist0img" value="">
+        <input type="hidden" id="artist0linkf" name="artist0link" value="">
+        <input type="hidden" id="artist1imgf" name="artist1img" value="">
+        <input type="hidden" id="artist1linkf" name="artist1link" value="">
+        <input type="hidden" id="artist2imgf" name="artist2img" value="">
+        <input type="hidden" id="artist2linkf" name="artist2link" value="">
+        <input type="hidden" id="artist3imgf" name="artist3img" value="">
+        <input type="hidden" id="artist3linkf" name="artist3link" value="">
+        <input type="hidden" id="artist4imgf" name="artist4img" value="">
+        <input type="hidden" id="artist4linkf" name="artist4link" value="">
+        <input type="hidden" id="artist5imgf" name="artist5img" value="">
+        <input type="hidden" id="artist5linkf" name="artist5link" value="">
+        <input type="hidden" id="artist6imgf" name="artist6img" value="">
+        <input type="hidden" id="artist6linkf" name="artist6link" value="">
+        <input type="hidden" id="artist7imgf" name="artist7img" value="">
+        <input type="hidden" id="artist7linkf" name="artist7link" value="">
+        <input type="hidden" id="artist8imgf" name="artist8img" value="">
+        <input type="hidden" id="artist8linkf" name="artist8link" value="">
+        <br>
+        <input type="submit" name="" id="create" value="Create Your Profile!">
+
+    </form>
 </div>
+
 <div class="artistgrid">
     <div class="artist0div">
         <a href="" id="artist0link" target="_blank"><img src="" id="artist0"/></a>
@@ -47,6 +85,8 @@
 </div>
 
 </div>
+
+
 
 <script src="/static/js/spotifyPipline.js"></script>
 {% endblock %}

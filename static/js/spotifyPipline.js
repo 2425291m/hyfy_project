@@ -1,3 +1,5 @@
+document.getElementById("usernamef").value = "testtest"
+console.log("jsRunning")
 
 var tempurl = window.location.hash
 //this is a hacky way to get around socialauth not giving us an easy wat to access our access token
@@ -13,9 +15,6 @@ var hash = window.location.hash
 hash = hash.slice(14, hash.length-34)
 console.log(hash)
 
-var doc = document.getElementById('thanksuser')
-var newText = ''
-
 jQuery.ajax({
     url: 'https://api.spotify.com/v1/me',
     headers: {
@@ -23,15 +22,17 @@ jQuery.ajax({
     },
     dataType: "json",
     success: function(result){
-        newText = result.id + "<br>"  + result.display_name + "<br>" +  result.birthdate + "<br>" + result.email + "<br>" + result.external_urls.spotify
         console.log(result)
         console.log(result.birthdate)
         console.log(result.display_name)
+        document.getElementById("displaynamef").value = result.display_name
         console.log(result.email)
-        console.log(result.id);
+        document.getElementById("emailf").value = result.email
+        console.log(result.id)
+        document.getElementById("usernamef").value = result.id
         console.log(result.external_urls.spotify)
-
-        //doc.innerHTML = newText
+        document.getElementById("spotifylinkf").value = result.external_urls.spotify
+        document.getElementById("userprofile").src=result.images[0].url;
     }
 });
 
@@ -46,10 +47,12 @@ jQuery.ajax({
             //newText += "<br>" + result.items[i].name + "<br>" + result.items[i].images[2].url + "<br>" + result.items[i].external_urls.spotify
             document.getElementById("artist"+i).src=result.items[i].images[0].url
             document.getElementById("artist"+i+"link").href=result.items[i].external_urls.spotify
+            document.getElementById("artist"+i+"linkf").value=result.items[i].external_urls.spotify
+            document.getElementById("artist"+i+"imgf").value=result.items[i].external_urls.spotify
 
         }
-        doc.innerHTML = newText
     }
 });
+
 
 //document.getElementById("imageid").src="../template/save.png";

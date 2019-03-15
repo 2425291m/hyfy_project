@@ -7,6 +7,7 @@ from django.db import models
 import datetime
 import os
 
+
 # Create your models here.
 
 class spotAuth(models.Model):
@@ -82,6 +83,8 @@ class UserProfile(models.Model):
     bio = models.TextField(max_length=500,blank=True)
     picture = models.ImageField(upload_to='profile_images', blank=True)
     # Override the __unicode__() method to return out something meaningful!
+    userJson = models
+
     def __str__(self):
         return self.user.username
 

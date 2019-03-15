@@ -2,10 +2,13 @@
     display: flex;
 }
 
-.thanksuser{
+.signupformdiv{
     background-color: white;
     height: 500;
     width: 500;
+    margin: 2%;
+    padding: 2%;
+    border-radius: 40px;
 }
 .testing{
     background-color: white;
@@ -14,12 +17,12 @@
 }
 
 .artistgrid{
+    margin: 2%;
     background-color: grey;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 1em;
-    margin: 0 auto;
     box-sizing: border-box;
     border-radius: .5em;
     padding: .5em;
