@@ -5,6 +5,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.db import models
 import datetime
+from django.utils.timezone import now
 import os
 
 
@@ -102,6 +103,7 @@ class Review(models.Model):
     venue = models.ForeignKey(Venue)
     username = models.CharField(User, max_length=100)
     date = datetime.date.today()
+    # date = models.DateField(default=now, blank=True, editable=True) #<<< might work (Ollie)
     text = models.CharField(max_length=200)
 
     def save(self, *args, **kwargs):
