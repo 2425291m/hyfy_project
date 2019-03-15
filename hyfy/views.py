@@ -372,7 +372,13 @@ def account(request, username):
     except User.DoesNotExist:
         return redirect('index')
     
-    userprofile = UserProfile.objects.get_or_create(user=user)[0]
+    #userprofile = UserProfile.objects.get_or_create(user=user)[0]
+    userprofile = UserProfile.objects.get(user=user)
+    print(userprofile)
+    print(userprofile.artist0link)
+
+
+   # print(userprofile.a0link)
     form = UserProfileForm({'bio': userprofile.bio, 'picture': userprofile.picture})
     
     if request.method == 'POST':
@@ -382,8 +388,11 @@ def account(request, username):
             return redirect('profile', user.username)
         else:
             print(form.errors)
+
+    # contextdict = {'userprofile': userprofile, 'selecteduser': user, 'form': form, 'picture': userprofile.spotifyPicture,
+    #                 'a0link':}
     
-    return render(request, 'hyfy/account.html', {'userprofile': userprofile, 'selecteduser': user, 'form': form})
+    return render(request, 'hyfy/account.html', {'userprof': userprofile, 'selecteduser': user, 'form': form, 'picture': userprofile.spotifyPicture})
 
 
 def search(request):

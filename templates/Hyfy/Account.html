@@ -2,7 +2,10 @@
 {% block title_block %}
 AboutUs
 {% endblock %}
-    
+
+{% load staticfiles %}
+
+
 {% block links_block %} 
     <link rel="stylesheet" type="text/css" href="/static/CSS/account.css"> 
     <script>
@@ -19,23 +22,24 @@ AboutUs
                 <div id="pofile-box">
                     <div id="top-section">
                     <div id="profile-picture">
-<!--                     userprofile.picture below is not rading the userprofile -->
-                        
-                        <img src="{{ MEDIA_URL }}{{ userprofile.picture }}" onerror="imgError(this);" />
+<!--                     userprofile.picture below is not rading the userprofile -->                       
+                        <img src="{{ userprof.spotifyPicture }}" onerror="imgError(this);" />
                     </div>
                     <div id="account-name">
                    {{ user.username }}
                     </div>
                         </div>
-                    <div id="line">
+                    <div class="block">
+                    <label id="spotify-username">Display Name :</label>
+                    <input type="text" id="spotify-username-text" value="{{ userprof.spotifyDisplayName }}"  readonly>
                     </div>
                     <div class="block">
                         <label id="email-address">E-Mail :</label>
                         <input type="text" id="email-text" value={{ user.email }} readonly>
                     </div>
                     <div class="block">
-                        <label id="spotify-username">Spotify Username :</label>
-                        <input type="text" id="spotify-username-text" value="BigBarryTheMan1963"  readonly>
+                    <label id="spotify-link">Spotify Profile Link :</label>
+                    <input type="text" id="spotify-link-text" value="{{ userprof.spotifyLink }}"  readonly>
                     </div>
                     <div class="block">
                         <label id="profile-city">City :</label>
@@ -51,13 +55,10 @@ AboutUs
                             <option value="Classical">Classical</option>
                         </select>
                     </div>
-                    <div>
-                        <a href="{% url "social:begin" "spotify" %}">login with spotify.</a>
-                    </div>
                     <div class="block">
                         <label id="bio">BIO :</label>
                         <div id="bio-box">
-                        <p>{{ userprofile.bio }}</p></div>
+                        <p>{{ userprof.bio }}</p></div>
                     </div>
                 </div>
 
