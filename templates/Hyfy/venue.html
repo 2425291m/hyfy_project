@@ -1,11 +1,12 @@
 {% extends 'hyfy/header.html' %}
+{% load staticfiles %}
 {% block title_block %}
 Venue
 {% endblock %}
     
 {% block links_block %} 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-    <script src="/hyfy/static/js/venue.js"></script>
+    <script src="{% static 'js/hyfy-venue.js' %}"></script>
     <script type="text/javascript"> 
         var csrf_token = '{{ csrf_token }}';
         var venue_slug = '{{ venue.slug }}';
@@ -18,49 +19,76 @@ Venue
 {% endblock %}
         
 {% block main_block %}     
-        {% if venue %}
-        <div id="genres2-navigation">
-        <script>changeBackgroundImageWithVenue();</script>
-           <a href="/hyfy/{{ venue.city.slug }}" id="back"><i class="icon ion-md-arrow-back"></i><h3> BACK TO TOP VENUES</h3></a>
-            
-           
-            <div id="city"><h3 id="city-title">{{ venue.city }}</h3>
-            </div>
+    {% if venue %}
+    <div id="genres2-navigation">
+    <script>changeBackgroundImageWithVenue();</script>
+        <a href="/hyfy/{{ venue.city.slug }}" id="back"><i class="icon ion-md-arrow-back"></i><h3> BACK TO TOP VENUES</h3></a>
+        
+        
+        <div id="city">
+            <h3 id="city-title">{{ venue.city }}</h3>
         </div>
-            
-            <div id="genres2-center-column">
-                <h2 id="venue-name">{{ venue.name }}</h2>
-                <div id="main-box">
-                    <div id="top-row">
-                        <div id="venue-picture">
-                            <img src="/static/images/venues/{{ venue.name }}.jpg">
-                        </div>
-                        <div id="venue-bio">
+    </div>
+        
+    <div id="genres2-center-column">
+        <h2 id="venue-name">{{ venue.name }}</h2>
+        <div id="main-box">
+            <div id="top-row">
+                <div id="venue-picture">
+                <img src="/static/images/venues/{{ venue.name }}.jpg">
+                </div>
+                <div id="venue-bio">
 
+                </div>
+                <div id="googleMap"></div>
+                </div>
+                <div id="second-row">
+
+                    {% if user.is_authenticated %}
+
+                        <div id="review-frame">
+                            <form id="review_form" method="post" action="">
+                                {% csrf_token %}
+                                <input type="hidden" name="venue_slug" value="{{ venue.slug }}" />
+                                <textarea id="comment_text" name="comment" form="review_form" class="textArea" placeholder="If you're logged in, please leave a review here."></textarea>
+                                <input type="submit" name="submit" value="Create Review" />
+                            </form>
                         </div>
-                        <div id="googleMap"></div>
-                    </div>
-                    <div id="second-row">
-                        <div class="leave-box">
-                            <div class="leave-review">
-                                {% if user.is_authenticated %}
-                                <iframe id="review-frame" src="/hyfy/add_review/{{ user.username }}/{{ venue.slug }}" frameborder="0" allowfullscreen></iframe>              
-                                {% else %}
-                                <div class="login">
-                                    <a href="{% url 'auth_login' %}" class="login-btn">log in to leave a review</a>
+                        <div id="review-display">
+                        {% if reviews %}   
+                        {% for review in reviews %}
+                            <div class="review-block">
+                                <div id="review-user">
+                                    <!--        
+                                            <div id="reviewer">
+                                                <div id="picture-box">
+                                                <img id ="reviewer-picture" src="/media/profile-pictures/Barry.png" alt="dunno" />
+                                                </div>
+                                    
+                                                <h4 id="reviewer-details">{{ review.username }} - {{ review.date }</h4>
+                                            </div>
+                                    -->
+                                {{ review.username }} <!-- {{ review.date }} -->
                                 </div>
-                                {% endif %}
+                                <div id="review-text">
+                                    <p>{{ review.text }}</p>
+                                </div> 
                             </div>
+                        {% endfor %}
+                        {% endif %}
                         </div>
-                        <div class="see-box">                        <div class="see-review">                            <iframe id="review-display" src="/hyfy/show_review/{{ venue.slug }}" frameborder="0" allowfullscreen></iframe>
+                        {% else %}
+                        <div class="login">
+                            <a href="{% url 'auth_login' %}" class="login-btn">log in to leave a review</a>
                         </div>
-                        </div>
-
+                    {% endif %}
+                    </div>
+                </div>
             </div>
         </div>
-</div>
-        {% endif %}
- <script>
+    </div>
+    {% endif %}
+<script>
 function initMap() {
   // The location of Uluru
   var uluru = {lat: -25.344, lng: 131.036};
@@ -69,10 +97,8 @@ function initMap() {
       document.getElementById('googleMap'), {zoom: 4, center: uluru});
   // The marker, positioned at Uluru
   var marker = new google.maps.Marker({position: uluru, map: map});
-}
-     
+}    
 </script>
-
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8WJxmedig_2H0W1fe4-cLAXoppDt_7Ss&callback=initMap"></script>
 
 {% endblock %}
