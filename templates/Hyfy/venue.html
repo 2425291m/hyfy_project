@@ -73,21 +73,10 @@ Venue
                         <div id="review-display">
                         {% if reviews %}   
                         {% for review in reviews %}
-                            
                         
                             <div class="review-block">
                                 <div id="review-user">
-                
-                                    <!--        
-                                            <div id="reviewer">
-                                                <div id="picture-box">
-                                                <img id ="reviewer-picture" src="/media/profile-pictures/Barry.png" alt="dunno" />
-                                                </div>
-                                    
-                                                <h4 id="reviewer-details">{{ review.username }} - {{ review.date }</h4>
-                                            </div>
-                                    -->
-                                <strong>{{ review.username }}</strong> <!-- {{ review.date }} -->
+                                <strong>{{ review.username }} - {{ review.date }}</strong> <!-- {{ review.date }} -->
                                 </div>
                                 <div id="review-text">
                                     <p>{{ review.text }}</p>
@@ -105,7 +94,7 @@ Venue
 <script>
 function initMap() {
   // The location of Uluru
-  var uluru = {lat: -25.344, lng: 131.036};
+  var uluru = {lat: {{ venue.latitude }}, lng: -{{ venue.longitude }}};
   // The map, centered at Uluru
   var map = new google.maps.Map(
       document.getElementById('googleMap'), {zoom: 4, center: uluru});

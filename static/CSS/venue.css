@@ -81,7 +81,7 @@ img {
 #leave-review-box {
     float: left;
     background-color: white;
-    margin-left:2%;
+    margin-left:1%;
     border: 0.5px solid black;
     font-size: 10px;
 }
@@ -126,8 +126,9 @@ img {
 }
 
 #submitted-review-box {
-    background-color: white;
-    margin-left: 2%;
+     width: 96%;
+    height: 100%;
+    margin-left: 1%;
     float: left;
 }
 
@@ -137,7 +138,7 @@ img {
 
 textarea {
     resize: none;
-    width: 98%;
+    width: 96%;
     height: 79%;
     margin: 1%;
     margin-bottom: 0%;
@@ -195,7 +196,7 @@ a {
 #review-text {
     margin: 1%;
     height: 70%;
-    width: 98%;
+
     border: 0.5px solid black;
     padding: 0.5%;
 }
@@ -205,12 +206,12 @@ a {
 }
 
 .leave-review {
-    width: 100%;
+  
     height: 100%;
 }
 
 .see-review {
-    width: 100%;
+ 
     height: 100%;
 }
 
@@ -233,7 +234,7 @@ a {
 
 #review-display {
     margin-top: 4%;
-    width: 100%;
+ 
     font-size: 15px;
     
 }

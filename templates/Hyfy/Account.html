@@ -94,32 +94,17 @@ AboutUs
             </div>
 
     </div>
-    <div id="reviews-main-box">
+    {% if reviews %}
+        {% for review in reviews %}
+        <div id="reviews-main-box">
             <div class="review-box">
-                <h3 class="review">Review - 25/02/19</h3>
+                <h3 class="review">{{ review.username }} - {{ review.venue }} - {{ review.date }}</h3> 
                 <div id="line"></div>
                 <div id="review-1-box">
-                    
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
-            </div>
-            <div class="review-box">
-                <h3 class="review">Review - 20/02/19</h3>
-                <div id="line"></div>
-                <div id="review-1-box">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
-            </div>
-            <div class="review-box">
-                <h3 class="review">Review - 08/02/19</h3>
-                <div id="line"></div>
-                <div id="review-1-box">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
-            </div>
-            <div class="review-box">
-                <h3 class="review">Review - 15/01/19</h3>
-                <div id="line"></div>
-                <div id="review-1-box">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
+                <p>{{ review.text }}</p></div>
             </div>
         </div>
+        {% endfor %}
+    {% endif %}
 
 {% endblock %}

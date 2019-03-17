@@ -391,6 +391,7 @@ class HyfyRegistrationView(RegistrationView):
 def account(request, username):
     try:
         user = User.objects.get(username=username)
+        reviews = Review.objects.all().filter(username=username)
     except User.DoesNotExist:
         return redirect('index')
     
@@ -414,7 +415,7 @@ def account(request, username):
     # contextdict = {'userprofile': userprofile, 'selecteduser': user, 'form': form, 'picture': userprofile.spotifyPicture,
     #                 'a0link':}
     
-    return render(request, 'hyfy/account.html', {'userprof': userprofile, 'selecteduser': user, 'form': form, 'picture': userprofile.spotifyPicture})
+    return render(request, 'hyfy/account.html', {'userprof': userprofile, 'selecteduser': user, 'form': form, 'picture': userprofile.spotifyPicture, 'reviews': reviews})
 
 
 def search(request):
