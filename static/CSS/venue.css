@@ -27,7 +27,7 @@
 }
 
 #review-frame {
-    
+    height: 50%;
 }
 
 #city {
@@ -195,7 +195,6 @@ a {
 #review-text {
     margin: 1%;
     height: 70%;
-    margin-top: 5%;
     width: 98%;
     border: 0.5px solid black;
     padding: 0.5%;
@@ -225,4 +224,36 @@ a {
     float: right;
     width: 50%;
     background-color: green;
+}
+
+.review-block {
+    margin: 1%;
+    border: 0.5px solid #000000;
+}
+
+#review-display {
+    margin-top: 4%;
+    width: 100%;
+    font-size: 15px;
+    
+}
+
+
+#review-user {
+    margin-left: 2%;
+}
+
+
+
+#review_form {
+    height: 100%;
+}
+
+.textArea {
+    height: 100%;
+}
+
+#comment_text {
+    border-radius: 10px;
+    padding: 0.5%;
 }

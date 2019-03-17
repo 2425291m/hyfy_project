@@ -14,7 +14,7 @@ Venue
     document.getElementById('review_form').action = "/hyfy/add_review/{{ user.username }}/{{ venue_slug }}/";
 
     </script>
-    <link rel="stylesheet" type="text/css" href="/static/CSS/venue.css">  
+    <link rel="stylesheet" type="text/css" href="/static/CSS/venue.css"> <link rel="stylesheet" type="text/css" href="/static/CSS/ajax_comment.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 {% endblock %}
         
@@ -50,15 +50,34 @@ Venue
                             <form id="review_form" method="post" action="">
                                 {% csrf_token %}
                                 <input type="hidden" name="venue_slug" value="{{ venue.slug }}" />
-                                <textarea id="comment_text" name="comment" form="review_form" class="textArea" placeholder="If you're logged in, please leave a review here."></textarea>
+                                
+                                <textarea id="comment_text" name="comment" form="review_form" class="textArea" placeholder="Hi, {{ user.username }}! If you've visited {{ venue.name }}, please leave a review here!"></textarea>
                                 <input type="submit" name="submit" value="Create Review" />
                             </form>
                         </div>
+                        {% else %}
+                        <div id="review-frame">
+                                <form id="review_form" method="post" action="">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="venue_slug" value="{{ venue.slug }}" />
+
+                                    <textarea id="comment_text" name="comment" form="review_form" class="textArea" placeholder="Log in to leave a review!"></textarea>
+                                     <div class="login">
+                                         <a href="{% url 'auth_login' %}" class="login-btn">log in to leave a review</a>
+                                    </div>
+                                </form>
+                        </div>
+                       
+                    {% endif %}
+                    
                         <div id="review-display">
                         {% if reviews %}   
                         {% for review in reviews %}
+                            
+                        
                             <div class="review-block">
                                 <div id="review-user">
+                
                                     <!--        
                                             <div id="reviewer">
                                                 <div id="picture-box">
@@ -68,25 +87,20 @@ Venue
                                                 <h4 id="reviewer-details">{{ review.username }} - {{ review.date }</h4>
                                             </div>
                                     -->
-                                {{ review.username }} <!-- {{ review.date }} -->
+                                <strong>{{ review.username }}</strong> <!-- {{ review.date }} -->
                                 </div>
                                 <div id="review-text">
                                     <p>{{ review.text }}</p>
                                 </div> 
-                            </div>
+                    
+                                </div>
                         {% endfor %}
                         {% endif %}
                         </div>
-                        {% else %}
-                        <div class="login">
-                            <a href="{% url 'auth_login' %}" class="login-btn">log in to leave a review</a>
-                        </div>
-                    {% endif %}
+                        
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
     {% endif %}
 <script>
 function initMap() {

@@ -249,7 +249,7 @@ def add_review(request):
 
         new_review = Review()
         new_review.venue = venue
-        new_review.username = request.user
+        new_review.username = request.user.username
         new_review.date = datetime.date.today()
         new_review.text = comment_text
 
