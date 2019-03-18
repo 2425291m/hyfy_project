@@ -49,6 +49,8 @@ class Venue(models.Model):
     likes = models.IntegerField(default=0)
     latitude = models.FloatField(default=0)
     longitude = models.FloatField(default=0)
+    address = models.TextField(max_length=200, blank=True)
+    website = models.URLField(max_length=500,blank=True)
     slug = models.SlugField()
 
     def save(self, *args, **kwargs):

@@ -52,7 +52,9 @@
 }
 
 
-
+h2{
+    font-size: 25px;
+}
 h3 {
     display: inline;
     font-size: 12px;
@@ -115,7 +117,7 @@ img {
 }  
 
 #venue-bio {
-    font-size: 10px;
+    font-size: 25px;
     float: left;
     border: 0.5px solid black;
     padding: 4px;
@@ -257,4 +259,8 @@ a {
 #comment_text {
     border-radius: 10px;
     padding: 0.5%;
+}
+
+#website-text {
+    color: midnightblue;
 }
