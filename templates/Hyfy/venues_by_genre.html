@@ -32,12 +32,13 @@
                     <img src="/static/images/venues/{{ venues.name }}.jpg">
                 
                      <div id="genre1-info">
-                         <h3 id="genre1-rating">RATING:
+                         <h3 id="genre1-rating">LIKES: {{venues.likes}}
                          
                          </h3>
 
                          <div id="info">
-                             <p> Address and stuff</p>
+                              <h4>Addess: {{ venues.address }}<br /><br />
+                        <a id = "website-text" href="{{ venues.website }}">Click here to go to venue's website!</a></h4>
                         </div>
                      </div>
                      <div id="to-venue">

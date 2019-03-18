@@ -81,11 +81,16 @@ def show_city(request, city_name_slug):
         dance = genres.filter(genrename="DANCE")
         jazz = genres.filter(genrename="JAZZ")
 
-        top_rock = all_venues.filter(genre=rock).first()
-        top_pop = all_venues.filter(genre=pop).first()
-        top_dance = all_venues.filter(genre=dance).first()
-        top_jazz = all_venues.filter(genre=jazz).first()
+        ordered_rock = all_venues.filter(genre=rock).order_by('-likes')
+        ordered_pop = all_venues.filter(genre=pop).order_by('-likes')
+        ordered_dance = all_venues.filter(genre=dance).order_by('-likes')
+        ordered_jazz = all_venues.filter(genre=jazz).order_by('-likes')
         
+        top_rock = ordered_rock.first()
+        top_pop = ordered_pop.first()
+        top_dance = ordered_dance.first()
+        top_jazz = ordered_jazz.first()
+
         top_venues = {top_rock, top_pop, top_dance, top_jazz}
 
         context_dict['top_venues'] = top_venues

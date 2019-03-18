@@ -28,12 +28,13 @@ City
                 <div id="top-bar"> 
                     <div class="genre-title-box">
                         <a class="genre-title-a" href="/hyfy/venues_by_genre/{{ city.slug }}/{{ venues.genre.slug }}">
-                        <h3 class="genre-title">{{ venues.genre.genrename }}</h3></a>
+                            <h3 class="genre-title">{{ venues.genre.genrename }}</h3></a>
                          <span class="genre-span">Go to {{ city.name }}'s top {{ venues.genre.slug }} venues! </span>
                     </div>
 
                      <div class="venue-title-box">
-                         <a class="venue-title-a" href="/hyfy/{{ venues.city.slug }}/{{ venues.slug }}"><h3 class="venue-title">{{ venues.name }}</h3></a>
+                         <a class="venue-title-a" href="/hyfy/{{ venues.city.slug }}/{{ venues.slug }}">
+                             <h3 class="venue-title">{{ venues.name }}</h3></a>
                      </div>
                  </div>
                  <div id="to-genre-icon">
@@ -44,20 +45,18 @@ City
                     <img src="/static/images/venues/{{ venues.name }}.jpg">
                 
                      <div id="genre1-info">
-                         <h4 id="genre1-rating">RATING:
+                         <h4 id="genre1-rating">Likes: {{ venues.likes }}
                          
                          </h4>
 
                          <div id="info">
-                             <p> Address and stuff</p>
+                              <h4>Addess: {{ venues.address }}<br /><br />
+                        <a id = "website-text" href="{{ venues.website }}">Click here to go to {{ venues.name }} website!</a></h4>
                         </div>
                      </div>
-                     <div id="to-venue">
-                         <h6>TO VENUE</h6>
-                        <a href="/hyfy/{{ venues.city.slug }}/{{ venues.slug }}">
+                    
                             
-                            <i class="icon ion-md-arrow-forward"></i></a>
-                     </div>
+
                  </div>
                  
              </div>

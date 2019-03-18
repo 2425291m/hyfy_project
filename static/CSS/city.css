@@ -32,7 +32,9 @@
 }
 
 .venue-title{
-
+    padding-left: 5px;
+    padding-right: 5px;
+    
 }
 
 
@@ -191,6 +193,7 @@ h3:hover{
 
 .venue-title-box {
     float: right;
+    margin: 1%
 }
 .venue-title-box h3{
     display: inline-block;
@@ -201,7 +204,7 @@ h3:hover{
 .genre-span {
     visibility: hidden;
     background-color: #e67e22;
-    width: 300%;
+    width: 200px;
     margin-left: 25%;
     color: #fff;
     text-align: center;
@@ -217,7 +220,7 @@ h3:hover{
 }
 
 .venue-title-a {
-display: inline-block;
+
 }
 
 
