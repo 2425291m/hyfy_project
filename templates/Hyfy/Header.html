@@ -14,18 +14,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         
         
-    <script type = "text/javascript">
-        function changeBackgroundImageWithCity(){
-            document.body.style.backgroundImage = "url('/static/images/{{ city.slug }}.jpg')";
-        }
-        function changeBackgroundImageWithVenue(){
-             document.body.style.backgroundImage = "url('/static/images/{{ venue.city.slug }}.jpg')";
-        }
-        function changeBackgroundImageToDefault(){
-             document.body.style.backgroundImage = "url('/static/images/glasgow.jpg')";
-        }
-    </script>
-        
     {% block links_block %}
     {% endblock %}
     </head>
@@ -80,5 +68,16 @@
         
         
    
+    <script type = "text/javascript">
+        function changeBackgroundImageWithCity(){
+            document.body.style.backgroundImage = "url('/static/images/{{ city.slug }}.jpg')";
+        }
+        function changeBackgroundImageWithVenue(){
+             document.body.style.backgroundImage = "url('/static/images/{{ venue.city.slug }}.jpg')";
+        }
+        function changeBackgroundImageToDefault(){
+             document.body.style.backgroundImage = "url('/static/images/glasgow.jpg')";
+        }
+    </script>
     </body>
 </html>

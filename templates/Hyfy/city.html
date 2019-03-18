@@ -10,7 +10,9 @@ City
 {% block main_block %}
 
         <div id="center-column">
-            <script>changeBackgroundImageWithCity();</script>
+            <script>
+                window.onload = function () {
+                    changeBackgroundImageWithCity();}</script>
         <div class="city-select"><h2 id="city-title">City <i class="icon ion-md-arrow-dropdown"></i></h2>
             <div class="city-list">
                  {% for city in cities %}
