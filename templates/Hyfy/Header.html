@@ -33,11 +33,7 @@
             {% else %}
             <div class="btn-signupin">
                  <div class="signin">
-                     <a href="{% url 'auth_login' %}" class="signinButton">sign in</a>
-                 </div>
-
-                 <div class="signup">
-                     <a href="{% url 'registration_register' %}"class="signupButton">sign up</a>
+                     <a href="{% url "social:begin" "spotify" %}" class="signinButton">sign in with Spotify<img src="/media/spotifylogo.png" width="40" height="40"  alt="spotifylogon"></a>
                  </div>
             </div>
             {% endif %}
