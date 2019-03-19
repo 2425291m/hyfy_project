@@ -13,7 +13,7 @@ $(document).ready(function() {
                 'comment': $('#comment_text').val(),
             },
             success: function(data) {
-                $('#review-display').html(data);
+                location.reload();
             },
             dataType: 'html'
         });

@@ -64,7 +64,7 @@ Venue
 
                                     <textarea id="comment_text" name="comment" form="review_form" class="textArea" placeholder="Log in to leave a review!"></textarea>
                                      <div class="login">
-                                         <a href="{% url 'auth_login' %}" class="login-btn">log in to leave a review</a>
+                                         <a href="{% url "social:begin" "spotify" %}" class="login-btn">log in to leave a review</a>
                                     </div>
                                 </form>
                         </div>
@@ -95,7 +95,7 @@ Venue
 <script>
 function initMap() {
   // The location of Uluru
-  var uluru = {lat: {{ venue.latitude }}, lng: -{{ venue.longitude }}};
+  var uluru = {lat: {{ venue.latitude }}, lng: -{{ venue.longitude }};
   // The map, centered at Uluru
   var map = new google.maps.Map(
       document.getElementById('googleMap'), {zoom: 4, center: uluru});
