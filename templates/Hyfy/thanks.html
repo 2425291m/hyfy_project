@@ -17,25 +17,17 @@
 {% endblock %}
 
 {% block main_block %}
+Pulling your data from spotify...
 <div class="flexcontainer">
     <br>
 <div id="thanksuser" class="thanksuser"></div>
 <div class="signupformdiv">
     <form action="" method="POST" id="userinfo_form">
             {% csrf_token %}
-        <img src="" id="userprofile"/>
-        <br>
-        <label for="username">Your Spotify Username: </label>
-        <input id="usernamef" type="text" name="usernamefield" value="" readonly>
-        <br>
-        <label for="displayname">Your Spotify Display Name: </label>
-        <input id="displaynamef" type="text" name="displaynamefield" value="test" readonly>
-        <br>
-        <label for="email">Your Email Address:  </label>
-        <input id="emailf" type="text" name="emailfield" value="" readonly>
-        <br>
-        <label for="spotfylink">Your Spotify Link:  </label>
-        <input id="spotifylinkf" type="text" name="linkfield" value="" readonly>
+        <input type="hidden" id="usernamef" type="text" name="usernamefield" value="" readonly>
+        <input type="hidden" id="displaynamef" type="text" name="displaynamefield" value="test" readonly>
+        <input type="hidden" id="emailf" type="text" name="emailfield" value="" readonly>
+        <input type="hidden" id="spotifylinkf" type="text" name="linkfield" value="" readonly>
         <input type="hidden" id="artist0imgf" name="artist0img" value="">
         <input type="hidden" id="artist0linkf" name="artist0link" value="">
         <input type="hidden" id="artist1imgf" name="artist1img" value="">
@@ -55,41 +47,9 @@
         <input type="hidden" id="artist8imgf" name="artist8img" value="">
         <input type="hidden" id="artist8linkf" name="artist8link" value="">
         <input type="hidden" id="spotifyphotof" name="spotifyphoto" value="">
+        <input type="hidden" id="topGenre" name="topGenre" value="">
         <br>
-        <input type="submit" name="" id="create" value="Create Your Profile!">
-
     </form>
-</div>
-
-<div class="artistgrid">
-    <div class="artist0div">
-        <a href="" id="artist0link" target="_blank"><img src="" id="artist0"/></a>
-    </div>
-    <div class="artist1div">
-        <a href="" id="artist1link" target="_blank"><img src="" id="artist1"/></a>
-    </div>
-    <div class="artist2div">
-        <a href="" id="artist2link" target="_blank"><img src="" id="artist2"/></a>
-    </div>
-    <div class="artist3div">    
-        <a href="" id="artist3link" target="_blank"><img src="" id="artist3"/></a>
-    </div>
-    <div class="artist4div">    
-        <a href="" id="artist4link" target="_blank"><img src="" id="artist4"/></a>
-    </div>
-    <div class="artist5div">    
-        <a href="" id="artist5link" target="_blank"><img src="" id="artist5"/></a>
-    </div>
-    <div class="artist6div">    
-        <a href="" id="artist6link" target="_blank"><img src="" id="artist6"/></a>
-    </div>
-    <div class="artist7div">    
-        <a href="" id="artist7link" target="_blank"><img src="" id="artist7"/></a>
-    </div>
-    <div class="artist8div">    
-        <a href="" id="artist8link" target="_blank"><img src="" id="artist8"/></a>
-    </div>
-
 </div>
 
 </div>

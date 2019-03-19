@@ -21,11 +21,10 @@ AboutUs
         <div class="profileInfo">
                 <div id="top-section">
                         <div id="profile-picture">
-    <!--                     userprofile.picture below is not rading the userprofile -->                       
-                            <img src="{{ userprof.spotifyPicture }}" onerror="imgError(this);" />
+                            <img src="{{ userprof.spotifyPicture }}" onerror="imgError(this);" id="profimg" />
                         </div>
                         <div id="account-name">
-                       {{ user.username }}
+                       {{ userprof.user }}
                         </div>
                     </div>
                     <br> <br> <br>
@@ -35,31 +34,12 @@ AboutUs
                 <input type="text" id="spotify-username-text" value="{{ userprof.spotifyDisplayName }}"  readonly>
                 </div>
                 <div class="block">
-                    <label id="email-address">E-Mail: </label>
-                    <input type="text" id="email-text" value={{ user.email }} readonly>
-                </div>
-                <div class="block">
-                <label id="spotify-link">Spotify Profile Link: </label>
+                <label id="spotify-link">Spotify Profile: </label>
                 <input type="text" id="spotify-link-text" value="{{ userprof.spotifyLink }}"  readonly>
-                </div>
+                </div>  
                 <div class="block">
-                    <label id="profile-city">City: </label>
-                    <input type="text" id="profile-city-text" value="Edinburgh, Obviously."  readonly>
-                </div>
-                <div class="block">
-                    <label id="selected-genre">Selected Genre: </label>
-                    <select>
-                        <option value="jazz">Jazz</option>
-                        <option value="rock">Rock</option>
-                        <option value="dance">Dance</option>
-                        <option value="R+B">R+B</option>
-                        <option value="Classical">Classical</option>
-                    </select>
-                </div>
-                <div class="block">
-                    <label id="bio">BIO :</label>
-                    <div id="bio-box">
-                    <p>{{ userprof.bio }}</p></div>
+                    <label id="selected-genre">Top Genre: </label>
+                    <input type="text" id="topGenre" value="{{ userprof.topGenre }}"  readonly>
                 </div>
         </div>
         <div class="artistgrid">
@@ -98,7 +78,8 @@ AboutUs
         {% for review in reviews %}
         <div id="reviews-main-box">
             <div class="review-box">
-                <h3 class="review">{{ review.username }} - {{ review.venue }} - {{ review.date }}</h3> 
+                <h3 class="review"><a href="/hyfy/account/{{review.username}}">{{ review.username }}</a>
+                <a href="/hyfy/{{ review.venue.city }}/{{ review.venue.slug }}">{{ review.venue}}</a>    {{ review.date }}</h3> 
                 <div id="line"></div>
                 <div id="review-1-box">
                 <p>{{ review.text }}</p></div>

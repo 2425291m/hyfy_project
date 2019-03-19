@@ -133,6 +133,7 @@ def user_details(request):
         display_name = request.POST.get('displayname','')
         spotify_link = request.POST.get('spotifylink','')
         spotify_img = request.POST.get('spotifyphoto','')
+        topGenre = request.POST.get('topGenre')
         a0link = request.POST.get('artist0link','')
         a0img = request.POST.get('artist0img','')
         a1link = request.POST.get('artist1link','')
@@ -167,6 +168,7 @@ def user_details(request):
         userprofile.spotifyDisplayName = display_name
         userprofile.spotifyLink = spotify_link
         userprofile.spotifyPicture = spotify_img
+        userprofile.topGenre = topGenre
         userprofile.artist0imglink = a0img
         userprofile.artist0link = a0link
         userprofile.artist1imglink = a1img

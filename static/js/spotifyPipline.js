@@ -1,5 +1,8 @@
 console.log("jsRunning")
 
+//within this javascript file i made the decision to use both AJAX/jQuery and plain JS syntax, in order to practice both.
+//This is why, in some cases, I have used document.getElementById('element'), and in others ive used $('#element').
+
 $(document).ready(function(){
 
     var tempurl = window.location.hash
@@ -16,6 +19,8 @@ $(document).ready(function(){
     hash = hash.slice(14, hash.length-34)
     console.log(hash)
 
+
+    //user information getting and setting.
     jQuery.ajax({
         url: 'https://api.spotify.com/v1/me',
         headers: {
@@ -33,10 +38,24 @@ $(document).ready(function(){
             document.getElementById("usernamef").value = result.id
             console.log(result.external_urls.spotify)
             document.getElementById("spotifylinkf").value = result.external_urls.spotify
-            document.getElementById("userprofile").src=result.images[0].url;
             document.getElementById("spotifyphotof").value=result.images[0].url;
         }
     });
+
+    //artist information getting and setting
+
+    var genres = [];
+    var pop = 0;
+    var hiphop = 0;
+    var dance = 0;
+    var rock = 0;
+    var indie = 0;
+    var jazz = 0;
+    var rap = 0;
+    var other = 0;
+    var topGenreNo = 0;
+    var topGenre = "";
+
 
     jQuery.ajax({
         url: 'https://api.spotify.com/v1/me/top/artists?time_range=long_term&limit=10&offset=0',
@@ -46,19 +65,74 @@ $(document).ready(function(){
         dataType: "json",
         success: function(result){
             for(var i=0; i<9;i++){
-                //newText += "<br>" + result.items[i].name + "<br>" + result.items[i].images[2].url + "<br>" + result.items[i].external_urls.spotify
-                document.getElementById("artist"+i).src=result.items[i].images[0].url
-                document.getElementById("artist"+i+"link").href=result.items[i].external_urls.spotify
+
+                //loop to add artists genres to genre arrays
+                for(var j=0; j < result.items[i].genres.length; j++){
+                    genres.push(result.items[i].genres[j])
+                }
+
                 document.getElementById("artist"+i+"linkf").value=result.items[i].external_urls.spotify
                 document.getElementById("artist"+i+"imgf").value=result.items[i].images[0].url
-
             }
+
+            //loop to calculate top genre using very simple algorithm
+            for(var k = 0; k<genres.length;k++){
+                if(genres[k].includes("pop")){
+                    pop++
+                } else if(genres[k].includes("hip hop")){
+                    hiphop++
+                } else if(genres[k].includes("dance")){
+                    dance++
+                } else if(genres[k].includes("rock")){
+                    rock++
+                } else if(genres[k].includes("indie")){
+                    indie++
+                } else if(genres[k].includes("jazz")){
+                    jazz++
+                } else if(genres[k].includes("rap")){
+                    rap++
+                } else if(genres[k].includes("other")){
+                    other++
+                }
+            }
+            if(pop > topGenreNo){
+                topGenre = "pop"
+                topGenreNo = pop
+            }
+            if(hiphop > topGenreNo){
+                topGenre = "hip hop"
+                topGenreNo = hipop
+            }
+            if(dance > topGenreNo){
+                topGenre = "dance"
+                topGenreNo = dance
+            }
+            if(rock > topGenreNo){
+                topGenre = "rock"
+                topGenreNo = rock
+            }
+            if (indie > topGenreNo){
+                topGenre = "indie"
+                topGenreNo = indie
+            }
+            if(jazz > topGenreNo){
+                topGenre = "jazz"
+                topGenreNo = jazz
+            }
+            if (rap >topGenreNo){
+                topGenre = "rap"
+                topGenreNo = rap
+            }
+            if(other >topGenreNo){
+                topGenre = "other"
+                topGenreNo = other
+            }
+            document.getElementById("topGenre").value=topGenre
+            submitForm()
         }
     });
 
-    console.log($('#userinfo_form input[name=crsfmiddlewaretoken]').val())
-    $('#userinfo_form').submit(function(event){
-        event.preventDefault();
+    function submitForm(){
         $.ajax({
             type: "POST",
             url:"/hyfy/user_details/",
@@ -68,6 +142,7 @@ $(document).ready(function(){
                 'displayname': $('#displaynamef').val(),
                 'spotifylink': $('#spotifylinkf').val(),
                 'spotifyphoto': $('#spotifyphotof').val(),
+                'topGenre': $('#topGenre').val(),
                 'artist0link': $('#artist0linkf').val(),
                 'artist0img': $('#artist0imgf').val(),
                 'artist1link': $('#artist1linkf').val(),
@@ -88,10 +163,11 @@ $(document).ready(function(){
                 'artist8img': $('#artist8imgf').val(),
             },
             success: function(data){
-                console.log(csrfmiddlewaretoken)
+                console.log("form submitted")
+                window.open('/hyfy/', "_self")
             }
         })
-    })
+    }
 })
 
 

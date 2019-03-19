@@ -76,6 +76,7 @@ class UserProfile(models.Model):
     spotifyPicture = models.URLField(max_length=500, default="placeholder")
     spotifyDisplayName = models.TextField(max_length=100, default="placeholder")
     spotifyLink = models.URLField(max_length=500 , default="placeholder")
+    topGenre = models.CharField(max_length = 50, default = "placeholder")
     artist0link = models.URLField(max_length=500, default="placeholder")
     artist0imglink = models.URLField(max_length=500, default="placeholder")
     artist1link = models.URLField(max_length=500, default="placeholder")
