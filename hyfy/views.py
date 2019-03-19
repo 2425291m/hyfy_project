@@ -108,6 +108,15 @@ def show_city(request, city_name_slug):
 #     response = render(request, 'hyfy/venue.html')
 #     return response
 
+def like_venue(request, city_name_slug, venue_name_slug):
+
+    venue = Venue.objects.get(slug=venue_name_slug)
+    venue.likes = venue.likes+1
+    venue.save()
+
+    return show_venue(request, city_name_slug, venue_name_slug)
+
+
 def show_venue(request, city_name_slug, venue_name_slug):
 
     context_dict = {}

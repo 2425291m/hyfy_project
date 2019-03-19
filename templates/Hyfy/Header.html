@@ -25,15 +25,15 @@
             <h2 class="pageTitle"></h2>
 
             {% if user.is_authenticated %}
-            <div class="btn-signupin">
+            <div class="sign-in-container">
                  <div class="signin">
                      <a href="{% url 'auth_logout' %}?next=/hyfy/">Logout</a>
                  </div>
             </div>
             {% else %}
-            <div class="btn-signupin">
+            <div class="sign-in-container">
                  <div class="signin">
-                     <a href="{% url "social:begin" "spotify" %}" class="signinButton">sign in with Spotify<img src="/media/spotifylogo.png" width="40" height="40"  alt="spotifylogon"></a>
+                     <a href="{% url "social:begin" "spotify" %}" class="signinButton">sign in with Spotify<img id="spotify-image" src="/media/spotifylogo.png" width="40px" height="40px"  alt="spotifylogon"></a>
                  </div>
             </div>
             {% endif %}

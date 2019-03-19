@@ -21,7 +21,7 @@ Venue
 {% block main_block %}     
     {% if venue %}
     <div id="genres2-navigation">
-    <script>changeBackgroundImageWithVenue();</script>
+    
         <a href="/hyfy/{{ venue.city.slug }}" id="back"><i class="icon ion-md-arrow-back"></i><h3> BACK TO TOP VENUES</h3></a>
         
         
@@ -31,7 +31,8 @@ Venue
     </div>
         
     <div id="genres2-center-column">
-        <h2 id="venue-name">{{ venue.name }}</h2>
+        <h2 id="venue-name">{{ venue.name }} | LIKES: {{ venue.likes }}</h2>
+        <button id="like-button"><a href=/hyfy/like_venue/{{venue.city}}/{{venue.slug}}>LIKE</a></button>
         <div id="main-box">
             <div id="top-row">
                 <div id="venue-picture">
@@ -95,7 +96,7 @@ Venue
 <script>
 function initMap() {
   // The location of Uluru
-  var uluru = {lat: {{ venue.latitude }}, lng: -{{ venue.longitude }};
+  var uluru = {lat: {{ venue.latitude }}, lng: -{{ venue.longitude }}};
   // The map, centered at Uluru
   var map = new google.maps.Map(
       document.getElementById('googleMap'), {zoom: 4, center: uluru});
@@ -104,5 +105,7 @@ function initMap() {
 }    
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8WJxmedig_2H0W1fe4-cLAXoppDt_7Ss&callback=initMap"></script>
-
+ <script>
+                window.onload = function () {
+                    changeBackgroundImageWithVenue();}</script>
 {% endblock %}

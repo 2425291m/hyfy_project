@@ -13,6 +13,7 @@ urlpatterns = [
     url(r'^user_details/$',views.user_details, name='user_details'),
     url(r'^contact_us/$', views.contact_us, name='contact_us'),
     url(r'^add_review/$', views.add_review, name='add_review'),
+    url(r'^like_venue/(?P<city_name_slug>[\w\-]+)/(?P<venue_name_slug>[\w\-]+)$', views.like_venue, name='like_venue'),
     # url(r'^show_review/(?P<venue_name_slug>[\w\-]+)/$', views.show_review, name='show_review'),
     
     # url(r'^submitted/$', views.submitted, name='submitted'),

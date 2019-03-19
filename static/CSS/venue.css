@@ -61,6 +61,7 @@ h3 {
 }
 
 #venue-name {
+    float: left;
     margin-left: 2%;
     margin-top: 0.3%;
     font-size: 20px;
@@ -267,5 +268,10 @@ a {
 
 #userlink{
     color: black;
+    font-size: 20px;
+}
+#like-button {
+    float: right;
+    margin-right: 2%;
     font-size: 20px;
 }

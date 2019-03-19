@@ -10,9 +10,7 @@ City
 {% block main_block %}
 
         <div id="center-column">
-            <script>
-                window.onload = function () {
-                    changeBackgroundImageWithCity();}</script>
+           
         <div class="city-select"><h2 id="city-title">City <i class="icon ion-md-arrow-dropdown"></i></h2>
             <div class="city-list">
                  {% for city in cities %}
@@ -44,7 +42,7 @@ City
                  </div>
                  <div id="genre1-details">
                 
-                    <img src="/static/images/venues/{{ venues.name }}.jpg">
+                    <img id="venue-image" src="/static/images/venues/{{ venues.name }}.jpg">
                 
                      <div id="genre1-info">
                          <h4 id="genre1-rating">Likes: {{ venues.likes }}
@@ -67,5 +65,9 @@ City
             {% endif %}
         </div>
         </div>
+
+ <script>
+                window.onload = function () {
+                    changeBackgroundImageWithCity();}</script>
 
 {% endblock %}
