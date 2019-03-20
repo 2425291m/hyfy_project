@@ -14,7 +14,8 @@ Venue
     document.getElementById('review_form').action = "/hyfy/add_review/{{ user.username }}/{{ venue_slug }}/";
 
     </script>
-    <link rel="stylesheet" type="text/css" href="/static/CSS/venue.css"> <link rel="stylesheet" type="text/css" href="/static/CSS/ajax_comment.css">
+    <link rel="stylesheet" type="text/css" href="/static/CSS/venue.css"> 
+    <link rel="stylesheet" type="text/css" href="/static/CSS/ajax_comment.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 {% endblock %}
         
@@ -36,7 +37,7 @@ Venue
         <div id="main-box">
             <div id="top-row">
                 <div id="venue-picture">
-                <img src="/static/images/venues/{{ venue.name }}.jpg">
+                <img src="/static/images/venues/{{ venue.name }}.jpg" class="venueimg">
                 </div>
                 <div id="venue-bio">
                     <h2>Addess: {{ venue.address }}<br /><br />
@@ -93,18 +94,24 @@ Venue
                 </div>
             </div>
     {% endif %}
+
+    <!--The google maps script it inline as it needs to have access to venue.lat and long
+        it seemed silly to have an external JS file go through extra steps to get these parameters-->
+        
 <script>
 function initMap() {
   // The location of Uluru
   var uluru = {lat: {{ venue.latitude }}, lng: -{{ venue.longitude }}};
   // The map, centered at Uluru
   var map = new google.maps.Map(
-      document.getElementById('googleMap'), {zoom: 4, center: uluru});
+      document.getElementById('googleMap'), {zoom: 15, center: uluru});
   // The marker, positioned at Uluru
   var marker = new google.maps.Marker({position: uluru, map: map});
 }    
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8WJxmedig_2H0W1fe4-cLAXoppDt_7Ss&callback=initMap"></script>
+
+
  <script>
                 window.onload = function () {
                     changeBackgroundImageWithVenue();}</script>
