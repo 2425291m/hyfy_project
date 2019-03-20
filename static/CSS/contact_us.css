@@ -14,10 +14,10 @@
 .textBox {
     float: left;
     position: absolute;
-    margin-top: 2%;
-    margin-left: 5%;
-    width: 50%;
-    height: 70%;
+    margin: 2%;
+    padding: 2%;
+    width: auto;
+    height: auto;
     background-color: #ffffff;
     border: 3px solid #9a9a9a ;
     opacity: .9;
