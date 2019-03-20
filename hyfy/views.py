@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.shortcuts import redirect
 from hyfy.forms import UserForm, UserProfileForm
-from hyfy.forms import ReviewForm
+from hyfy.forms import ReviewForm, ContactForm
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
@@ -13,6 +13,7 @@ from hyfy.models import City
 from hyfy.models import Venue
 from hyfy.models import Genre
 from hyfy.models import Review
+from django.core.mail import send_mail
 from registration.backends.simple.views import RegistrationView
 from django.db.models import Q 
 import os
@@ -40,10 +41,10 @@ def faq(request):
     return response
 
 
-def contact_us(request):
+# def contact_us(request):
 
-    response = render(request, 'hyfy/contact_us.html')
-    return response
+#     response = render(request, 'hyfy/contact_us.html')
+#     return response
 
 def show_venues_by_genre(request, city_name_slug, genre_name_slug):
 
@@ -275,6 +276,23 @@ def add_review(request):
     return render(request, 'hyfy/show_review.html', context={'reviews': reviews})
 
 
+def contact_us(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            # send email code goes here
+            sender_name = form.cleaned_data['name']
+            sender_email = form.cleaned_data['email']
+
+            message = "{0} has sent you a new message:\n\n{1}".format(sender_name, form.cleaned_data['message'])
+            send_mail('New Enquiry', message, sender_email, ['euan_M108@hotmail.com'])
+            return HttpResponse('Thanks for contacting us!')
+    else:
+        form = ContactForm()
+
+    return render(request, 'hyfy/contact_us.html', {'form': form})
+
+
     # form = ReviewForm()
     # venue = Venue.objects.get(slug=venue_name_slug)
     # user = User.objects.get(username=username)
@@ -444,3 +462,5 @@ def search(request):
     context = {'venues': results, 'cities': city_list}
 
     return render(request, template, context)
+
+

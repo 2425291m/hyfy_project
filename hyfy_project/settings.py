@@ -152,6 +152,8 @@ SOCIAL_AUTH_SPOTIFY_SECRET = 'a536e1e7b77c49d5abaa6e39764c4cf9'
 SOCIAL_AUTH_SPOTIFY_SCOPE = ['user-read-email', 'user-library-read']
 LOGIN_REDIRECT_URL = 'http://127.0.0.1:8000/hyfy/thanks/'
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'social_core.backends.spotify.SpotifyOAuth2',

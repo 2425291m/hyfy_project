@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.models import User
-from hyfy.models import UserProfile, Review
+from hyfy.models import UserProfile, Review, Contact
 from django.utils import datetime_safe
 
 class UserForm(forms.ModelForm):
@@ -25,3 +25,8 @@ class ReviewForm(forms.ModelForm):
 	class Meta:
 		model = Review
 		fields = ('text',)
+
+class ContactForm(forms.Form):
+    name = forms.CharField(max_length=100)
+    email = forms.EmailField()
+    message = forms.CharField(widget=forms.Textarea)

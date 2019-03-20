@@ -17,7 +17,15 @@ ContactUs
 
                 <!-- easy enough to connect form to send emails -->
           
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Submit" />
+            </form>
             
+            
+            
+<!--
                <textarea  name="comment" form="usrform" class="textArea" placeholder="Please leave your polite comments here. . . "></textarea>  
              
                 <form class="userForm">
@@ -25,5 +33,6 @@ ContactUs
                     <input type="submit">
 
                 </form>
+-->
         </div>
 {% endblock %}
