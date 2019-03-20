@@ -24,6 +24,8 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+
+
 img {
     width: 100%;
     height: 100%;
@@ -55,7 +57,7 @@ img {
     background-color: black;
     opacity: 0.2;
     margin-left: 1%;
-    margin-top: 2%;
+    margin-top: 1.5%;
 } 
 
 label {
@@ -103,26 +105,18 @@ label {
 }
 
 #reviews-main-box {
-    background-color: white;
-    margin: 0 2em 2em 2em;
-    width: auto;
-    height: auto;
-    font-size: 14px;
-    border-top-left-radius: 40px;
-    border-bottom-left-radius: 40px;
-    overflow-y: scroll;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+    margin: 1%;
 }
 
 .review-box {
     background-color: white;
-    margin: 2em;
-    width: auto;
-    height: auto;
+    margin: 0 auto;
+    width: 98%;
     border: 0.5px solid black;
-    border-radius: 3px;
+    border-radius: 20px;
     overflow: hidden;
+    height: 12%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .line-review {
@@ -136,7 +130,8 @@ label {
 
 .review {
     margin:0.5em;
-    padding: 0.5em;
+    padding: 0.5%;
+    padding-bottom: 3%;
 }
 
 #review-1-box {
@@ -171,7 +166,7 @@ label {
     padding: 2em;
     margin: 2em;
     width: 33%;
-    opacity: 0.9;
+    opacity: 0.95;
     border-radius: 40px;
     border: 1em;
     border: 1em solid #9a9a9a;
@@ -196,4 +191,63 @@ img{
     height: 12em;
     border:  solid white;
     border-radius: .5em;
+}
+
+#review-container {
+    margin: 0 auto;
+    border-radius: 30px;
+    width: 80%;
+    padding: 0.5%;
+    background-color: grey;
+    opacity: 0.95;
+    border: 1px solid white;
+}
+
+#your-reviews-title {
+    margin-left: 5%;
+    background-color: white;
+    border-radius: 30px;
+    padding: 0.5%;
+    width: 21%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#review-box-venue {
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 0.2%;
+    margin-bottom: 1%;
+    padding-bottom: 0.5%;
+    border: 0.5px solid black;
+    display: inline-block;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 30px;
+    background-color: rgb(81, 117, 150);
+    color: aliceblue;
+    font-family: 'Montserrat';
+    text-decoration: none;
+}
+
+#review-box-venue:hover{
+    background-color: #202d3b; 
+    transition: 0.5s;
+}
+
+#review-box-venue:hover .go-to-span {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.go-to-span {
+    opacity: 0;
+    background-color: #e67e22;
+    width: 200px;
+    color: #fff;
+    text-align: center;
+    font-size: 22px;
+    position: absolute;
+    z-index: 1;
+    border: 1px solid black;
+    border-radius: 10px;
 }

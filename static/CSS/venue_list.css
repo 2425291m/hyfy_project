@@ -7,6 +7,7 @@
 
 
 
+
 .genres {
     margin-top: 2%;
     height: 70vh;
@@ -31,6 +32,9 @@
   
 }
 
+h1{
+    text-align: center;
+}
 .genre-title{
     margin-left: 2%;
 }

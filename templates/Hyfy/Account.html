@@ -74,12 +74,16 @@ AboutUs
             </div>
 
     </div>
+    <div id="review-container">
+        <h2 id="your-reviews-title">YOUR REVIEWS</h2>
     {% if reviews %}
         {% for review in reviews %}
         <div id="reviews-main-box">
             <div class="review-box">
-                <h3 class="review"><a href="/hyfy/account/{{review.username}}">{{ review.username }}</a>
-                <a href="/hyfy/{{ review.venue.city }}/{{ review.venue.slug }}">{{ review.venue}}</a>    {{ review.date }}</h3> 
+                <h3 class="review">
+                <a id="review-box-venue" href="/hyfy/{{ review.venue.city }}/{{ review.venue.slug }}">{{ review.venue}} - {{ review.date }}<span class="go-to-span">Go to {{ review.venue.name }}! </span></a>
+                </h3> 
+                
                 <div id="line"></div>
                 <div id="review-1-box">
                 <p>{{ review.text }}</p></div>
@@ -87,5 +91,6 @@ AboutUs
         </div>
         {% endfor %}
     {% endif %}
+    </div>
 
 {% endblock %}

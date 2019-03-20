@@ -122,7 +122,7 @@ def show_venue(request, city_name_slug, venue_name_slug):
     context_dict = {}
     try:
         venue = Venue.objects.get(slug=venue_name_slug)
-        reviews = Review.objects.all().filter(venue=venue)
+        reviews = Review.objects.all().filter(venue=venue).order_by('-id')[:5]
         context_dict['venue'] = venue
         context_dict['reviews'] = reviews
 
@@ -407,7 +407,7 @@ class HyfyRegistrationView(RegistrationView):
 def account(request, username):
     try:
         user = User.objects.get(username=username)
-        reviews = Review.objects.all().filter(username=username)
+        reviews = Review.objects.all().filter(username=username).order_by('-id')[:5]
     except User.DoesNotExist:
         return redirect('index')
     
