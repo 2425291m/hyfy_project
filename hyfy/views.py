@@ -21,7 +21,6 @@ import datetime
 
 # Create your views here.
 
-
 def index(request):
     city_list = City.objects.all
     context_dict = {'cities': city_list}
@@ -98,10 +97,6 @@ def show_city(request, city_name_slug):
         context_dict['genres'] = None
 
     return render(request,'hyfy/city.html', context=context_dict)
-
-# def venue(request):
-#     response = render(request, 'hyfy/venue.html')
-#     return response
 
 def like_venue(request, city_name_slug, venue_name_slug):
 
@@ -197,38 +192,6 @@ def user_details(request):
 
         return render(request, 'hyfy/account.html')
 
-
-
-def register(request):
-    registered = False
-
-    if request.method == 'POST':
-        user_form = UserForm(data=request.POST)
-        profile_form = UserProfileForm(data=request.POST)
-
-        if user_form.is_valid() and profile_form.is_valid():
-            user = user_form.save()
-
-            user.set_password(user.password)
-            user.save()
-
-            profile = profile_form.save(commit=False)
-            profile.user = user
-
-            if 'picture' in request.FILES:
-                profile.picture = request.FILES['picture']
-
-            profile.save()
-
-            registered = True
-        else:
-            print(user_form.errors, profile_form.errors)
-    else: 
-        user_form = UserForm()
-        profile_form = UserProfileForm()
-
-    return render(request, 'hyfy/register.html', {'user_form': user_form, 'profile_form': profile_form, 'registered': registered})
-
 def user_login(request):
 
     if request.method == 'POST':
@@ -275,16 +238,20 @@ def contact_us(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             # send email code goes here
-            sender_name = form.cleaned_data['name']
-            sender_email = form.cleaned_data['email']
-
-            message = "{0} has sent you a new message:\n\n{1}".format(sender_name, form.cleaned_data['message'])
-            send_mail('New Enquiry', message, sender_email, ['euan_M108@hotmail.com'])
-            return HttpResponse('Thanks for contacting us!')
+            sender_username = form.cleaned_data['username']
+            try:
+                user = User.objects.get(username = sender_username)
+                message = "Account'" + user.username +"' has sent you a new message:\n\n{1}".format(user.username, form.cleaned_data['message'])
+                send_mail('New Enquiry', message, user.username, ['euan_M108@hotmail.com'])
+                return HttpResponseRedirect(reverse('index'))
+            except User.DoesNotExist:
+                return HttpResponse("Invalid account name")
     else:
         form = ContactForm()
 
     return render(request, 'hyfy/contact_us.html', {'form': form})
+
+
 
 def thanks(request):
     response = render(request, 'hyfy/thanks.html')
@@ -294,27 +261,6 @@ def thanks(request):
 def user_logout(request):
     logout(request)
     return HttpResponseRedirect(reverse('index'))
-
-@login_required
-def register_profile(request):
-    form = UserProfileForm()
-    if request.method == 'POST':
-        form = UserProfileForm(request.POST, request.FILES)
-        if form.is_valid():
-            user_profile = form.save(commit=False)
-            user_profile.user = request.user
-            user_profile.save()
-
-            return redirect('index')
-        else:
-            print(form.errors)
-
-    context_dict = {'form':form}
-    return render(request, 'hyfy/profile_registration.html', context_dict)
-
-class HyfyRegistrationView(RegistrationView):
-    def get_success_url(self, user):
-        return reverse('register_profile')
 
 @login_required
 def account(request, username):
@@ -341,9 +287,6 @@ def account(request, username):
         else:
             print(form.errors)
 
-    # contextdict = {'userprofile': userprofile, 'selecteduser': user, 'form': form, 'picture': userprofile.spotifyPicture,
-    #                 'a0link':}
-    
     return render(request, 'hyfy/account.html', {'userprof': userprofile, 'selecteduser': user, 'form': form, 'picture': userprofile.spotifyPicture, 'reviews': reviews})
 
 

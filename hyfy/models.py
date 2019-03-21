@@ -115,7 +115,6 @@ class Review(models.Model):
 class Contact(models.Model):
     user = models.CharField(User, max_length=100)
     date = datetime.date.today()
-    # date = models.DateField(default=now, blank=True, editable=True) #<<< might work (Ollie)
     text = models.CharField(max_length=200)
 
     def save(self, *args, **kwargs):

@@ -18,7 +18,7 @@ class ReviewAdmin(admin.ModelAdmin):
     list_display = ('id','text','username','venue','date')
 
 class UserProfileAdmin(admin.ModelAdmin):
-    list_display = ('user', 'bio', 'picture', 'spotifypicture','spotifyDisplayName')
+    list_display = ('user', 'spotifypicture','spotifyDisplayName')
 
 class ContactAdmin(admin.ModelAdmin):
     list_display = ('user', 'text')

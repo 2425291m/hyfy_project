@@ -19,12 +19,11 @@ class UserProfileForm(forms.ModelForm):
 
 class ReviewForm(forms.ModelForm):
 	text = forms.CharField(max_length=200, help_text="Please enter a review")
-	
+
 	class Meta:
 		model = Review
 		fields = ('text',)
 
 class ContactForm(forms.Form):
-    name = forms.CharField(max_length=100)
-    email = forms.EmailField()
+    username = forms.CharField(max_length=100)
     message = forms.CharField(widget=forms.Textarea)

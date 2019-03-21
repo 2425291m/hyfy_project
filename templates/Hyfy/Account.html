@@ -74,9 +74,10 @@ AboutUs
             </div>
 
     </div>
+    {% if reviews %}
     <div id="review-container">
         <h2 id="your-reviews-title">YOUR REVIEWS</h2>
-    {% if reviews %}
+   
         {% for review in reviews %}
         <div id="reviews-main-box">
             <div class="review-box">
