@@ -9,9 +9,11 @@ City
 
 {% block main_block %}
 
+
         <div id="center-column">
-           
+           <h2 id="page-title">{{ city.name }}'s top venues!</h2>
         <div class="city-select"><h2 id="city-title">City <i class="icon ion-md-arrow-dropdown"></i></h2>
+           
             <div class="city-list">
                  {% for city in cities %}
                                 <a href="/hyfy/{{ city.slug }}">{{ city.name }}</a>
@@ -37,19 +39,17 @@ City
                              <h3 class="venue-title">{{ venues.name }}</h3></a>
                      </div>
                  </div>
-                 <div id="to-genre-icon">
-                 <h3>Go to genre! <i class="fa fa-angle-double-right"></i></h3>
-                 </div>
+                 
                  <div id="genre1-details">
                 
                     <img id="venue-image" src="/static/images/venues/{{ venues.name }}.jpg">
                 
-                     <div id="genre1-info">
+                     <div id="genre-info">
                          <h4 id="genre1-rating">Likes: {{ venues.likes }}
                          
                          </h4>
 
-                         <div id="info">
+                         <div id="venue-info">
                               <h4>Addess: {{ venues.address }}<br /><br />
                         <a id = "website-text" href="{{ venues.website }}">Click here to go to {{ venues.name }} website!</a></h4>
                         </div>

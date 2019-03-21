@@ -8,8 +8,7 @@
 
 
 .genres {
-    margin-top: 2%;
-    height: 70vh;
+    height: 75vh;
     background-color: rgba(189,195,199, 0.8);
     border: 1px solid #ffffff;
     padding-top: 2%;
@@ -34,7 +33,7 @@
 .venue-title{
     padding-left: 5px;
     padding-right: 5px;
-    
+    display: inline-block;
 }
 
 
@@ -60,61 +59,7 @@ h3{
     margin: 0 auto; 
 }
 
-/* The container <div> - needed to position the dropdown content */
-.city-select {
-    position: relative;
-    display: inline-block;
-    text-align: center;
-    border-radius: 10px;
-    margin-top: 1%;
-    background-color: white;
-    width: 20%;
-    margin-left: 70%;
-}
 
-/* Dropdown Content (Hidden by Default) */
-.city-list {
-    font-size: 18px;
-    display: none;
-    position: absolute;
-    min-width: 100%;
-}
-
-/* Links inside the dropdown */
-.city-list a {
-    color: white;
-    background-color: black;
- 
-    margin-top: 5px;
-     border: 2px solid black;
-    text-decoration: none;
-    display: block;
-    border-radius: 7px;
-    
-}
-
-a {
-    text-decoration: none;
-    color: black;
-    color: black;
-}
-
-/* Change color of dropdown links on hover */
-.city-list a:hover {
-    background-color: white;
-    color: black;
-}
-
-/* Show the dropdown menu on hover */
-.city-select:hover .city-list {
-    display: block;
-}
-
-.city-select:hover{
-    background-color: #bdc3c7;
-    border: 1 solid black;
-    transition: 0.5s;
-}
 #genre1-details {
     border: 0.5px solid black;
     border-radius: 3px;
@@ -133,51 +78,22 @@ a {
 
 }
 
-#genre1-info {
+#genre-info {
     float: left;
     width: 70%;
     height: inherit;
 }
 
-#info {
-     padding: 5px;
+#venue-info {
+    padding: 5px;
     border: 0.5px solid #9d9d9d;
     height: 100%;
     width: 100%;
 }
 
-#to-venue {
-    float: right;
-    margin-top: 3%;
-    margin-right: 1%;
-    color: #888;
-}
-
-.ion-md-arrow-forward {
-    padding-left: 23%;
-    font-size: 50px;
-    color: black;
-}
-
-
-.ion-md-arrow-forward:hover{
-    color: red;
-}
-
-#to-genre-icon {
-    float: right;
-    display: none;
-}
-
 h3:hover{
     background-color: #202d3b; 
     transition: 0.5s;
-}
-
-
-
-.venue-title {
-    display: inline-block;
 }
 
 .genre-title-box{
@@ -189,6 +105,8 @@ h3:hover{
 .genre-title-box h3{
     display: inline-block;
     padding: 7%;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 .venue-title-box {
@@ -198,8 +116,6 @@ h3:hover{
 .venue-title-box h3{
     display: inline-block;
 }
-
-
 
 .genre-span {
     visibility: hidden;
@@ -223,3 +139,7 @@ h3:hover{
     display: inline-block;
     width: 100%;
 }
+
+
+
+

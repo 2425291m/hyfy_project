@@ -47,7 +47,7 @@ Venue
                 </div>
                 <div id="second-row">
 
-                    {% if user.is_authenticated %}
+                    
 
                         <div id="review-frame">
                             <form id="review_form" method="post" action="">
@@ -55,19 +55,13 @@ Venue
                                 <input type="hidden" name="venue_slug" value="{{ venue.slug }}" />
                                 
                                 <textarea id="comment_text" name="comment" form="review_form" class="textArea" placeholder="Hi, {{ user.username }}! If you've visited {{ venue.name }}, please leave a review here!"></textarea>
+                            {% if user.is_authenticated %}    
                                 <input type="submit" name="submit" value="Create Review" />
-                            </form>
-                        </div>
+                                </form>
                         {% else %}
-                        <div id="review-frame">
-                                <form id="review_form" method="post" action="">
-                                    {% csrf_token %}
-                                    <input type="hidden" name="venue_slug" value="{{ venue.slug }}" />
-
-                                    <textarea id="comment_text" name="comment" form="review_form" class="textArea" placeholder="Log in to leave a review!"></textarea>
-                                     <div class="login">
-                                         <a href="{% url "social:begin" "spotify" %}" class="login-btn">log in to leave a review</a>
-                                    </div>
+                                <div class="login">
+                                     <a href="{% url "social:begin" "spotify" %}" class="login-btn">log in to leave a review</a>
+                                </div>
                                 </form>
                         </div>
                        

@@ -63,9 +63,6 @@ class Venue(models.Model):
     def __str__(self):
         return self.name
 
-# class review(models.Model):
-#     user = models.ForeignKey(User, on_delete=models.CASCADE)
-
 
 class UserProfile(models.Model):
     # This line is required. Links UserProfile to a User model instance.
@@ -95,9 +92,6 @@ class UserProfile(models.Model):
     artist7imglink = models.URLField(max_length=500, default="placeholder")
     artist8link = models.URLField(max_length=500, default="placeholder")
     artist8imglink = models.URLField(max_length=500, default="placeholder")
-    
-
-    # Override the __unicode__() method to return out something meaningful!
 
     def __str__(self):
         return self.user.username
@@ -130,16 +124,3 @@ class Contact(models.Model):
     def __str__(self):
         return self.text
 
-# user = models.OneToOneField(User, on_delete=models.CASCADE)
-# bio = models.TextField(max_length=500, blank=True)
-# location = models.CharField(max_length=30, blank=True)
-# birth_date = models.DateField(null=True, blank=True)
-# picture = models.ImageField(upload_to='profile_images', blank=True)
-
-# class SpotifyProfile(models.Model):
-#     spotifyUser = models.OneToOneField(UserProfile, on_delete=models.CASCADE)
-#     displayName = models.CharField(max_length=100, blank=True)
-#     spotifyURL = models.URLField(max_length=150, blank=True)
-#     #topArtists = SeparatedValuesField() #should we make artists an entity
-#     topGenres = SeparatedValuesField()
-    

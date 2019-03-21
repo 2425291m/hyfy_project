@@ -1,38 +1,6 @@
-#column {
-    width: 70%;
-    height: 71vh;
-    margin: 0 auto; 
-}
-#main-box {
-    height: 105%;
-    background-color: rgba(189,195,199, 0.4);
-    overflow: hidden;
-    margin-top: 2%;
-}
-
-#pofile-box {
-    float: left;  
-    background-color: white;    
-    width: 42.5%;
-    height: 96%;
-    margin: 0 auto;
-    margin-left: 1%;
-    margin-top: 1%;
-    font-size: 14px;
-    border-radius: 3px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-
-
 img {
     width: 100%;
     height: 100%;
-}
-
-#profile-space {
-    width: 50px;
 }
 
 #profile-picture {
@@ -67,12 +35,8 @@ label {
     padding-left: 3%;
 }
 
-#email-address {
-
-}
-
 .block * {
-   margin-top: 2%;
+    margin-top: 2%;
     vertical-align: middle;
     white-space: nowrap;
 }
@@ -89,25 +53,9 @@ label {
 
 }
 
-#bio-box {
-    font-size: 10px;
-    float: right;
-    width: 85%;
-    border: 0.5px solid black;
-    padding: 4px;
-    height: 100px;
-    margin-right: 2%;
-    overflow: hidden;
-}
-
-#bio {
-    width: 45px;
-}
-
 #reviews-main-box {
     margin: 1%;
 }
-
 .review-box {
     background-color: white;
     margin: 0 auto;
@@ -117,15 +65,6 @@ label {
     overflow: hidden;
     height: 12%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.line-review {
-    height: 0.1px;
-    width: 60%;
-    background-color: black;
-    opacity: 0.4;
-    margin: 1em;
-    padding: 1em;
 }
 
 .review {

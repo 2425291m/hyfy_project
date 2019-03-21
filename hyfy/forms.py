@@ -19,9 +19,7 @@ class UserProfileForm(forms.ModelForm):
 
 class ReviewForm(forms.ModelForm):
 	text = forms.CharField(max_length=200, help_text="Please enter a review")
-	# review = forms.IntegerField(widget=forms.HiddenInput())
-	# date = forms.DateField(widget=forms.HiddenInput())
-
+	
 	class Meta:
 		model = Review
 		fields = ('text',)

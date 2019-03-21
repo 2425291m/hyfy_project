@@ -11,13 +11,11 @@
 }
 
 
-.textBox {
+.textBox-container {
     float: left;
-    position: absolute;
-    margin: 2%;
+    margin: 0 auto;
     padding: 2%;
-    width: auto;
-    height: auto;
+
     background-color: #ffffff;
     border: 3px solid #9a9a9a ;
     opacity: .9;

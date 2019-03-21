@@ -138,7 +138,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
- # page 46
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
 
@@ -158,6 +157,3 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'social_core.backends.spotify.SpotifyOAuth2',
 )
-# AUTHENTICATION_BACKENDS = (
-#     'social_core.backends.spotify.SpotifyOAuth2',
-# )

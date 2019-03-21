@@ -17,7 +17,7 @@ h1 {
     font-size: 15px;
 }
 
-.city-list {
+.homepage-city-list {
     margin-left: 10px;
     margin-right: 10px%;
     font-size: 22px;
@@ -26,8 +26,18 @@ h1 {
     opacity: .9;
 }
 
-
-
+/* Links inside the dropdown */
+.homepage-city-list a {
+    color: white;
+    background-color: black;
+ 
+    margin-top: 5px;
+     border: 2px solid black;
+    text-decoration: none;
+    display: block;
+    border-radius: 7px;
+    
+}
 
 .city-box {
     margin-left: 40%;

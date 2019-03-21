@@ -22,8 +22,7 @@
         
         <div class="header">
             <div class="HyfyLogo"><h1>HyFy</h1></div>
-            <h2 class="pageTitle"></h2>
-
+            
             {% if user.is_authenticated %}
             <div class="sign-in-container">
                  <div class="signin">
@@ -50,7 +49,7 @@
 
              <div class="search-bar">
                  <form id="searchform" action="{% url 'search' %}" method="get" accept-charset="utf-8">
-                     <input class="searchField" id="searchbox" name="q" value="{{request.GET.q}}" type="text" placeholder="Search">
+                     <input class="searchField" name="q" value="{{request.GET.q}}" type="text" placeholder="Search">
                      <button class="searchButton" type="submit">
                          <i class="fa fa-search"></i>
                      </button>

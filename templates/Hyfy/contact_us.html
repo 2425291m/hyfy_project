@@ -9,30 +9,16 @@ ContactUs
 {% endblock %}
 
 {% block main_block %}
-        <div class="textBox">
-                
-      
+        <div class="textBox-container">
+            
                 <br>
                 <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact us</h2>
-
-                <!-- easy enough to connect form to send emails -->
-          
             <form method="post">
                 {% csrf_token %}
                 {{ form.as_p }}
+                
                 <input type="submit" value="Submit" />
             </form>
             
-            
-            
-<!--
-               <textarea  name="comment" form="usrform" class="textArea" placeholder="Please leave your polite comments here. . . "></textarea>  
-             
-                <form class="userForm">
-
-                    <input type="submit">
-
-                </form>
--->
         </div>
 {% endblock %}

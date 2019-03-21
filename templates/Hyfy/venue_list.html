@@ -4,52 +4,48 @@
 {% endblock %}
     
 {% block links_block %}     
-     <link rel="stylesheet" type="text/css" href="/static/CSS/venue_list.css"> 
+     <link rel="stylesheet" type="text/css" href="/static/CSS/city.css"> 
 {% endblock %}
     
 {% block main_block %}
-    <div id="center-column">
-        <div class="city-select"><h2 id="city-title">City <i class="icon ion-md-arrow-dropdown"></i></h2>
-            <div class="city-list">
-                {% for city in cities %}
-                                <a href="/hyfy/city/{{ city.slug }}">{{ city.name }}</a>
-                {% endfor %}
-            </div>
-        </div>
-         <div class="genres">
-          {% if venues %}
+    <div id="center-column"> 
+          <h2 id="page-title">List of venues</h2>
+          <div class="genres">
+             {% if venues %}
                 {% for venue in venues %}
-           <div class="genre-box">
-                 <a href="/hyfy/venues_by_genre/{{ venue.city.slug }}/{{ venue.genre.genrename }}"><h3 class="genre-title">{{ venue.genre.genrename }}</h3></a>
-                 <a href="/hyfy/{{ venue.city.slug }}/{{ venue.slug }}"><h3 class="venue-title">{{ venue.name }}</h3></a>
-                    <div id="to-genre-icon">
-                 </div>
-                 <div id="genre1-details">
-                
-                    <img src="/static/images/venues/{{ venue.name }}.jpg">
-                
-                     <div id="genre1-info">
-                         <h4 id="genre1-rating">RATING:
-                         
-                         </h4>
+              <div class="genre-box">
+                <div id="top-bar"> 
+                    <div class="genre-title-box">
+                        <a class="genre-title-a" href="/hyfy/venues_by_genre/{{ venue.city.slug }}/{{ venue.genre.slug }}">
+                            <h3 class="genre-title">{{ venue.genre.genrename }}</h3></a>
+                         <span class="genre-span">Go to {{ city.name }}'s top {{ venue.genre.slug }} venues! </span>
+                    </div>
 
-                         <div id="info">
-                             <p> Address and stuff</p>
-                        </div>
-                     </div>
-                     <div id="to-venue">
-                         <h6>TO VENUE</h6>
-                        <a href="/hyfy/{{ venue.city.slug }}/{{ venue.slug }}">
-                            
-                            <i class="icon ion-md-arrow-forward"></i></a>
+                     <div class="venue-title-box">
+                         <a class="venue-title-a" href="/hyfy/{{ venue.city.slug }}/{{ venue.slug }}">
+                             <h3 class="venue-title">{{ venue.name }}</h3></a>
                      </div>
                  </div>
                  
+                 <div id="genre1-details">
+                
+                    <img id="venue-image" src="/static/images/venues/{{ venue.name }}.jpg">
+                
+                     <div id="genre-info">
+                         <h4 id="genre1-rating">Likes: {{ venue.likes }}
+                         
+                         </h4>
+
+                         <div id="venue-info">
+                              <h4>Addess: {{ venue.address }}<br /><br />
+                        <a id = "website-text" href="{{ venue.website }}">Click here to go to {{ venue.name }} website!</a></h4>
+                        </div>
+                     </div>
+                 </div>
              </div>
-                 {% endfor %}
+                     {% endfor %}
             {% else %}
                 <h1>No venues have been found. Please try another search.</h1>
-            {% endif %}
-        </div>
+            {% endif %}          
 </div>
 {% endblock %}
