@@ -131,7 +131,9 @@ $(document).ready(function(){
             submitForm()
         }
     });
+ 
 
+    //submit the form
     function submitForm(){
         $.ajax({
             type: "POST",
@@ -169,8 +171,3 @@ $(document).ready(function(){
         })
     }
 })
-
-
-
-
-//document.getElementById("imageid").src="../template/save.png";

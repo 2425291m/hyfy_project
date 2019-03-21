@@ -33,7 +33,9 @@ Venue
         
     <div id="genres2-center-column">
         <h2 id="venue-name">{{ venue.name }} | LIKES: {{ venue.likes }}</h2>
+        {% if user.is_authenticated %} 
         <button id="like-button"><a href=/hyfy/like_venue/{{venue.city}}/{{venue.slug}}><h2>LIKE</h2></a></button>
+            {% endif %}
         <div id="main-box">
             <div id="top-row">
                 <div id="venue-picture">
@@ -66,23 +68,24 @@ Venue
                         </div>
                        
                     {% endif %}
-                    
+                    {% if reviews %}   
+                    {% for review in reviews %}
                         <div id="review-display">
-                        {% if reviews %}   
-                        {% for review in reviews %}
-                        
                             <div class="review-block">
                                 <div id="review-user">
-                                <strong><h3 class="review"><a href="/hyfy/account/{{review.username}}" id="userlink">{{ review.username }}</a> - {{ review.date }}</strong> <!-- {{ review.date }} -->
-                                </div>
+                                        {% if user.is_authenticated %} 
+                                <strong><h3 class="review"><a href="/hyfy/account/{{review.username}}" id="userlink">{{ review.username }}</a> - {{ review.date }}</strong>
+                                        {% else %}
+                                <strong><h3 class="review">{{ review.username }}- {{ review.date }}</strong>
+                                         {% endif %}
                                 <div id="review-text">
                                     <p>{{ review.text }}</p>
                                 </div> 
                     
                                 </div>
+                        </div>
                         {% endfor %}
                         {% endif %}
-                        </div>
                         
                     </div>
                 </div>
@@ -94,13 +97,10 @@ Venue
         
 <script>
 function initMap() {
-  // The location of Uluru
-  var uluru = {lat: {{ venue.latitude }}, lng: -{{ venue.longitude }}};
-  // The map, centered at Uluru
+  var loc = {lat: {{ venue.latitude }}, lng: -{{ venue.longitude }}};
   var map = new google.maps.Map(
-      document.getElementById('googleMap'), {zoom: 15, center: uluru});
-  // The marker, positioned at Uluru
-  var marker = new google.maps.Marker({position: uluru, map: map});
+      document.getElementById('googleMap'), {zoom: 15, center: loc});
+  var marker = new google.maps.Marker({position: loc, map: map});
 }    
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8WJxmedig_2H0W1fe4-cLAXoppDt_7Ss&callback=initMap"></script>
